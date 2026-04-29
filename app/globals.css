@@ -2606,3 +2606,58 @@ body.home-dark .nav.scrolled .nav-links a{text-shadow:none}
 body:not(.home-dark) .wordmark{color:var(--ink)}
 body:not(.home-dark) .nav-links a{color:var(--text-secondary)}
 body:not(.home-dark) .nav.scrolled{box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 14px 40px -18px rgba(9,9,2,.14)}
+
+/* ════════════════════════════════════════════════════════
+   HERO TITLE + NAV SCROLLED — tighter sizing, denser glass
+   ════════════════════════════════════════════════════════ */
+
+/* User-specified hero title rule — overrides earlier sizing */
+body.home-dark .hero-title{
+  text-shadow:none;
+  font-size:clamp(56px, 8vw, 100px);
+  line-height:100px;
+}
+.hero-title{
+  font-size:clamp(56px, 8vw, 100px);
+  line-height:100px;
+}
+/* Match grad-fill to the new line-height so the gradient line aligns
+   with the rest of the title vertically. */
+body.home-dark .hero-title .grad-fill{line-height:100px}
+
+/* SCROLLED NAV — denser smoke glass so nav links are crisp the
+   moment scrolling starts. Adds a translucent dark base under the
+   color gradient + much stronger backdrop blur. */
+body.home-dark .nav.scrolled{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.22) 0%,
+      rgba(0,236,252,.26) 50%,
+      rgba(119,0,255,.30) 100%),
+    rgba(7,7,16,.62);
+  backdrop-filter:blur(40px) saturate(200%);
+  -webkit-backdrop-filter:blur(40px) saturate(200%);
+  border-color:rgba(255,255,255,.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.34),
+    0 24px 60px -22px rgba(0,0,0,.6);
+}
+/* Light pages — same idea: dense glass that hides scrolled content */
+.nav.scrolled{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.65) 0%,
+      rgba(213,247,251,.55) 50%,
+      rgba(232,217,255,.65) 100%),
+    rgba(255,255,255,.55);
+  backdrop-filter:blur(40px) saturate(200%);
+  -webkit-backdrop-filter:blur(40px) saturate(200%);
+  border-color:rgba(255,255,255,.6);
+}
+
+/* Drop the text-shadow on nav links the moment we enter scrolled
+   state — the dense glass makes the shadow look muddy. */
+body.home-dark .nav.scrolled .wordmark,
+body.home-dark .nav.scrolled .nav-links a{text-shadow:none;color:#fff}
+body.home-dark .nav.scrolled .nav-links a:hover{background:rgba(255,255,255,.20)}
+body.home-dark .nav.scrolled .nav-links a.active{background:rgba(0,236,252,.28);box-shadow:inset 0 0 0 1px rgba(0,236,252,.55), 0 0 18px rgba(0,236,252,.40)}

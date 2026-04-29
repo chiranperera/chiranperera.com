@@ -14,11 +14,10 @@ export function Nav() {
     const onScroll = () => {
       const y = window.scrollY;
       const isHomeDark = document.body.classList.contains("home-dark");
-      // On home, hold the nav at its at-rest state through the hero so the
-      // glassmorphism transition reads as "you've left the hero". Inner pages
-      // flip almost immediately because their hero is shorter.
-      const threshold = isHomeDark ? Math.max(innerHeight * 0.7, 200) : 40;
-      setScrolled(y > threshold);
+      // Flip to the opaque glass state as soon as any scroll happens so
+      // nav links stay legible. The at-rest gradient is reserved for
+      // y === 0 (page just loaded, hero fully framed).
+      setScrolled(y > 10);
 
       if (isHomeDark) {
         const start = innerHeight * 0.3;
