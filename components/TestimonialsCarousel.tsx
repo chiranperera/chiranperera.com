@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { Testimonial } from "@/lib/content/testimonials";
+import { ninetyninedesignsProfile } from "@/lib/content/testimonials";
 
 const TONE_CLASS: Record<NonNullable<Testimonial["avatarTone"]>, string> = {
   violet: "",
@@ -62,6 +63,20 @@ export function TestimonialsCarousel({ items }: { items: Testimonial[] }) {
       >
         →
       </button>
+      <div className="tc-foot">
+        <a
+          href={ninetyninedesignsProfile.url}
+          target="_blank"
+          rel="noreferrer"
+          className="tc-cta"
+        >
+          <span className="tc-cta-stars">
+            ★ {ninetyninedesignsProfile.starRating.toFixed(1)}
+          </span>
+          View {ninetyninedesignsProfile.totalReviews} verified reviews on 99designs
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </div>
   );
 }

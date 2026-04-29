@@ -4,7 +4,7 @@ import { HeroIndustries } from "@/components/HeroIndustries";
 import { HeroTitle } from "@/components/HeroTitle";
 import { Marquee } from "@/components/Marquee";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
-import { ninetyninedesignsProfile, testimonials } from "@/lib/content/testimonials";
+import { testimonials } from "@/lib/content/testimonials";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -448,17 +448,6 @@ export default function HomePage() {
             <h2 className="display section-title">
               Wall of <span className="italic-green">love</span>.
             </h2>
-            <a
-              href={ninetyninedesignsProfile.url}
-              target="_blank"
-              rel="noreferrer"
-              className="verify-badge"
-            >
-              <span className="verify-dot" />
-              {ninetyninedesignsProfile.starRating.toFixed(1)} ★ from{" "}
-              {ninetyninedesignsProfile.totalReviews} verified reviews on 99designs
-              <span aria-hidden="true">↗</span>
-            </a>
           </div>
           <TestimonialsCarousel items={testimonials} />
         </div>

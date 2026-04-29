@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { AmbientFX } from "@/components/AmbientFX";
 import { BodyClass } from "@/components/BodyClass";
-import { Cursor } from "@/components/Cursor";
+import { BtnLabels } from "@/components/BtnLabels";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Reveal } from "@/components/Reveal";
@@ -71,13 +71,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${dmSans.variable} ${jetbrains.variable}`}>
       <body>
+        {/* Set body.home-dark before first paint so the home nav doesn't
+            flash light theme on hard refresh. BodyClass keeps it in sync
+            during client-side navigation. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(location.pathname==='/')document.body.classList.add('home-dark');}catch(e){}`,
+          }}
+        />
         <BodyClass />
         <AmbientFX />
-        <Cursor />
         <Nav />
         {children}
         <Footer />
         <Reveal />
+        <BtnLabels />
         <script {...jsonLdScript(organizationJsonLd)} />
         <script {...jsonLdScript(personJsonLd)} />
         <script {...jsonLdScript(localBusinessJsonLd)} />
