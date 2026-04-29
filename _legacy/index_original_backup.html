@@ -1,0 +1,1202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chiran Perera — Lifestyle brand design studio · Sri Lanka</title>
+<meta name="description" content="A cinematic lifestyle brand design studio in Sri Lanka. Websites for hotels, wellness, beauty and lifestyle brands — engineered for the AI search era." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Chiran Perera","url":"https://chiranperera.com","founder":{"@type":"Person","name":"Chiran Perera","jobTitle":"Designer"},"address":{"@type":"PostalAddress","addressLocality":"Colombo","addressCountry":"Sri Lanka"},"description":"Lifestyle brand design studio — websites optimized for AI search."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --violet:#7700FF; --violet-2:#A94BFF; --violet-glow:rgba(119,0,255,.35);
+  --black:#050506; --black-2:#0A0A0D; --black-3:#0F0F14; --black-4:#14141A;
+  --mist:#F8F7FC; --white:#FFFFFF;
+  --t1:#FFFFFF; --t2:rgba(255,255,255,.78); --t3:rgba(255,255,255,.55); --t4:rgba(255,255,255,.35);
+  --bd:rgba(255,255,255,.08); --bd-2:rgba(255,255,255,.14);
+  --card-bg:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+  --card-edge:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.02));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--black);color:var(--t1);font-family:'Inter',system-ui,sans-serif;font-weight:400;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{cursor:none}
+@media (pointer:coarse){body{cursor:auto}.cursor-dot{display:none!important}}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;border:0;background:none;color:inherit;cursor:none}
+@media(pointer:coarse){button,a{cursor:pointer}}
+img{display:block;max-width:100%}
+
+/* ambient bg */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:
+  radial-gradient(600px 500px at 10% 10%, rgba(119,0,255,.12), transparent 60%),
+  radial-gradient(800px 600px at 90% 30%, rgba(80,0,160,.10), transparent 60%),
+  radial-gradient(700px 500px at 50% 90%, rgba(119,0,255,.07), transparent 60%);
+}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.05;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.9'/></svg>");
+  mix-blend-mode:overlay;
+}
+
+/* cursor */
+.cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--violet);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;box-shadow:0 0 18px rgba(119,0,255,.7)}
+.cursor-dot.hover{width:28px;height:28px;background:rgba(119,0,255,.3)}
+
+/* type */
+.display{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.03em;line-height:.98}
+.italic-violet{font-style:italic;color:var(--violet-2);font-weight:500}
+.label{font-family:'Inter',sans-serif;font-weight:500;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--t3)}
+.label .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--violet);vertical-align:middle;margin:0 10px 2px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+/* layout */
+.wrap{max-width:1360px;margin:0 auto;padding:0 40px}
+section{padding:120px 0;position:relative}
+
+/* nav */
+.nav{position:fixed;top:20px;left:20px;right:20px;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:10px 14px 10px 22px;border-radius:100px;background:rgba(10,10,13,.6);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);border:.5px solid var(--bd);transition:all .3s ease}
+.nav.scrolled{background:rgba(10,10,13,.82);box-shadow:0 20px 60px -20px rgba(0,0,0,.8)}
+.wordmark{font-family:'Fraunces',serif;font-weight:500;font-size:17px;letter-spacing:-.02em;display:flex;align-items:center;gap:6px}
+.wordmark .vdot{width:6px;height:6px;border-radius:50%;background:var(--violet);display:inline-block;box-shadow:0 0 10px var(--violet)}
+.nav-links{display:flex;gap:4px;font-size:13px}
+.nav-links a{position:relative;padding:8px 14px;border-radius:100px;opacity:.72;transition:all .22s}
+.nav-links a:hover{opacity:1}
+.nav-links a.active{opacity:1;background:rgba(255,255,255,.06)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-pill{padding:6px 12px;border-radius:100px;border:.5px solid var(--bd);font-size:11px;display:flex;align-items:center;gap:6px;color:var(--t2)}
+.nav-pill .p-dot{width:6px;height:6px;border-radius:50%;background:#3ddc84;box-shadow:0 0 8px #3ddc84}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;font-size:13px;font-weight:500;transition:transform .18s,box-shadow .24s,background .24s,color .24s,border-color .24s;white-space:nowrap}
+.btn-primary{background:linear-gradient(180deg,#8a1cff,#6b00e0);color:#fff;box-shadow:0 10px 30px -10px rgba(119,0,255,.6),inset 0 1px 0 rgba(255,255,255,.15)}
+.btn-primary:hover{box-shadow:0 20px 44px -12px rgba(119,0,255,.8),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary.glow{box-shadow:0 0 28px rgba(119,0,255,.45),inset 0 1px 0 rgba(255,255,255,.15)}
+.btn-primary.glow:hover{box-shadow:0 0 48px rgba(119,0,255,.7),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:active{transform:scale(.98)}
+.btn-secondary{background:rgba(255,255,255,.04);border:.5px solid var(--bd-2);color:#fff;backdrop-filter:blur(10px)}
+.btn-secondary:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
+.btn .arrow{display:inline-block;transition:transform .2s}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* glass card primitive */
+.glass{position:relative;background:var(--card-bg);border-radius:20px;padding:1px;overflow:hidden;isolation:isolate}
+.glass::before{content:'';position:absolute;inset:0;border-radius:20px;padding:.5px;background:var(--card-edge);-webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+.glass-inner{border-radius:19px;background:linear-gradient(180deg,rgba(15,15,20,.9),rgba(8,8,12,.95));position:relative;z-index:1}
+.glass:hover::before{background:linear-gradient(180deg,rgba(119,0,255,.55),rgba(255,255,255,.04))}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ========== HERO ========== */
+.hero{min-height:100vh;padding:140px 0 80px;position:relative;overflow:hidden}
+.hero-video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-video-wrap video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05) hue-rotate(-6deg)}
+.hero-video-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 40%,transparent 0%,rgba(5,5,6,.55) 60%,rgba(5,5,6,.95) 100%)}
+.hero-video-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,6,.4) 0%,rgba(5,5,6,.1) 40%,rgba(5,5,6,.95) 100%);z-index:1}
+
+/* CSS fallback "nebula orb" */
+.hero-nebula{position:absolute;inset:0;display:grid;place-items:center;z-index:0;overflow:hidden}
+.hero-nebula .orb{position:relative;width:min(62vw,720px);aspect-ratio:1;border-radius:50%;filter:blur(.5px);transform:translateY(4vh)}
+.hero-nebula .orb::before{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 140deg,#2a0050,#7700FF,#1c0035,#5000a8,#2a0050);filter:blur(50px) saturate(1.4);animation:orbSpin 18s linear infinite;opacity:.55}
+.hero-nebula .orb::after{content:'';position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle,#13001f 0%,#080010 60%,#050506 100%);box-shadow:inset 0 0 80px rgba(119,0,255,.35),0 0 120px rgba(119,0,255,.35)}
+.hero-nebula .rings{position:absolute;inset:0;border-radius:50%}
+.hero-nebula .ring{position:absolute;inset:0;border-radius:50%;border:.5px solid rgba(255,255,255,.08);animation:ringPulse 6s ease-in-out infinite}
+.hero-nebula .ring.r2{inset:-8%;animation-delay:-2s;border-color:rgba(119,0,255,.14)}
+.hero-nebula .ring.r3{inset:-18%;animation-delay:-4s;border-color:rgba(255,255,255,.04)}
+.hero-nebula .ring.r4{inset:-30%;animation-delay:-1s;border-color:rgba(119,0,255,.08)}
+@keyframes orbSpin{to{transform:rotate(360deg)}}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.04);opacity:.5}}
+
+.hero-inner{position:relative;z-index:3;display:flex;flex-direction:column;height:100%;min-height:calc(100vh - 220px);justify-content:space-between;gap:48px}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.hero-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.04);border:.5px solid var(--bd-2);backdrop-filter:blur(14px);font-size:12px;color:var(--t2);letter-spacing:.02em}
+.hero-pill .p-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);box-shadow:0 0 10px var(--violet);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+.hero-center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
+.hero-title{font-size:clamp(56px,9.5vw,140px);max-width:1100px;margin:0 auto;text-wrap:balance}
+.hero-title .line{display:block;overflow:hidden}
+.hero-title .line-3{color:rgba(255,255,255,.42)}
+.hero-aside{display:none}
+@media(min-width:1500px){.hero-aside{display:block;position:absolute;right:40px;bottom:240px;max-width:260px;padding:18px 20px;border-radius:14px;background:rgba(12,12,16,.7);border:.5px solid var(--bd-2);backdrop-filter:blur(16px);z-index:4;font-size:13px;color:var(--t2);line-height:1.5}}
+.hero-aside .aside-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--violet-2);margin-bottom:8px;display:block}
+.hero-sub{max-width:560px;color:var(--t2);font-size:17px;line-height:1.5;margin:0 auto}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:3}
+.hstat{padding:22px 24px;border-radius:14px;background:rgba(10,10,14,.5);border:.5px solid var(--bd);backdrop-filter:blur(16px);display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.hstat .hs-num{font-family:'Fraunces',serif;font-weight:500;font-size:34px;letter-spacing:-.02em;line-height:1}
+.hstat .hs-num em{font-style:italic;color:var(--violet-2)}
+.hstat .hs-lbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--t3);font-weight:500;text-align:right;max-width:110px}
+
+.hero-video-label{position:absolute;bottom:110px;left:40px;z-index:4;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--t4);display:flex;align-items:center;gap:10px}
+.hero-video-label::before{content:'';width:20px;height:1px;background:var(--t4)}
+
+/* marquee */
+.marquee{border-top:.5px solid var(--bd);border-bottom:.5px solid var(--bd);padding:22px 0;overflow:hidden;background:linear-gradient(180deg,rgba(10,10,14,.6),rgba(10,10,14,.2))}
+.marquee-track{display:flex;gap:64px;white-space:nowrap;animation:slide 34s linear infinite;font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.01em;color:var(--t2)}
+.marquee-track span{display:inline-flex;align-items:center;gap:64px}
+.marquee-track span::before{content:'●';color:var(--violet);font-size:10px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* section head */
+.section-head{display:flex;flex-direction:column;gap:18px;margin-bottom:64px;max-width:900px}
+.section-head .mini-title{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--t3)}
+.section-head .mini-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:100px;background:rgba(255,255,255,.03);border:.5px solid var(--bd-2);font-size:11px;color:var(--t2);letter-spacing:.02em;align-self:flex-start}
+.section-head .mini-pill .p-dot{width:5px;height:5px;border-radius:50%;background:var(--violet);box-shadow:0 0 8px var(--violet)}
+.section-title{font-size:clamp(40px,5.6vw,78px)}
+
+/* what i do — aitech style bento */
+.services-bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.sv{padding:32px;border-radius:20px;background:linear-gradient(180deg,rgba(14,14,20,.9),rgba(8,8,12,.95));border:.5px solid var(--bd);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:18px;min-height:280px;transition:border-color .25s,transform .25s}
+.sv:hover{border-color:rgba(119,0,255,.4);transform:translateY(-3px)}
+.sv::before{content:'';position:absolute;inset:0;border-radius:20px;background:radial-gradient(600px 300px at 0% 0%,rgba(119,0,255,.14),transparent 60%);opacity:.6;pointer-events:none}
+.sv.big{grid-row:span 2;min-height:100%}
+.sv .sv-kicker{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--t4);display:flex;align-items:center;gap:10px}
+.sv .sv-kicker::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--violet);box-shadow:0 0 8px var(--violet)}
+.sv h3{font-family:'Fraunces',serif;font-weight:500;font-size:30px;letter-spacing:-.02em;line-height:1.05}
+.sv.big h3{font-size:44px}
+.sv p{color:var(--t3);font-size:14px;line-height:1.55;max-width:340px}
+.sv .sv-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.sv .sv-tags{display:flex;gap:6px;flex-wrap:wrap}
+.sv .t{font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:5px 10px;border-radius:100px;border:.5px solid var(--bd);color:var(--t3)}
+.sv .learn{color:var(--violet-2);font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.sv-visual{position:absolute;inset:auto 0 0 auto;width:60%;height:60%;pointer-events:none;opacity:.9}
+.sv.big .sv-visual{width:70%;height:70%}
+
+/* schematic */
+.schematic{position:absolute;right:-10px;bottom:-10px;width:340px;height:280px;opacity:.9}
+.wave-lines{position:absolute;right:0;bottom:0;width:300px;height:200px}
+.orbit{position:absolute;right:-30px;bottom:-30px;width:240px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(119,0,255,.18),transparent 60%);filter:blur(20px)}
+.grid-lines{position:absolute;right:-10px;bottom:-10px;width:260px;height:200px;background-image:linear-gradient(rgba(255,255,255,.06) .5px,transparent .5px),linear-gradient(90deg,rgba(255,255,255,.06) .5px,transparent .5px);background-size:22px 22px;mask-image:radial-gradient(200px 140px at 70% 70%,#000,transparent 80%);-webkit-mask-image:radial-gradient(200px 140px at 70% 70%,#000,transparent 80%)}
+
+/* featured work */
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.wk{padding:0;border-radius:20px;background:linear-gradient(180deg,rgba(14,14,20,.9),rgba(8,8,12,.95));border:.5px solid var(--bd);overflow:hidden;transition:transform .3s,border-color .3s;position:relative}
+.wk:hover{transform:translateY(-4px);border-color:rgba(119,0,255,.4)}
+.wk.wide{grid-column:span 2}
+.wk-media{aspect-ratio:16/9;position:relative;overflow:hidden;background:#0a0a0e}
+.wk.wide .wk-media{aspect-ratio:21/8}
+.wk-media .ph{position:absolute;inset:0;display:grid;place-items:center;background:
+  linear-gradient(160deg,#1a0a24 0%,#0f0518 60%,#0a0210 100%),
+  repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 14px,rgba(255,255,255,.04) 14px 28px);
+  color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wk:hover .wk-media .ph{transform:scale(1.04)}
+.wk-media .ph-tag{padding:8px 16px;border-radius:100px;border:.5px solid var(--bd-2);background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
+.wk-media .wk-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,6,.85) 100%);pointer-events:none}
+.wk-media .wk-play{position:absolute;right:18px;top:18px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);border:.5px solid var(--bd-2);backdrop-filter:blur(10px);display:grid;place-items:center;color:#fff}
+.wk-body{padding:24px 28px 28px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.wk-title{font-family:'Fraunces',serif;font-weight:500;font-size:28px;letter-spacing:-.02em;line-height:1.08}
+.wk.wide .wk-title{font-size:40px}
+.wk-pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.wk-pills .p{font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:5px 10px;border-radius:100px;border:.5px solid var(--bd-2);color:var(--t2);background:rgba(255,255,255,.03)}
+.wk-link{font-size:12px;color:var(--violet-2);display:inline-flex;gap:8px;align-items:center;white-space:nowrap;padding:10px 14px;border-radius:100px;border:.5px solid var(--bd-2);background:rgba(255,255,255,.03)}
+
+/* audit lead magnet — glass hero card */
+.audit-card{border-radius:24px;padding:56px;background:
+  radial-gradient(600px 300px at 90% 0%,rgba(119,0,255,.2),transparent 60%),
+  linear-gradient(180deg,rgba(18,14,28,.9),rgba(10,8,16,.95));
+  border:.5px solid var(--bd-2);position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.audit-card::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(119,0,255,.8),transparent)}
+.audit-card .a-list{display:flex;flex-direction:column;gap:12px;margin:24px 0 36px;padding:0;list-style:none}
+.audit-card .a-list li{padding-left:30px;position:relative;color:var(--t2);font-size:15px}
+.audit-card .a-list li::before{content:'';position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:rgba(119,0,255,.15);border:.5px solid rgba(119,0,255,.4)}
+.audit-card .a-list li::after{content:'';position:absolute;left:4px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--violet-2);box-shadow:0 0 8px var(--violet)}
+
+.audit-mock{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;transform:rotate(-3deg);transition:transform .4s;box-shadow:0 40px 100px -30px rgba(119,0,255,.4),0 10px 30px -10px rgba(0,0,0,.5);border:.5px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#14141a,#0a0a0e)}
+.audit-mock:hover{transform:rotate(-1deg) translateY(-4px)}
+.audit-mock .m-head{padding:22px 24px;border-bottom:.5px solid var(--bd);display:flex;justify-content:space-between}
+.audit-mock .m-logo{font-family:'Fraunces',serif;font-size:13px;display:flex;align-items:center;gap:5px;color:#fff}
+.audit-mock .m-logo .d{width:5px;height:5px;border-radius:50%;background:var(--violet);box-shadow:0 0 6px var(--violet)}
+.audit-mock .m-date{font-size:9px;letter-spacing:.22em;color:var(--t4);text-transform:uppercase}
+.audit-mock .m-body{padding:24px;display:flex;flex-direction:column;gap:14px}
+.audit-mock .m-title{font-family:'Fraunces',serif;font-size:22px;color:#fff;line-height:1.15;letter-spacing:-.02em}
+.audit-mock .m-title em{color:var(--violet-2)}
+.audit-mock .m-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:.5px solid var(--bd);font-size:11px;color:var(--t3)}
+.audit-mock .m-row .mono{color:#fff}
+.audit-mock .m-score{margin-top:6px;padding:16px;border-radius:10px;background:linear-gradient(180deg,rgba(119,0,255,.18),rgba(119,0,255,.05));border:.5px solid rgba(119,0,255,.25);display:flex;justify-content:space-between;align-items:center}
+.audit-mock .m-score .big{font-family:'Fraunces',serif;font-style:italic;font-size:36px;color:var(--violet-2);letter-spacing:-.02em}
+.audit-mock .m-score .lbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--t3)}
+
+/* process timeline */
+.process-rail{position:relative;padding:40px 0 0}
+.process-rail::before{content:'';position:absolute;left:0;right:0;top:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(119,0,255,.5),rgba(119,0,255,.3),rgba(255,255,255,.08));z-index:1}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:2}
+.ps{padding:32px 24px;border-radius:16px;background:rgba(10,10,14,.6);border:.5px solid var(--bd);display:flex;flex-direction:column;gap:12px;backdrop-filter:blur(10px);transition:transform .25s,border-color .25s}
+.ps:hover{transform:translateY(-3px);border-color:rgba(119,0,255,.4)}
+.ps .node{width:32px;height:32px;border-radius:50%;background:rgba(5,5,6,1);border:.5px solid rgba(119,0,255,.5);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--violet-2);box-shadow:0 0 18px rgba(119,0,255,.45)}
+.ps .week{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--t4)}
+.ps h4{font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.02em;line-height:1.15}
+.ps p{color:var(--t3);font-size:13px;line-height:1.55}
+
+/* ai shift — stat cards in dark glass */
+.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sc{padding:36px 32px;border-radius:20px;background:linear-gradient(180deg,rgba(14,14,20,.9),rgba(8,8,12,.95));border:.5px solid var(--bd);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.sc:hover{transform:translateY(-4px);border-color:rgba(119,0,255,.4)}
+.sc::before{content:'';position:absolute;top:0;right:0;width:180px;height:180px;background:radial-gradient(circle,rgba(119,0,255,.14),transparent 70%);pointer-events:none}
+.sc .big{font-family:'Fraunces',serif;font-weight:500;font-size:68px;letter-spacing:-.03em;line-height:.95}
+.sc .big .u{color:var(--violet-2);font-style:italic}
+.sc .desc{color:var(--t3);font-size:14px;line-height:1.55}
+.sc .mini-chart{margin-top:12px;height:40px;display:flex;align-items:flex-end;gap:4px}
+.sc .mini-chart .bar{flex:1;background:linear-gradient(180deg,var(--violet),rgba(119,0,255,.15));border-radius:2px;opacity:.7}
+
+/* testimonials */
+.testimonials-grid{columns:3;column-gap:16px}
+.tm{break-inside:avoid;margin-bottom:16px;padding:28px;background:linear-gradient(180deg,rgba(16,16,22,.85),rgba(10,10,14,.9));border:.5px solid var(--bd);border-radius:16px;display:flex;flex-direction:column;gap:18px;transition:transform .25s,border-color .25s}
+.tm:hover{transform:scale(1.01);border-color:rgba(119,0,255,.4)}
+.tm.accent{background:linear-gradient(180deg,rgba(119,0,255,.2),rgba(60,0,120,.12));border-color:rgba(119,0,255,.3)}
+.tm .quote{font-family:'Fraunces',serif;font-style:italic;font-size:20px;line-height:1.3;letter-spacing:-.01em;color:#fff}
+.tm.lg .quote{font-size:26px}
+.tm.sm .quote{font-size:16px}
+.who{display:flex;align-items:center;gap:12px}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#bba4dd,#5a3b8b);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:13px;color:#fff;border:.5px solid rgba(255,255,255,.1)}
+.avatar.a2{background:linear-gradient(135deg,#d7a9b7,#8b5a79)}
+.avatar.a3{background:linear-gradient(135deg,#aabaa4,#4d6b4f)}
+.avatar.a4{background:linear-gradient(135deg,#c4b89a,#7a6a3d)}
+.avatar.a5{background:linear-gradient(135deg,#b8a4dc,#5a3b8b)}
+.avatar.a6{background:linear-gradient(135deg,#9cb4cc,#3c5a7a)}
+.avatar.a7{background:linear-gradient(135deg,#dcb0a0,#8a4a3a)}
+.avatar.a8{background:linear-gradient(135deg,#c8c0d8,#6a6288)}
+.who .name{font-size:14px;color:#fff;font-weight:500}
+.who .role{font-size:12px;color:var(--t4)}
+
+/* final CTA glass */
+.final-card{border-radius:28px;padding:100px 64px;text-align:center;background:radial-gradient(800px 500px at 50% 20%,rgba(119,0,255,.22),transparent 60%),linear-gradient(180deg,rgba(18,14,28,.9),rgba(8,6,14,.95));border:.5px solid var(--bd-2);position:relative;overflow:hidden}
+.final-card::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,rgba(119,0,255,.9),transparent)}
+.final-card .display{font-size:clamp(48px,7vw,100px);margin-bottom:24px}
+.final-card .sub{color:var(--t2);font-size:17px;margin-bottom:36px}
+.final-card .ctas{display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap}
+.email-link{color:#fff;font-size:14px;display:inline-flex;align-items:center;gap:6px;border-bottom:.5px solid rgba(255,255,255,.3);padding-bottom:3px}
+.email-link:hover{color:var(--violet-2);border-color:var(--violet-2)}
+.final-orbs{position:absolute;bottom:-160px;left:50%;transform:translateX(-50%);width:600px;height:300px;pointer-events:none}
+.final-orbs::before,.final-orbs::after{content:'';position:absolute;border-radius:50%;filter:blur(60px)}
+.final-orbs::before{left:20%;top:0;width:240px;height:240px;background:rgba(119,0,255,.35)}
+.final-orbs::after{right:10%;top:20px;width:200px;height:200px;background:rgba(60,0,120,.4)}
+
+/* footer */
+footer{padding:80px 0 40px;position:relative;border-top:1px solid transparent}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(119,0,255,.6),transparent)}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:60px;margin-bottom:48px}
+.foot-col h5{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--t4);font-weight:500;margin-bottom:18px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col li a{font-size:14px;color:var(--t2)}
+.foot-col li a:hover{color:var(--violet-2)}
+.foot-tag{color:var(--t3);font-size:14px;max-width:300px;margin-top:12px;line-height:1.5}
+.foot-small{display:flex;justify-content:space-between;font-size:12px;color:var(--t4);border-top:.5px solid var(--bd);padding-top:24px;flex-wrap:wrap;gap:16px}
+
+/* WORK PAGE */
+.short-hero{min-height:60vh;padding:160px 0 60px;position:relative;overflow:hidden}
+.short-hero .hero-nebula .orb{width:60vw;transform:translate(20vw,-20vh)}
+.short-hero-inner{position:relative;z-index:3}
+.short-hero .display{font-size:clamp(56px,7vw,96px);margin:20px 0 20px;max-width:900px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:48px 0 40px}
+.chip{padding:10px 18px;border-radius:100px;border:.5px solid var(--bd);background:rgba(10,10,14,.5);backdrop-filter:blur(10px);font-size:12px;color:var(--t2);transition:all .2s}
+.chip:hover{border-color:rgba(255,255,255,.3);color:#fff}
+.chip.active{background:linear-gradient(180deg,#8a1cff,#6b00e0);border-color:transparent;color:#fff;box-shadow:0 0 20px rgba(119,0,255,.4)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pc{border-radius:16px;background:linear-gradient(180deg,rgba(14,14,20,.85),rgba(8,8,12,.9));border:.5px solid var(--bd);overflow:hidden;display:flex;flex-direction:column;gap:0;transition:transform .3s,border-color .3s}
+.pc:hover{transform:translateY(-4px);border-color:rgba(119,0,255,.4)}
+.pc-media{aspect-ratio:4/3;position:relative;overflow:hidden}
+.pc-media .ph{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(160deg,#1a0a24 0%,#0f0518 60%,#0a0210 100%),repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 14px,rgba(255,255,255,.04) 14px 28px);color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;transition:transform .6s}
+.pc:hover .pc-media .ph{transform:scale(1.05)}
+.pc-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.pc-tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--violet-2);font-weight:500}
+.pc-name{font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.02em}
+.pc-desc{color:var(--t3);font-size:13px;line-height:1.5}
+
+/* STUDIO PAGE */
+.studio-hero{padding:180px 0 60px;position:relative;overflow:hidden}
+.studio-hero .display{font-size:clamp(56px,7vw,104px);margin:20px 0 32px}
+.studio-hero .display .line{display:block}
+.studio-two{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start;padding-top:40px}
+.story p{font-size:17px;line-height:1.65;color:var(--t2);margin-bottom:20px}
+.story p:first-child::first-letter{font-family:'Fraunces',serif;font-size:56px;line-height:.9;float:left;padding:6px 10px 0 0;color:var(--violet-2);font-weight:500}
+.portrait{position:sticky;top:120px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;border:.5px solid var(--bd-2);background:linear-gradient(165deg,#2a1a3a 0%,#0e0818 100%);display:grid;place-items:center;color:var(--t4);font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase}
+.portrait .ph-tag{padding:8px 16px;border-radius:100px;border:.5px solid var(--bd-2);background:rgba(0,0,0,.4)}
+.principles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pr{padding:36px 28px;border-radius:16px;background:linear-gradient(180deg,rgba(14,14,20,.85),rgba(8,8,12,.9));border:.5px solid var(--bd);display:flex;flex-direction:column;gap:18px;min-height:240px;transition:border-color .25s,transform .25s}
+.pr:hover{border-color:rgba(119,0,255,.4);transform:translateY(-3px)}
+.pr .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--violet-2);letter-spacing:.22em}
+.pr .p-text{font-family:'Fraunces',serif;font-weight:500;font-size:26px;line-height:1.15;letter-spacing:-.02em;margin-top:auto}
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tool{padding:22px 24px;border:.5px solid var(--bd);border-radius:14px;background:linear-gradient(180deg,rgba(14,14,20,.85),rgba(8,8,12,.9));display:flex;flex-direction:column;gap:8px;transition:border-color .2s,transform .2s}
+.tool:hover{border-color:rgba(119,0,255,.4);transform:translateY(-2px)}
+.tool .t-name{font-family:'Fraunces',serif;font-weight:500;font-size:18px;letter-spacing:-.02em}
+.tool .t-role{font-size:12px;color:var(--t4)}
+.availability-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+.cal-mini{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cal{border:.5px solid var(--bd);border-radius:16px;padding:22px;background:linear-gradient(180deg,rgba(14,14,20,.85),rgba(8,8,12,.9))}
+.cal-head{display:flex;justify-content:space-between;margin-bottom:14px}
+.cal-month{font-family:'Fraunces',serif;font-size:18px;font-weight:500;letter-spacing:-.01em}
+.cal-year{font-size:11px;color:var(--t4);letter-spacing:.2em}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-size:11px}
+.cal-days .d-name{color:var(--t4);text-align:center;padding:6px 0;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.cal-days .d{text-align:center;padding:6px 0;border-radius:4px;color:var(--t2)}
+.cal-days .d.booked{background:rgba(255,255,255,.04);color:var(--t4);text-decoration:line-through}
+.cal-days .d.open{background:rgba(119,0,255,.14);color:var(--violet-2);font-weight:500}
+.cal-days .d.today{outline:.5px solid var(--violet-2);color:#fff}
+
+/* AUDIT PAGE */
+.audit-hero{min-height:100vh;padding:140px 0 80px;position:relative;overflow:hidden}
+.audit-hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center;padding-top:40px}
+.audit-hero .display{font-size:clamp(44px,5.6vw,80px);margin:20px 0 22px;text-wrap:balance}
+.audit-hero .sub{max-width:560px;color:var(--t2);font-size:17px}
+.audit-form{background:linear-gradient(180deg,rgba(18,14,28,.85),rgba(10,8,16,.92));border:.5px solid var(--bd-2);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;backdrop-filter:blur(14px)}
+.audit-form::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(119,0,255,.7),transparent)}
+.audit-form h3{font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.01em}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--t3);font-weight:500}
+.field input,.field select{background:rgba(255,255,255,.04);border:.5px solid var(--bd-2);padding:13px 16px;border-radius:10px;color:#fff;font-family:inherit;font-size:14px;transition:all .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--violet-2);background:rgba(119,0,255,.06);box-shadow:0 0 0 3px rgba(119,0,255,.15)}
+.field input::placeholder{color:var(--t4)}
+.small-note{color:var(--t4);font-size:12px;margin-top:4px}
+
+.deliverables{display:flex;flex-direction:column;gap:12px}
+.dv{padding:20px 24px;border-radius:14px;background:linear-gradient(180deg,rgba(14,14,20,.7),rgba(10,10,14,.85));border:.5px solid var(--bd);display:flex;gap:18px;align-items:flex-start;transition:border-color .25s}
+.dv:hover{border-color:rgba(119,0,255,.4)}
+.dv .check{flex:none;width:28px;height:28px;border-radius:50%;background:rgba(119,0,255,.15);border:.5px solid rgba(119,0,255,.4);color:var(--violet-2);display:grid;place-items:center}
+.dv .d-title{font-family:'Fraunces',serif;font-weight:500;font-size:18px;letter-spacing:-.01em;color:#fff}
+.dv .d-desc{color:var(--t3);font-size:13px;margin-top:4px;line-height:1.55}
+
+.faq-list{max-width:880px;margin:0 auto}
+.faq{border:.5px solid var(--bd);border-radius:14px;padding:6px 24px;margin-bottom:10px;background:linear-gradient(180deg,rgba(14,14,20,.7),rgba(10,10,14,.85));transition:border-color .2s}
+.faq:hover{border-color:rgba(119,0,255,.3)}
+.faq.open{border-color:rgba(119,0,255,.4)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:24px;width:100%;text-align:left;font-family:'Fraunces',serif;font-weight:500;font-size:20px;letter-spacing:-.01em;color:#fff;padding:16px 0}
+.faq-toggle{flex:none;width:28px;height:28px;border-radius:50%;border:.5px solid var(--bd-2);display:grid;place-items:center;font-size:14px;color:var(--violet-2);transition:transform .3s}
+.faq.open .faq-toggle{transform:rotate(45deg);background:rgba(119,0,255,.15);border-color:rgba(119,0,255,.4)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease,padding .32s;color:var(--t3);font-size:14px;line-height:1.6;max-width:680px}
+.faq.open .faq-a{max-height:360px;padding:0 0 20px}
+
+/* pages */
+.page{display:none}
+.page.active{display:block;animation:pi .4s cubic-bezier(.2,.7,.2,1)}
+@keyframes pi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* focus */
+:focus-visible{outline:2px solid var(--violet-2);outline-offset:3px;border-radius:4px}
+
+/* responsive */
+@media (max-width:1100px){
+  .wrap{padding:0 24px}
+  .nav{left:12px;right:12px;padding:8px 10px 8px 18px}
+  .nav-links{display:none}
+  .services-bento{grid-template-columns:1fr 1fr}
+  .sv.big{grid-column:span 2;grid-row:auto;min-height:320px}
+  .work-grid{grid-template-columns:1fr}
+  .wk.wide{grid-column:span 1}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-aside{display:none}
+  .audit-card{grid-template-columns:1fr;padding:40px}
+  .audit-hero-grid{grid-template-columns:1fr}
+  .studio-two{grid-template-columns:1fr}
+  .portrait{position:relative;top:0;max-width:480px}
+  .availability-wrap{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .process-rail::before{display:none}
+  .sc-grid{grid-template-columns:1fr}
+  .testimonials-grid{columns:2}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .principles-grid{grid-template-columns:repeat(2,1fr)}
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:40px}
+  section{padding:80px 0}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .services-bento{grid-template-columns:1fr}
+  .sv.big{grid-column:span 1}
+  .testimonials-grid{columns:1}
+  .projects-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .principles-grid{grid-template-columns:1fr}
+  .tools-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .final-card{padding:64px 28px}
+  .audit-card{padding:28px}
+  section{padding:64px 0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .hero-video-wrap video,.hero-nebula .orb::before{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor-dot" id="cursor"></div>
+
+<nav class="nav" id="nav">
+  <a href="#" class="wordmark" data-page="home">CHIRAN<span class="vdot"></span></a>
+  <div class="nav-links">
+    <a href="#" data-page="home" class="active">Home</a>
+    <a href="#" data-page="work">Work</a>
+    <a href="#" data-page="studio">Studio</a>
+    <a href="#" data-page="audit">Audit</a>
+    <a href="#" data-page="journal">Journal</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-pill"><span class="p-dot"></span>Q3 2026 · 2 slots</div>
+    <a href="#" data-page="audit" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
+  </div>
+</nav>
+
+<!-- ═════════ HOME ═════════ -->
+<main class="page active" id="page-home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-video-wrap">
+    <!-- When client video is supplied, uncomment and point src at a local file like assets/hero.mp4 -->
+    <!-- <video autoplay muted loop playsinline><source src="assets/hero.mp4" type="video/mp4"/></video> -->
+  </div>
+  <div class="hero-nebula" aria-hidden="true">
+    <div class="orb">
+      <div class="rings">
+        <div class="ring"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="ring r4"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <div class="label">LIFESTYLE BRAND DESIGN STUDIO<span class="dot"></span>COLOMBO · SRI LANKA</div>
+      <div class="hero-pill"><span class="p-dot"></span>Powering lifestyle brands for the AI era</div>
+    </div>
+
+    <div class="hero-center">
+      <h1 class="display hero-title" id="heroTitle">
+        <span class="line" data-text="Brands"></span>
+        <span class="line" data-text="people " data-italic="love."></span>
+        <span class="line line-3" data-text="Shipped in weeks."></span>
+      </h1>
+      <p class="hero-sub">I design and build websites for hotels, wellness, beauty, and lifestyle brands — beautifully crafted, engineered for the new AI search era.</p>
+      <div class="hero-ctas">
+        <a href="#" data-page="audit" class="btn btn-primary glow">Get a free AI audit <span class="arrow">→</span></a>
+        <a href="#featured" class="btn btn-secondary">See the work</a>
+      </div>
+    </div>
+
+    <aside class="hero-aside">
+      <span class="aside-label">What I build</span>
+      A one-designer studio shipping editorial, AI-citable websites for 50+ lifestyle brands — from boutique hotels to beauty founders — on Next.js and WordPress.
+    </aside>
+
+    <div class="hero-stats">
+      <div class="hstat"><div class="hs-num">50<em>+</em></div><div class="hs-lbl">Brands<br/>Designed</div></div>
+      <div class="hstat"><div class="hs-num">6<em> yrs</em></div><div class="hs-lbl">Studio<br/>Experience</div></div>
+      <div class="hstat"><div class="hs-num">99<em>%</em></div><div class="hs-lbl">Repeat<br/>Client Rate</div></div>
+      <div class="hstat"><div class="hs-num">3<em> wks</em></div><div class="hs-lbl">Site to<br/>Launch</div></div>
+    </div>
+  </div>
+
+  <div class="hero-video-label">Background video slot · drop MP4 at /assets/hero.mp4</div>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <!-- filled by JS for seamless loop -->
+  </div>
+</div>
+
+<!-- WHAT I DO — bento -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>The studio · what I do</div>
+      <h2 class="display section-title">A studio for lifestyle brands<br/>that want to be <span class="italic-violet">found</span>.</h2>
+    </div>
+
+    <div class="services-bento reveal">
+      <div class="sv big">
+        <span class="sv-kicker">01 · Flagship</span>
+        <h3>Website Design<br/>+ Build, in 3 weeks.</h3>
+        <p>Custom websites on Next.js or WordPress — strategy, brand application, front-end, CMS and launch — wired for AI citation on day one.</p>
+        <div class="schematic">
+          <div class="orbit"></div>
+          <div class="grid-lines"></div>
+          <svg class="wave-lines" viewBox="0 0 300 200" fill="none" stroke="rgba(169,75,255,.55)" stroke-width=".6">
+            <path d="M0 160 Q 80 120, 150 140 T 300 100" />
+            <path d="M0 140 Q 80 100, 150 120 T 300 80" opacity=".6"/>
+            <path d="M0 120 Q 80 80, 150 100 T 300 60" opacity=".35"/>
+            <path d="M0 180 Q 80 150, 150 170 T 300 130" opacity=".25"/>
+          </svg>
+        </div>
+        <div class="sv-foot">
+          <div class="sv-tags">
+            <span class="t">Next.js</span><span class="t">WordPress</span><span class="t">Shopify</span>
+          </div>
+          <a href="#" class="learn">Learn more <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">02 · Identity</span>
+        <h3>Brand +<br/>Visual Identity</h3>
+        <p>Logos, visual systems, guidelines — the kind that don't need a refresh in 18 months.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">Logo</span><span class="t">Guidelines</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">03 · AI Search</span>
+        <h3>AI Search<br/>Optimization</h3>
+        <p>Structured so ChatGPT, Claude and Perplexity cite your brand in their answers.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">Schema</span><span class="t">Entity</span><span class="t">llms.txt</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">04 · Lifecycle</span>
+        <h3>Care + Growth,<br/>after launch.</h3>
+        <p>Monthly retainers for the brands that want their site to keep improving, not just exist.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">Retainer</span><span class="t">Analytics</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">05 · Tooling</span>
+        <h3>AI-Native<br/>CMS setup.</h3>
+        <p>Clean content models, MCP hooks, and editor workflows your team will actually use.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">CMS</span><span class="t">MCP</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section id="featured">
+  <div class="wrap">
+    <div class="section-head reveal" style="flex-direction:row;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="mini-pill"><span class="p-dot"></span>Featured work · 2026</div>
+        <h2 class="display section-title">Recent <span class="italic-violet">work</span>.</h2>
+      </div>
+      <a href="#" data-page="work" class="btn btn-secondary">All projects <span class="arrow">→</span></a>
+    </div>
+
+    <div class="work-grid reveal">
+      <article class="wk wide">
+        <div class="wk-media">
+          <div class="ph"><span class="ph-tag">[ Sarisara Lanka — hero still ]</span></div>
+          <div class="wk-ov"></div>
+          <div class="wk-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="wk-body">
+          <div>
+            <h3 class="wk-title">Sarisara Lanka</h3>
+            <div class="wk-pills"><span class="p">Travel Marketplace</span><span class="p">WordPress</span><span class="p">AI Itinerary</span><span class="p">MCP Ready</span></div>
+          </div>
+          <a href="#" class="wk-link">Case study <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="wk">
+        <div class="wk-media">
+          <div class="ph"><span class="ph-tag">[ Villa Kaloya — lobby still ]</span></div>
+          <div class="wk-ov"></div>
+        </div>
+        <div class="wk-body">
+          <div>
+            <h3 class="wk-title">Villa Kaloya</h3>
+            <div class="wk-pills"><span class="p">Hospitality</span><span class="p">Next.js</span><span class="p">Bookings</span></div>
+          </div>
+          <a href="#" class="wk-link">→</a>
+        </div>
+      </article>
+
+      <article class="wk">
+        <div class="wk-media">
+          <div class="ph"><span class="ph-tag">[ Lumen Skincare — product flat-lay ]</span></div>
+          <div class="wk-ov"></div>
+        </div>
+        <div class="wk-body">
+          <div>
+            <h3 class="wk-title">Lumen Skincare</h3>
+            <div class="wk-pills"><span class="p">Beauty</span><span class="p">Shopify</span><span class="p">Brand System</span></div>
+          </div>
+          <a href="#" class="wk-link">→</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT LEAD MAGNET -->
+<section>
+  <div class="wrap">
+    <div class="audit-card reveal">
+      <div>
+        <div class="mini-pill" style="margin-bottom:20px"><span class="p-dot"></span>Free tool · limited capacity</div>
+        <h2 class="display" style="font-size:clamp(40px,5.4vw,72px);margin-bottom:18px">Is your website <span class="italic-violet">invisible</span> to AI?</h2>
+        <p style="color:var(--t2);font-size:17px;max-width:520px">Travelers, buyers, and clients ask ChatGPT, Claude and Perplexity for recommendations right now. I'll check if your brand shows up — and tell you how to fix it if it doesn't.</p>
+        <ul class="a-list">
+          <li>I run your domain through ChatGPT, Claude, and Perplexity</li>
+          <li>Check schema, entity clarity, and citation-readiness</li>
+          <li>Deliver a branded PDF within 48 hours</li>
+          <li>Free. No credit card, no sales call.</li>
+        </ul>
+        <a href="#" data-page="audit" class="btn btn-primary glow">Get your free audit <span class="arrow">→</span></a>
+      </div>
+      <div class="audit-mock">
+        <div class="m-head">
+          <div class="m-logo">Chiran<span class="d"></span></div>
+          <div class="m-date">AUDIT · 04·24·26</div>
+        </div>
+        <div class="m-body">
+          <div class="m-title">AI Search<br/>Visibility <em>Report</em></div>
+          <div class="m-row"><span>Domain</span><span class="mono">villakaloya.com</span></div>
+          <div class="m-row"><span>ChatGPT cites</span><span class="mono">2 / 10</span></div>
+          <div class="m-row"><span>Claude cites</span><span class="mono">1 / 10</span></div>
+          <div class="m-row"><span>Perplexity cites</span><span class="mono">3 / 10</span></div>
+          <div class="m-row"><span>Schema found</span><span class="mono">Partial</span></div>
+          <div class="m-score">
+            <div class="lbl">Citation<br/>Readiness</div>
+            <div class="big">34<span style="font-size:18px">%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>How it works</div>
+      <h2 class="display section-title">Simple process.<br/>Serious <span class="italic-violet">results</span>.</h2>
+    </div>
+    <div class="process-rail reveal">
+      <div class="process-grid">
+        <div class="ps">
+          <div class="node">01</div>
+          <div class="week">30 minutes</div>
+          <h4>Discovery Call</h4>
+          <p>We talk about your brand, your audience, and what success looks like after launch.</p>
+        </div>
+        <div class="ps">
+          <div class="node">02</div>
+          <div class="week">Week One</div>
+          <h4>Strategy + Wireframes</h4>
+          <p>Content, positioning, and site architecture — with AI-search structure baked in.</p>
+        </div>
+        <div class="ps">
+          <div class="node">03</div>
+          <div class="week">Week Two</div>
+          <h4>Design + Build</h4>
+          <p>Visual design, front-end and CMS — built the way I'd build my own studio site.</p>
+        </div>
+        <div class="ps">
+          <div class="node">04</div>
+          <div class="week">Week Three</div>
+          <h4>Launch + Handover</h4>
+          <p>We ship it live, you get a Loom walkthrough and 30 days of support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI SHIFT STATS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>The shift · Why this matters</div>
+      <h2 class="display section-title">Search is <span class="italic-violet">changing</span>.<br/>Are you ready?</h2>
+    </div>
+    <div class="sc-grid reveal">
+      <div class="sc">
+        <div class="big" data-count="47">0<span class="u">%</span></div>
+        <div class="desc">of travelers plan trips using an AI chatbot as part of their research — rising every quarter.</div>
+        <div class="mini-chart">
+          <div class="bar" style="height:18%"></div><div class="bar" style="height:32%"></div>
+          <div class="bar" style="height:46%"></div><div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:72%"></div><div class="bar" style="height:90%"></div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="big"><span style="font-style:italic;color:var(--violet-2)">1</span> <span style="color:var(--t3);font-style:italic;font-weight:400;font-size:40px">in</span> <span data-count="4">0</span></div>
+        <div class="desc">Google searches now return an AI Overview above the first organic result.</div>
+        <div class="mini-chart">
+          <div class="bar" style="height:82%"></div><div class="bar" style="height:28%"></div>
+          <div class="bar" style="height:22%"></div><div class="bar" style="height:26%"></div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="big" data-count="12">0<span class="u">%</span></div>
+        <div class="desc">of small-and-midsized lifestyle sites are structurally ready to be cited by an LLM. The rest are invisible.</div>
+        <div class="mini-chart">
+          <div class="bar" style="height:88%"></div><div class="bar" style="height:86%"></div>
+          <div class="bar" style="height:84%"></div><div class="bar" style="height:22%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>What clients say</div>
+      <h2 class="display section-title">Wall of <span class="italic-violet">love</span>.</h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="tm lg"><p class="quote">"[TESTIMONIAL 1 — Hero quote. Specific outcome, specific tone.]"</p><div class="who"><div class="avatar">A</div><div><div class="name">[Client Name]</div><div class="role">Founder, [Brand]</div></div></div></div>
+      <div class="tm"><p class="quote">"[TESTIMONIAL 2 — speed of delivery and how the site felt from day one.]"</p><div class="who"><div class="avatar a2">K</div><div><div class="name">[Client Name]</div><div class="role">Owner, Boutique Hotel</div></div></div></div>
+      <div class="tm accent sm"><p class="quote">"[TESTIMONIAL 3 — short, punchy. Pull-quote material.]"</p><div class="who"><div class="avatar a3">M</div><div><div class="name">[Client Name]</div><div class="role">Director, Wellness Retreat</div></div></div></div>
+      <div class="tm sm"><p class="quote">"[TESTIMONIAL 4 — about the AI audit process.]"</p><div class="who"><div class="avatar a4">P</div><div><div class="name">[Client Name]</div><div class="role">CMO, Beauty Brand</div></div></div></div>
+      <div class="tm"><p class="quote">"[TESTIMONIAL 5 — about handover and docs.]"</p><div class="who"><div class="avatar a5">D</div><div><div class="name">[Client Name]</div><div class="role">Developer, Real Estate</div></div></div></div>
+      <div class="tm lg"><p class="quote">"[TESTIMONIAL 6 — the long emotional one. Trust, craft, being understood.]"</p><div class="who"><div class="avatar a6">R</div><div><div class="name">[Client Name]</div><div class="role">Founder, Lifestyle Product</div></div></div></div>
+      <div class="tm sm"><p class="quote">"[TESTIMONIAL 7 — bookings and revenue impact after launch.]"</p><div class="who"><div class="avatar a7">S</div><div><div class="name">[Client Name]</div><div class="role">GM, Eco Resort</div></div></div></div>
+      <div class="tm"><p class="quote">"[TESTIMONIAL 8 — referrals and why they came back.]"</p><div class="who"><div class="avatar a8">T</div><div><div class="name">[Client Name]</div><div class="role">Head of Brand, Eldercare</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <div class="wrap">
+    <div class="final-card reveal">
+      <div class="final-orbs"></div>
+      <h2 class="display">Let's build<br/>something <span class="italic-violet">unforgettable</span>.</h2>
+      <p class="sub">Currently booking Q3 2026. 2 slots remaining.</p>
+      <div class="ctas">
+        <a href="#" data-page="audit" class="btn btn-primary glow">Start a project <span class="arrow">→</span></a>
+        <a href="mailto:hello@chiranperera.com" class="email-link">hello@chiranperera.com <span>↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="wordmark" style="margin-bottom:8px">CHIRAN<span class="vdot"></span></div>
+        <p class="foot-tag">A lifestyle brand design studio. Beautiful websites, engineered for the AI search era.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Studio</h5>
+        <ul><li><a href="#" data-page="work">Work</a></li><li><a href="#" data-page="studio">Studio</a></li><li><a href="#">Journal</a></li><li><a href="#" data-page="audit">Audit</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul><li><a href="mailto:hello@chiranperera.com">hello@chiranperera.com</a></li><li><a href="#">Schedule a call</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-small">
+      <div>© 2026 Chiran Perera. Made with care in Colombo, Sri Lanka.</div>
+      <div class="mono">v2026.04</div>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- ═════════ WORK ═════════ -->
+<main class="page" id="page-work">
+  <section class="short-hero">
+    <div class="hero-nebula" aria-hidden="true"><div class="orb"><div class="rings"><div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div></div></div></div>
+    <div class="wrap short-hero-inner">
+      <div class="mini-pill"><span class="p-dot"></span>Selected work · 2020–2026</div>
+      <h1 class="display" style="margin-top:20px">Every project,<br/>every <span class="italic-violet">lesson</span>.</h1>
+      <p style="max-width:560px;color:var(--t2);font-size:17px">A tight portfolio of lifestyle brands I've built with — from boutique hotels in the hills to wellness brands ready for global launch.</p>
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="hospitality">Hospitality</button>
+        <button class="chip" data-filter="wellness">Wellness</button>
+        <button class="chip" data-filter="beauty">Beauty</button>
+        <button class="chip" data-filter="real-estate">Real Estate</button>
+        <button class="chip" data-filter="products">Products</button>
+        <button class="chip" data-filter="education">Education</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final-card reveal">
+        <div class="final-orbs"></div>
+        <h2 class="display" style="font-size:clamp(44px,6vw,80px)">Your brand, <span class="italic-violet">next</span>.</h2>
+        <p class="sub">Q3 2026 calendar opens May 1. Two slots.</p>
+        <div class="ctas"><a href="#" data-page="audit" class="btn btn-primary glow">Start a project <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═════════ STUDIO ═════════ -->
+<main class="page" id="page-studio">
+  <section class="studio-hero">
+    <div class="hero-nebula" aria-hidden="true" style="opacity:.7"><div class="orb" style="width:min(50vw,560px);transform:translate(-28vw,-5vh)"><div class="rings"><div class="ring"></div><div class="ring r2"></div></div></div></div>
+    <div class="wrap" style="position:relative;z-index:3">
+      <div class="mini-pill"><span class="p-dot"></span>The studio · Colombo, Sri Lanka</div>
+      <h1 class="display">
+        <span class="line">One designer.</span>
+        <span class="line">Six years.</span>
+        <span class="line">Fifty <span class="italic-violet">brands</span>.</span>
+      </h1>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="studio-two">
+        <div class="story">
+          <p>I'm Chiran. I run a small lifestyle brand design studio out of Colombo. For six years I've been quietly building websites for the kinds of brands I love — boutique hotels in the hill country, wellness retreats on the coast, beauty founders shipping out of their kitchens, real estate developers with something actually worth selling.</p>
+          <p>The studio started the way most do: a few 99designs wins, a referral, a second referral, and then suddenly 50+ brands later you realize you've accidentally built a practice. I picked a lane — lifestyle — because it's where design matters most. If the site doesn't feel like the brand, the booking doesn't happen.</p>
+          <p>Now there's a second shift. People ask ChatGPT, Claude and Perplexity for hotel picks, product recommendations and therapists instead of opening Google. Lifestyle brands that don't structure their sites for that conversation are, quietly, going missing. That's the problem I'm building around in 2026.</p>
+        </div>
+        <div class="portrait"><span class="ph-tag">[ Portrait of Chiran · Colombo · 4×5 ]</span></div>
+      </div>
+
+      <div class="section-head" style="margin:120px 0 40px">
+        <div class="mini-pill"><span class="p-dot"></span>How I work</div>
+        <h2 class="display section-title">Four <span class="italic-violet">principles</span>.</h2>
+      </div>
+      <div class="principles-grid reveal">
+        <div class="pr"><div class="num">01 / PRINCIPLE</div><div class="p-text">Design is a commercial act.</div></div>
+        <div class="pr"><div class="num">02 / PRINCIPLE</div><div class="p-text">Speed is a feature.</div></div>
+        <div class="pr"><div class="num">03 / PRINCIPLE</div><div class="p-text">Every brand has a soul.</div></div>
+        <div class="pr"><div class="num">04 / PRINCIPLE</div><div class="p-text">Ship, then improve.</div></div>
+      </div>
+
+      <div class="section-head" style="margin:120px 0 40px">
+        <div class="mini-pill"><span class="p-dot"></span>Tools of the trade</div>
+        <h2 class="display section-title">The <span class="italic-violet">stack</span>.</h2>
+      </div>
+      <div class="tools-grid reveal">
+        <div class="tool"><div class="t-name">Claude Design</div><div class="t-role">Ideation, spec, mockup</div></div>
+        <div class="tool"><div class="t-name">Claude Code</div><div class="t-role">Production front-end</div></div>
+        <div class="tool"><div class="t-name">Figma</div><div class="t-role">Systems, handoff</div></div>
+        <div class="tool"><div class="t-name">Next.js</div><div class="t-role">Custom builds</div></div>
+        <div class="tool"><div class="t-name">WordPress</div><div class="t-role">Editorial sites</div></div>
+        <div class="tool"><div class="t-name">Adobe CS</div><div class="t-role">Identity, print</div></div>
+        <div class="tool"><div class="t-name">Vercel</div><div class="t-role">Hosting, preview</div></div>
+        <div class="tool"><div class="t-name">Notion</div><div class="t-role">Brief, spec, delivery</div></div>
+      </div>
+
+      <div class="section-head" style="margin:120px 0 40px">
+        <div class="mini-pill"><span class="p-dot"></span>Availability</div>
+        <h2 class="display section-title">Currently booking <span class="italic-violet">Q3 2026</span>.</h2>
+      </div>
+      <div class="availability-wrap">
+        <p style="color:var(--t2);font-size:17px">Two engagement slots open each quarter. Green days are available to start that week. Grey days are booked — we can still shape the brief for the next cycle.</p>
+        <div class="cal-mini">
+          <div class="cal"><div class="cal-head"><div class="cal-month">July</div><div class="cal-year">2026</div></div><div class="cal-days" id="cal1"></div></div>
+          <div class="cal"><div class="cal-head"><div class="cal-month">August</div><div class="cal-year">2026</div></div><div class="cal-days" id="cal2"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final-card reveal">
+        <div class="final-orbs"></div>
+        <h2 class="display" style="font-size:clamp(44px,6vw,82px)">Want to work <span class="italic-violet">together</span>?</h2>
+        <p class="sub">Start with a free AI audit, or tell me about the project.</p>
+        <div class="ctas"><a href="#" data-page="audit" class="btn btn-primary glow">Start here <span class="arrow">→</span></a><a href="mailto:hello@chiranperera.com" class="email-link">hello@chiranperera.com <span>↗</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═════════ AUDIT ═════════ -->
+<main class="page" id="page-audit">
+  <section class="audit-hero">
+    <div class="hero-nebula" aria-hidden="true" style="opacity:.7"><div class="orb" style="width:min(46vw,520px);transform:translate(28vw,-8vh)"><div class="rings"><div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div></div></div></div>
+
+    <div class="wrap audit-hero-grid">
+      <div>
+        <div class="mini-pill"><span class="p-dot"></span>Free AI search audit</div>
+        <h1 class="display">See where your brand<br/>goes <span class="italic-violet">missing</span> in AI.</h1>
+        <p class="sub">Travelers, buyers and clients are asking ChatGPT, Claude and Perplexity for recommendations right now. Is your brand in the answer?</p>
+      </div>
+      <form class="audit-form" id="auditForm" novalidate>
+        <h3>Request your audit</h3>
+        <div class="field"><label for="url">Your website URL</label><input type="url" id="url" name="url" placeholder="https://yourbrand.com" required/></div>
+        <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Chiran Perera" required/></div>
+        <div class="field"><label for="email">Your email</label><input type="email" id="email" name="email" placeholder="you@brand.com" required/></div>
+        <div class="field"><label for="industry">Your industry</label><select id="industry" name="industry" required><option value="">Select one…</option><option>Hospitality · Hotels</option><option>Wellness · Retreat</option><option>Beauty · Skincare</option><option>Real Estate</option><option>Lifestyle Products</option><option>Education</option><option>Eldercare</option><option>Other</option></select></div>
+        <button type="submit" class="btn btn-primary glow" style="justify-content:center">Run my audit <span class="arrow">→</span></button>
+        <p class="small-note">Your audit lands in your inbox within 48 hours. No credit card, no sales call.</p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mini-pill"><span class="p-dot"></span>What's inside your audit</div>
+        <h2 class="display section-title">10 queries.<br/>3 engines.<br/>1 clear <span class="italic-violet">verdict</span>.</h2>
+      </div>
+      <div class="audit-card reveal" style="padding:40px">
+        <div class="deliverables">
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Visibility score across ChatGPT, Claude, Perplexity</div><div class="d-desc">Ten category queries per engine — counted, screenshotted, scored.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Schema + structured data audit</div><div class="d-desc">What's present, what's missing, what to add for citation-readiness.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Competitor comparison</div><div class="d-desc">Who's being cited for the queries you should own.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Entity clarity check</div><div class="d-desc">Does your brand read as a clear entity, or a vague content soup?</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Top 5 fixes, prioritized</div><div class="d-desc">Ordered by impact, not effort. Copy-paste ready where possible.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Branded PDF, in 48 hours</div><div class="d-desc">Readable by humans, actionable by developers, shareable with stakeholders.</div></div></div>
+        </div>
+        <div class="audit-mock">
+          <div class="m-head"><div class="m-logo">Chiran<span class="d"></span></div><div class="m-date">REPORT · 04·24·26</div></div>
+          <div class="m-body">
+            <div class="m-title">AI Search<br/>Visibility <em>Report</em></div>
+            <div class="m-row"><span>Domain</span><span class="mono">yourbrand.com</span></div>
+            <div class="m-row"><span>ChatGPT cites</span><span class="mono">2 / 10</span></div>
+            <div class="m-row"><span>Claude cites</span><span class="mono">1 / 10</span></div>
+            <div class="m-row"><span>Perplexity cites</span><span class="mono">3 / 10</span></div>
+            <div class="m-row"><span>Schema found</span><span class="mono">Partial</span></div>
+            <div class="m-score"><div class="lbl">Citation<br/>Readiness</div><div class="big">34<span style="font-size:18px">%</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mini-pill"><span class="p-dot"></span>The shift</div>
+        <h2 class="display section-title">Search is <span class="italic-violet">changing</span>.<br/>Are you ready?</h2>
+      </div>
+      <div class="sc-grid reveal">
+        <div class="sc"><div class="big" data-count="47">0<span class="u">%</span></div><div class="desc">of travelers plan trips using an AI chatbot as part of their research.</div><div class="mini-chart"><div class="bar" style="height:20%"></div><div class="bar" style="height:34%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:64%"></div><div class="bar" style="height:78%"></div><div class="bar" style="height:90%"></div></div></div>
+        <div class="sc"><div class="big"><span style="font-style:italic;color:var(--violet-2)">1</span> <span style="color:var(--t3);font-style:italic;font-weight:400;font-size:40px">in</span> <span data-count="4">0</span></div><div class="desc">Google searches now return an AI Overview above the first organic result.</div><div class="mini-chart"><div class="bar" style="height:82%"></div><div class="bar" style="height:26%"></div><div class="bar" style="height:22%"></div><div class="bar" style="height:28%"></div></div></div>
+        <div class="sc"><div class="big" data-count="12">0<span class="u">%</span></div><div class="desc">of lifestyle sites are structurally ready to be cited by an LLM. The rest are invisible.</div><div class="mini-chart"><div class="bar" style="height:88%"></div><div class="bar" style="height:86%"></div><div class="bar" style="height:84%"></div><div class="bar" style="height:22%"></div></div></div>
+      </div>
+      <p style="margin-top:40px;max-width:640px;color:var(--t2);font-size:16px">Sites that get cited in AI answers in 2026 will own the category. The rest will lose traffic quietly, for years, before they notice. The audit tells you which one you're on track for.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;align-items:center;margin:0 auto 48px">
+        <div class="mini-pill"><span class="p-dot"></span>FAQ</div>
+        <h2 class="display section-title">Questions, <span class="italic-violet">answered</span>.</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq"><button class="faq-q">What exactly will I get? <span class="faq-toggle">+</span></button><div class="faq-a">A branded PDF delivered to your inbox within 48 hours. It includes the visibility score across three AI engines, a schema audit, competitor comparison, entity clarity check, and a prioritized list of the top five fixes.</div></div>
+        <div class="faq"><button class="faq-q">How is this different from SEO? <span class="faq-toggle">+</span></button><div class="faq-a">SEO optimizes for Google's blue-link results. This audit tests for something newer: whether LLMs cite your brand in their answers when a human asks them for a recommendation. Some overlap, but different rules.</div></div>
+        <div class="faq"><button class="faq-q">How do you run the audit? <span class="faq-toggle">+</span></button><div class="faq-a">Ten representative category queries per engine, executed against ChatGPT, Claude, and Perplexity. Screenshots captured. Schema and structured-data scanned via tooling, then reviewed by hand.</div></div>
+        <div class="faq"><button class="faq-q">Is my data shared anywhere? <span class="faq-toggle">+</span></button><div class="faq-a">Never. Your domain and business context stay between us and the audit file. I don't sell leads, don't add you to a newsletter, don't pass details to third parties.</div></div>
+        <div class="faq"><button class="faq-q">What if I don't have a website yet? <span class="faq-toggle">+</span></button><div class="faq-a">Then the audit isn't right for you yet — the build service is. Reach out directly and we'll talk about what to launch with, wired for AI citation on day one.</div></div>
+        <div class="faq"><button class="faq-q">Do I have to buy anything after? <span class="faq-toggle">+</span></button><div class="faq-a">No. The audit is genuinely free, with no follow-up sales call. If you want help fixing what it surfaces, the studio is here. If you'd rather fix it yourself, the PDF is written so you can.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final-card reveal">
+        <div class="final-orbs"></div>
+        <h2 class="display" style="font-size:clamp(44px,6vw,82px)">Stop being invisible.<br/>Get the <span class="italic-violet">audit</span>.</h2>
+        <p class="sub">Two minutes to fill out. 48 hours to answer. Free.</p>
+        <div class="ctas"><a href="#" onclick="document.getElementById('url')?.focus()" class="btn btn-primary glow">Request my audit <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═════════ JOURNAL placeholder ═════════ -->
+<main class="page" id="page-journal">
+  <section class="short-hero">
+    <div class="hero-nebula" aria-hidden="true"><div class="orb"><div class="rings"><div class="ring"></div><div class="ring r2"></div></div></div></div>
+    <div class="wrap short-hero-inner" style="text-align:center">
+      <div class="mini-pill" style="margin:0 auto"><span class="p-dot"></span>Journal · Coming soon</div>
+      <h1 class="display" style="margin-top:24px">Notes from the <span class="italic-violet">studio</span>.</h1>
+      <p style="color:var(--t2);font-size:17px;max-width:520px;margin:24px auto 28px">Essays on lifestyle brand building, AI search, and running a one-person studio. First issue May 2026.</p>
+      <div class="ctas" style="display:flex;justify-content:center"><a href="#" data-page="home" class="btn btn-primary glow">Back home <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What exactly will I get?","acceptedAnswer":{"@type":"Answer","text":"A branded PDF within 48 hours with a visibility score, schema audit, competitor comparison, and top five fixes."}},{"@type":"Question","name":"How is this different from SEO?","acceptedAnswer":{"@type":"Answer","text":"SEO optimizes for Google blue links. This tests whether LLMs cite your brand in their answers."}}]}
+</script>
+
+<script>
+(function(){
+  // cursor
+  const cursor = document.getElementById('cursor');
+  let cx=0,cy=0,tx=0,ty=0;
+  addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+  (function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cursor.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
+  document.addEventListener('mouseover',e=>{if(e.target.closest('a,button,input,select,textarea,.tm,.wk,.pc,.tool,.sv,.sc,.ps,.pr,.dv,.faq,.audit-mock')) cursor.classList.add('hover')});
+  document.addEventListener('mouseout',e=>{if(e.target.closest('a,button,input,select,textarea,.tm,.wk,.pc,.tool,.sv,.sc,.ps,.pr,.dv,.faq,.audit-mock')) cursor.classList.remove('hover')});
+
+  // nav scroll
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+  // page routing
+  const pages=document.querySelectorAll('main.page');
+  const navLinks=document.querySelectorAll('.nav-links a');
+  function setPage(name){
+    pages.forEach(p=>p.classList.toggle('active',p.id==='page-'+name));
+    navLinks.forEach(a=>a.classList.toggle('active',a.dataset.page===name));
+    scrollTo({top:0,behavior:'instant'});
+    observeReveals();
+    animateCounters();
+  }
+  document.addEventListener('click',e=>{
+    const l=e.target.closest('[data-page]');
+    if(l){e.preventDefault();setPage(l.dataset.page)}
+  });
+
+  // reveal
+  let io;
+  function observeReveals(){
+    if(io) io.disconnect();
+    io=new IntersectionObserver(ents=>{
+      ents.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.1,rootMargin:'0px 0px -80px 0px'});
+    document.querySelectorAll('.page.active .reveal').forEach(el=>io.observe(el));
+  }
+  observeReveals();
+
+  // hero char stagger
+  (function stagger(){
+    const title=document.getElementById('heroTitle');
+    if(!title) return;
+    title.querySelectorAll('.line').forEach((line,li)=>{
+      const txt=line.dataset.text||'', ital=line.dataset.italic||'';
+      let idx=0; line.innerHTML='';
+      const base=li*160;
+      const put=(ch,wrap)=>{
+        const s=document.createElement('span');
+        s.style.display='inline-block';
+        s.style.opacity='0';
+        s.style.transform='translateY(12px)';
+        s.style.animation='charIn .6s forwards';
+        s.style.animationDelay=(base+idx*28)+'ms';
+        s.textContent=ch===' '?'\u00A0':ch;
+        (wrap||line).appendChild(s); idx++;
+      };
+      for(const ch of txt) put(ch);
+      if(ital){
+        const w=document.createElement('span');w.className='italic-violet';
+        for(const ch of ital) put(ch,w);
+        line.appendChild(w);
+      }
+    });
+  })();
+  const sty=document.createElement('style');sty.textContent='@keyframes charIn{to{opacity:1;transform:none}}';document.head.appendChild(sty);
+
+  // marquee build
+  (function mq(){
+    const el=document.getElementById('marquee');
+    if(!el) return;
+    const items=['Hospitality','Wellness','Beauty','Real Estate','Lifestyle Products','Education','Eldercare','AI Search','Brand Identity','Hospitality','Wellness','Beauty','Real Estate','Lifestyle Products','Education','Eldercare','AI Search','Brand Identity'];
+    const s=items.map(i=>`<span>${i}</span>`).join('');
+    el.innerHTML=s+s;
+  })();
+
+  // FAQ
+  document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+
+  // audit form
+  const form=document.getElementById('auditForm');
+  if(form){
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      if(!form.url.value||!form.name.value||!form.email.value||!form.industry.value){alert('Please fill every field.');return;}
+      form.innerHTML=`<h3 class="display" style="font-size:26px;letter-spacing:-.01em">Audit on the way.</h3><p style="color:var(--t2)">Thanks, ${form.name.value.split(' ')[0]}. Your audit for <span class="mono" style="color:#fff">${form.url.value}</span> is queued. Expect a branded PDF within 48 hours.</p><div style="padding:14px 16px;border-radius:10px;background:rgba(119,0,255,.12);border:.5px solid rgba(119,0,255,.3);color:#fff;font-size:14px">No follow-up. No newsletter. Just the audit.</div>`;
+    });
+  }
+
+  // projects
+  const projects=[
+    {n:'Sarisara Lanka',c:'hospitality',t:'Travel Marketplace',d:'WordPress + AI itinerary builder, MCP-ready.'},
+    {n:'Villa Kaloya',c:'hospitality',t:'Boutique Hotel',d:'Hill-country lodge on Next.js, bookings integrated.'},
+    {n:'Lumen Skincare',c:'beauty',t:'Beauty · DTC',d:'Shopify brand system for a clean-beauty founder.'},
+    {n:'Anuhas Wellness',c:'wellness',t:'Retreat',d:'Ayurvedic retreat, seasonal packages, multilingual.'},
+    {n:'Serendib Estates',c:'real-estate',t:'Developer',d:'Plantation-era property portfolio, Colombo.'},
+    {n:'Kōyō Hinoki',c:'products',t:'Home Fragrance',d:'Editorial shop for a Japanese-Lankan incense atelier.'},
+    {n:'Paduru Academy',c:'education',t:'Platform',d:'Online music academy — courses, bookings, streams.'},
+    {n:'Muse Bay',c:'hospitality',t:'Surf Hotel',d:'South-coast surf hotel. Editorial. Seasonal. Fast.'},
+    {n:'Herba Clinic',c:'wellness',t:'Clinical',d:'Naturopathy clinic with protocol-based content.'},
+    {n:'Ondulee Studio',c:'beauty',t:'Salon',d:'A Colombo hair atelier, booked three months ahead.'},
+    {n:'Kalpitiya Homes',c:'real-estate',t:'Lagoon Villas',d:'Villas for rent and sale, lagoon-side.'},
+    {n:'Chaga Goods',c:'products',t:'Wellness CPG',d:'Functional mushroom brand, shipped in 16 days.'}
+  ];
+  const grid=document.getElementById('projectsGrid');
+  if(grid){
+    const render=(f)=>{const list=f==='all'?projects:projects.filter(p=>p.c===f);grid.innerHTML=list.map(p=>`<a href="#" class="pc"><div class="pc-media"><div class="ph"><span class="ph-tag">[ ${p.n} ]</span></div></div><div class="pc-body"><div class="pc-tag">${p.t}</div><div class="pc-name">${p.n}</div><div class="pc-desc">${p.d}</div></div></a>`).join('')};
+    render('all');
+    document.querySelectorAll('#filters .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('#filters .chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');render(c.dataset.filter)}));
+  }
+
+  // calendar
+  function renderCal(id,y,m,today,booked){
+    const el=document.getElementById(id); if(!el) return;
+    const firstDay=new Date(y,m,1).getDay();
+    const last=new Date(y,m+1,0).getDate();
+    const names=['S','M','T','W','T','F','S'];
+    let h=names.map(n=>`<div class="d-name">${n}</div>`).join('');
+    for(let i=0;i<firstDay;i++) h+='<div class="d" style="color:transparent">·</div>';
+    for(let d=1;d<=last;d++){const cls=['d'];if(booked.includes(d)) cls.push('booked');else if(d>=today) cls.push('open');if(id==='cal1'&&d===today) cls.push('today');h+=`<div class="${cls.join(' ')}">${d}</div>`}
+    el.innerHTML=h;
+  }
+  renderCal('cal1',2026,6,6,[1,2,3,13,14,15,16,17,22,23,29,30]);
+  renderCal('cal2',2026,7,0,[3,4,5,10,11,12,19,20,26,27,28]);
+
+  // counters
+  function animateCounters(){
+    document.querySelectorAll('.page.active [data-count]').forEach(el=>{
+      const target=+el.dataset.count; if(el.dataset.done) return;
+      el.dataset.done='1';
+      const dur=1400, start=performance.now();
+      const suffix=el.innerHTML.replace(/^\d+/, '');
+      (function tick(now){
+        const p=Math.min(1,(now-start)/dur);
+        const eased=1-Math.pow(1-p,3);
+        const v=Math.round(target*eased);
+        el.innerHTML=v+suffix;
+        if(p<1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }
+  // kick counters when they enter viewport
+  const ci=new IntersectionObserver(ents=>ents.forEach(en=>{if(en.isIntersecting){animateCounters();ci.unobserve(en.target)}}),{threshold:.3});
+  document.querySelectorAll('[data-count]').forEach(el=>ci.observe(el));
+})();
+</script>
+
+</body>
+</html>

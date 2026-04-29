@@ -1,0 +1,3081 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chiran Perera — Lifestyle brand design studio · Sri Lanka</title>
+<meta name="description" content="A cinematic lifestyle brand design studio in Sri Lanka. Websites for hotels, wellness, beauty and lifestyle brands — engineered for the AI search era." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Chiran Perera","url":"https://chiranperera.com","founder":{"@type":"Person","name":"Chiran Perera","jobTitle":"Designer"},"address":{"@type":"PostalAddress","addressLocality":"Colombo","addressCountry":"Sri Lanka"},"description":"Lifestyle brand design studio — websites optimized for AI search."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Sarisara Lanka brand tokens */
+  --violet:#7700FF; --violet-2:#7700FF; --violet-light:#F0E5FF; --violet-dark:#5C00CC;
+  --green:#00ECFC; --green-light:#D6F9FD; --green-dark:#00A8B8;
+  --cyan:#00ECFC; --cyan-2:#00BCCC; --cyan-soft:rgba(0,236,252,.14);
+  --gold:#FFB700; --gold-light:#FFF5D6;
+  --error:#E5243B; --error-light:#FDEAEC;
+  --ink:#090902; --text-primary:#090902; --text-secondary:#5A5A6E; --text-tertiary:#8E8EA0;
+  --bg:#FFFFFF; --surface:#FFFFFF; --muted:#F0F0F5; --canvas:#F8F8F8;
+  --border:#E8E8EE; --border-2:#D8D8E0;
+  --violet-glow:rgba(119,0,255,.18);
+
+  /* legacy token aliases used throughout the file — now point at the light palette */
+  --black:#FFFFFF; --black-2:#FFFFFF; --black-3:#F8F8F8; --black-4:#F0F0F5;
+  --mist:#F0E5FF; --white:#FFFFFF;
+  --t1:#090902; --t2:#5A5A6E; --t3:#8E8EA0; --t4:#B8B8C4;
+  --bd:#E8E8EE; --bd-2:#D8D8E0;
+  --card-bg:#FFFFFF;
+  --card-edge:linear-gradient(180deg,#E8E8EE,#F0F0F5);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text-primary);font-family:'DM Sans',system-ui,sans-serif;font-weight:400;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{cursor:none}
+@media (pointer:coarse){body{cursor:auto}.cursor-dot{display:none!important}}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;border:0;background:none;color:inherit;cursor:none}
+@media(pointer:coarse){button,a{cursor:pointer}}
+img{display:block;max-width:100%}
+
+/* ambient bg — subtle off-white */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:
+  radial-gradient(700px 500px at 10% 10%, rgba(119,0,255,.05), transparent 60%),
+  radial-gradient(800px 600px at 90% 30%, rgba(48,179,0,.04), transparent 60%);
+}
+body::after{display:none}
+
+/* cursor */
+.cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--violet);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;box-shadow:0 0 14px rgba(119,0,255,.5)}
+.cursor-dot.hover{width:28px;height:28px;background:rgba(119,0,255,.25)}
+
+/* type — DM Sans everywhere, bold two-color headings */
+.display{font-family:'DM Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.italic-violet{color:var(--violet);font-weight:800;font-style:normal}
+/* second accent color - alternates green/gold in some places */
+.italic-green{color:var(--green);font-weight:800;font-style:normal}
+/* override italic-violet in certain spots with green via class */
+.display .italic-violet{color:var(--violet)}
+.label{font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary)}
+.label .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--violet);vertical-align:middle;margin:0 10px 2px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--violet);background:var(--violet-light);padding:2px 6px;border-radius:4px;font-size:.92em}
+
+/* layout */
+.wrap{max-width:1360px;margin:0 auto;padding:0 40px}
+section{padding:120px 0;position:relative}
+
+/* nav */
+.nav{position:fixed;top:20px;left:20px;right:20px;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:10px 14px 10px 22px;border-radius:100px;background:rgba(255,255,255,.82);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border:1px solid var(--border);transition:all .3s ease;box-shadow:0 4px 24px -12px rgba(9,9,2,.08)}
+.nav.scrolled{background:rgba(255,255,255,.95);box-shadow:0 10px 40px -12px rgba(9,9,2,.14)}
+.wordmark{font-family:'DM Sans',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em;display:flex;align-items:center;gap:6px;color:var(--ink)}
+.wordmark .vdot{width:7px;height:7px;border-radius:50%;background:var(--violet);display:inline-block;box-shadow:0 0 8px rgba(119,0,255,.5)}
+.nav-links{display:flex;gap:4px;font-size:14px;font-weight:500}
+.nav-links a{position:relative;padding:8px 14px;border-radius:100px;color:var(--text-secondary);transition:all .22s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{color:var(--violet);background:var(--violet-light)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-pill{padding:6px 12px;border-radius:100px;border:1px solid var(--border);font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px;color:var(--text-secondary);background:var(--canvas)}
+.nav-pill .p-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(48,179,0,.5)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;font-size:14px;font-weight:600;transition:transform .18s,box-shadow .24s,background .24s,color .24s,border-color .24s;white-space:nowrap}
+.btn-primary{background:var(--violet);color:#fff;box-shadow:0 8px 24px -10px rgba(119,0,255,.5)}
+.btn-primary:hover{background:var(--violet-dark);box-shadow:0 14px 32px -10px rgba(119,0,255,.6)}
+.btn-primary.glow{box-shadow:0 10px 28px -8px rgba(119,0,255,.45)}
+.btn-primary.glow:hover{box-shadow:0 16px 40px -10px rgba(119,0,255,.6)}
+.btn-primary:active{transform:scale(.98)}
+.btn-secondary{background:#fff;border:1px solid var(--border);color:var(--ink)}
+.btn-secondary:hover{background:var(--violet-light);border-color:var(--violet);color:var(--violet)}
+.btn .arrow{display:inline-block;transition:transform .2s}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* glass card primitive */
+.glass{position:relative;background:#fff;border-radius:20px;padding:1px;overflow:hidden;isolation:isolate;border:1px solid var(--border)}
+.glass::before{display:none}
+.glass-inner{border-radius:19px;background:#fff;position:relative;z-index:1}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ========== HERO ========== */
+.hero{min-height:100vh;padding:140px 0 80px;position:relative;overflow:hidden;background:#fff}
+.hero-video-wrap{display:none}
+
+/* soft brand aurora background replacing dark video */
+.hero-nebula{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero-nebula .orb{position:absolute;left:50%;top:50%;transform:translate(-50%,-40%);width:min(80vw,900px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(119,0,255,.18) 0%,rgba(119,0,255,.08) 35%,transparent 65%);filter:blur(20px);animation:orbBreathe 8s ease-in-out infinite}
+.hero-nebula .orb::before{content:'';position:absolute;inset:20%;border-radius:50%;background:radial-gradient(circle,rgba(48,179,0,.14) 0%,transparent 60%);filter:blur(24px)}
+.hero-nebula .orb::after{display:none}
+.hero-nebula .rings{position:absolute;left:50%;top:50%;transform:translate(-50%,-40%);width:min(70vw,780px);aspect-ratio:1}
+.hero-nebula .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(119,0,255,.08);animation:ringPulse 6s ease-in-out infinite}
+.hero-nebula .ring.r2{inset:-6%;animation-delay:-2s;border-color:rgba(119,0,255,.06)}
+.hero-nebula .ring.r3{inset:-14%;animation-delay:-4s;border-color:rgba(48,179,0,.06)}
+.hero-nebula .ring.r4{inset:-24%;animation-delay:-1s;border-color:rgba(119,0,255,.04)}
+@keyframes orbBreathe{0%,100%{transform:translate(-50%,-40%) scale(1)}50%{transform:translate(-50%,-40%) scale(1.05)}}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.04);opacity:.4}}
+
+.hero-inner{position:relative;z-index:3;display:flex;flex-direction:column;height:100%;min-height:calc(100vh - 220px);justify-content:space-between;gap:48px}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.hero-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:var(--violet-light);border:1px solid rgba(119,0,255,.2);font-size:12px;color:var(--violet-dark);font-weight:600;letter-spacing:.02em}
+.hero-pill .p-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);box-shadow:0 0 10px var(--violet);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+.hero-center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:28px}
+.hero-title{font-size:clamp(60px,10vw,150px);max-width:1200px;margin:0 auto;text-wrap:balance;font-weight:800}
+.hero-title .line{display:block;overflow:hidden}
+.hero-title .line-3{color:var(--green)}
+.hero-aside{display:none}
+@media(min-width:1500px){.hero-aside{display:block;position:absolute;right:40px;bottom:240px;max-width:260px;padding:18px 20px;border-radius:14px;background:#fff;border:1px solid var(--border);box-shadow:0 8px 32px -16px rgba(9,9,2,.12);z-index:4;font-size:13px;color:var(--text-secondary);line-height:1.55}}
+.hero-aside .aside-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin-bottom:8px;display:block}
+.hero-sub{max-width:620px;color:var(--text-secondary);font-size:18px;line-height:1.6;margin:0 auto}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:3}
+.hstat{padding:24px;border-radius:12px;background:#fff;border:1px solid var(--border);box-shadow:0 1px 2px rgba(9,9,2,.04);display:flex;justify-content:space-between;align-items:flex-end;gap:12px;transition:transform .2s,box-shadow .2s}
+.hstat:hover{transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(9,9,2,.12)}
+.hstat .hs-num{font-family:'DM Sans',sans-serif;font-weight:800;font-size:40px;letter-spacing:-.02em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.hstat .hs-num em{font-style:normal;color:var(--violet);font-weight:800}
+.hstat .hs-lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary);text-align:right;max-width:110px;line-height:1.4}
+
+.hero-video-label{display:none}
+
+/* marquee */
+.marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 0;overflow:hidden;background:var(--canvas)}
+.marquee-track{display:flex;gap:64px;white-space:nowrap;animation:slide 34s linear infinite;font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+.marquee-track span{display:inline-flex;align-items:center;gap:64px}
+.marquee-track span::before{content:'●';color:var(--violet);font-size:10px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* section head */
+.section-head{display:flex;flex-direction:column;gap:18px;margin-bottom:64px;max-width:900px}
+.section-head .mini-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary)}
+.section-head .mini-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:100px;background:var(--violet-light);border:1px solid rgba(119,0,255,.2);font-size:12px;color:var(--violet-dark);font-weight:600;letter-spacing:.02em;align-self:flex-start}
+.section-head .mini-pill .p-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);box-shadow:0 0 8px var(--violet)}
+.section-title{font-size:clamp(44px,6vw,84px);font-weight:800;color:var(--ink)}
+
+/* what i do — bento on white */
+.services-bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.sv{padding:32px;border-radius:16px;background:#fff;border:1px solid var(--border);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:18px;min-height:280px;transition:border-color .25s,transform .25s,box-shadow .25s;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.sv:hover{border-color:var(--violet);transform:translateY(-3px);box-shadow:0 14px 32px -16px rgba(119,0,255,.22)}
+.sv::before{content:'';position:absolute;inset:0;border-radius:16px;background:radial-gradient(500px 260px at 0% 0%,rgba(119,0,255,.05),transparent 60%);pointer-events:none}
+.sv.big{grid-row:span 2;min-height:100%;background:linear-gradient(135deg,#F0E5FF 0%,#E6F9E0 100%);border-color:transparent}
+.sv .sv-kicker{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);display:flex;align-items:center;gap:10px}
+.sv .sv-kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--violet);box-shadow:0 0 6px var(--violet)}
+.sv h3{font-family:'DM Sans',sans-serif;font-weight:800;font-size:32px;letter-spacing:-.025em;line-height:1.05;color:var(--ink)}
+.sv.big h3{font-size:48px}
+.sv p{color:var(--text-secondary);font-size:15px;line-height:1.6;max-width:360px}
+.sv .sv-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.sv .sv-tags{display:flex;gap:6px;flex-wrap:wrap}
+.sv .t{font-size:11px;font-weight:600;letter-spacing:.02em;padding:6px 12px;border-radius:100px;background:var(--canvas);color:var(--text-secondary)}
+.sv.big .t{background:rgba(255,255,255,.8);color:var(--violet-dark)}
+.sv .learn{color:var(--violet);font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.sv-visual{position:absolute;inset:auto 0 0 auto;width:60%;height:60%;pointer-events:none;opacity:.9}
+.sv.big .sv-visual{width:70%;height:70%}
+
+/* schematic */
+.schematic{position:absolute;right:-10px;bottom:-10px;width:340px;height:280px;opacity:.7}
+.wave-lines{position:absolute;right:0;bottom:0;width:300px;height:200px}
+.wave-lines path{stroke:var(--violet)!important;opacity:.5}
+.orbit{position:absolute;right:-30px;bottom:-30px;width:240px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(48,179,0,.25),transparent 60%);filter:blur(16px)}
+.grid-lines{position:absolute;right:-10px;bottom:-10px;width:260px;height:200px;background-image:linear-gradient(rgba(119,0,255,.14) .5px,transparent .5px),linear-gradient(90deg,rgba(119,0,255,.14) .5px,transparent .5px);background-size:22px 22px;mask-image:radial-gradient(200px 140px at 70% 70%,#000,transparent 80%);-webkit-mask-image:radial-gradient(200px 140px at 70% 70%,#000,transparent 80%)}
+
+/* featured work */
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.wk{padding:0;border-radius:16px;background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.wk:hover{transform:translateY(-4px);border-color:var(--violet);box-shadow:0 18px 36px -16px rgba(119,0,255,.22)}
+.wk.wide{grid-column:span 2}
+.wk-media{aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--muted)}
+.wk.wide .wk-media{aspect-ratio:21/8}
+.wk-media .ph{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(135deg,#F0E5FF 0%,#E6F9E0 100%);color:var(--violet-dark);font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.wk:hover .wk-media .ph{transform:scale(1.04)}
+.wk-media .ph-tag{padding:8px 16px;border-radius:100px;border:1px solid rgba(119,0,255,.2);background:rgba(255,255,255,.85);backdrop-filter:blur(6px)}
+.wk-media .wk-ov{display:none}
+.wk-media .wk-play{position:absolute;right:18px;top:18px;width:40px;height:40px;border-radius:50%;background:var(--violet);display:grid;place-items:center;color:#fff;box-shadow:0 6px 18px -4px rgba(119,0,255,.4)}
+.wk-body{padding:24px 28px 28px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.wk-title{font-family:'DM Sans',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.025em;line-height:1.08;color:var(--ink)}
+.wk.wide .wk-title{font-size:44px}
+.wk-pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.wk-pills .p{font-size:11px;font-weight:600;letter-spacing:.02em;padding:5px 11px;border-radius:100px;background:var(--canvas);color:var(--text-secondary)}
+.wk-link{font-size:13px;font-weight:600;color:var(--violet);display:inline-flex;gap:8px;align-items:center;white-space:nowrap;padding:10px 16px;border-radius:100px;background:var(--violet-light)}
+.wk-link:hover{background:var(--violet);color:#fff}
+
+/* audit lead magnet */
+.audit-card{border-radius:20px;padding:56px;background:linear-gradient(135deg,#F0E5FF 0%,#E6F9E0 100%);border:1px solid transparent;position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.audit-card::before{display:none}
+.audit-card .a-list{display:flex;flex-direction:column;gap:12px;margin:24px 0 36px;padding:0;list-style:none}
+.audit-card .a-list li{padding-left:32px;position:relative;color:var(--text-secondary);font-size:15px;line-height:1.55}
+.audit-card .a-list li::before{content:'';position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:var(--violet);}
+.audit-card .a-list li::after{content:'';position:absolute;left:6px;top:9px;width:8px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+
+.audit-mock{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;transform:rotate(-3deg);transition:transform .4s;box-shadow:0 30px 80px -24px rgba(119,0,255,.3),0 8px 24px -8px rgba(9,9,2,.12);border:1px solid var(--border);background:#fff}
+.audit-mock:hover{transform:rotate(-1deg) translateY(-4px)}
+.audit-mock .m-head{padding:22px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between}
+.audit-mock .m-logo{font-family:'DM Sans',sans-serif;font-weight:800;font-size:14px;display:flex;align-items:center;gap:5px;color:var(--ink)}
+.audit-mock .m-logo .d{width:6px;height:6px;border-radius:50%;background:var(--violet);box-shadow:0 0 6px var(--violet)}
+.audit-mock .m-date{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--text-tertiary);text-transform:uppercase}
+.audit-mock .m-body{padding:24px;display:flex;flex-direction:column;gap:14px}
+.audit-mock .m-title{font-family:'DM Sans',sans-serif;font-weight:800;font-size:24px;color:var(--ink);line-height:1.15;letter-spacing:-.02em}
+.audit-mock .m-title em{color:var(--violet);font-style:normal}
+.audit-mock .m-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--text-secondary)}
+.audit-mock .m-row .mono{color:var(--violet);background:var(--violet-light);padding:2px 8px;border-radius:4px;font-weight:500}
+.audit-mock .m-score{margin-top:6px;padding:16px;border-radius:10px;background:linear-gradient(135deg,var(--violet) 0%,var(--violet-dark) 100%);display:flex;justify-content:space-between;align-items:center;color:#fff}
+.audit-mock .m-score .big{font-family:'DM Sans',sans-serif;font-weight:800;font-size:40px;color:#fff;letter-spacing:-.02em;font-style:normal}
+.audit-mock .m-score .lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+
+/* process timeline */
+.process-rail{position:relative;padding:40px 0 0}
+.process-rail::before{content:'';position:absolute;left:0;right:0;top:56px;height:2px;background:linear-gradient(90deg,var(--violet) 0%,var(--green) 100%);z-index:1;opacity:.25}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:2}
+.ps{padding:32px 24px;border-radius:16px;background:#fff;border:1px solid var(--border);display:flex;flex-direction:column;gap:12px;transition:transform .25s,border-color .25s,box-shadow .25s;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.ps:hover{transform:translateY(-3px);border-color:var(--violet);box-shadow:0 10px 28px -14px rgba(119,0,255,.2)}
+.ps .node{width:36px;height:36px;border-radius:50%;background:var(--violet);display:grid;place-items:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;color:#fff;box-shadow:0 6px 16px -4px rgba(119,0,255,.4)}
+.ps .week{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.ps h4{font-family:'DM Sans',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em;line-height:1.15;color:var(--ink)}
+.ps p{color:var(--text-secondary);font-size:14px;line-height:1.6}
+
+/* ai shift stat cards */
+.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sc{padding:36px 32px;border-radius:16px;background:#fff;border:1px solid var(--border);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.sc:hover{transform:translateY(-4px);border-color:var(--violet);box-shadow:0 14px 32px -16px rgba(119,0,255,.2)}
+.sc:nth-child(2){background:linear-gradient(135deg,#F0E5FF 0%,#FFF5D6 100%);border-color:transparent}
+.sc::before{content:'';position:absolute;top:0;right:0;width:180px;height:180px;background:radial-gradient(circle,rgba(119,0,255,.08),transparent 70%);pointer-events:none}
+.sc .big{font-family:'DM Sans',sans-serif;font-weight:800;font-size:72px;letter-spacing:-.03em;line-height:.95;color:var(--ink)}
+.sc .big .u{color:var(--violet);font-style:normal}
+.sc .desc{color:var(--text-secondary);font-size:15px;line-height:1.6}
+.sc .mini-chart{margin-top:12px;height:44px;display:flex;align-items:flex-end;gap:4px}
+.sc .mini-chart .bar{flex:1;background:var(--violet);border-radius:3px;opacity:.85}
+
+/* testimonials */
+.testimonials-grid{columns:3;column-gap:16px}
+.tm{break-inside:avoid;margin-bottom:16px;padding:28px;background:#fff;border:1px solid var(--border);border-radius:16px;display:flex;flex-direction:column;gap:18px;transition:transform .25s,border-color .25s,box-shadow .25s;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.tm:hover{transform:translateY(-2px);border-color:var(--violet);box-shadow:0 10px 28px -14px rgba(119,0,255,.18)}
+.tm.accent{background:linear-gradient(135deg,var(--violet) 0%,var(--violet-dark) 100%);border-color:transparent}
+.tm.accent .quote{color:#fff}
+.tm.accent .who .name{color:#fff}
+.tm.accent .who .role{color:rgba(255,255,255,.7)}
+.tm .quote{font-family:'DM Sans',sans-serif;font-weight:500;font-size:18px;line-height:1.4;letter-spacing:-.01em;color:var(--ink)}
+.tm.lg .quote{font-size:22px;font-weight:600}
+.tm.sm .quote{font-size:16px}
+.who{display:flex;align-items:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--violet-dark));display:grid;place-items:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;color:#fff}
+.avatar.a2{background:linear-gradient(135deg,#FFB700,#C98A00)}
+.avatar.a3{background:linear-gradient(135deg,var(--green),#1F8000)}
+.avatar.a4{background:linear-gradient(135deg,#E5243B,#A61828)}
+.avatar.a5{background:linear-gradient(135deg,var(--violet),var(--green))}
+.avatar.a6{background:linear-gradient(135deg,#5A5A6E,#2A2A3A)}
+.avatar.a7{background:linear-gradient(135deg,var(--gold),var(--violet))}
+.avatar.a8{background:linear-gradient(135deg,var(--green),var(--violet))}
+.who .name{font-size:14px;color:var(--ink);font-weight:600}
+.who .role{font-size:13px;color:var(--text-tertiary)}
+
+/* final CTA */
+.final-card{border-radius:24px;padding:100px 64px;text-align:center;background:linear-gradient(135deg,#090902 0%,#2D0066 50%,#0A4D2E 100%);border:none;position:relative;overflow:hidden}
+.final-card::before{display:none}
+.final-card .display{font-size:clamp(52px,7.5vw,108px);margin-bottom:24px;color:#fff}
+.final-card .display .italic-violet{color:#FFB700}
+.final-card .sub{color:rgba(255,255,255,.8);font-size:18px;margin-bottom:36px}
+.final-card .ctas{display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap}
+.final-card .btn-primary{background:#fff;color:var(--violet)}
+.final-card .btn-primary:hover{background:var(--gold);color:var(--ink)}
+.email-link{color:#fff;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:3px}
+.email-link:hover{color:var(--gold);border-color:var(--gold)}
+.final-orbs{position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:700px;height:360px;pointer-events:none;opacity:.5}
+.final-orbs::before,.final-orbs::after{content:'';position:absolute;border-radius:50%;filter:blur(70px)}
+.final-orbs::before{left:15%;top:0;width:280px;height:280px;background:var(--violet)}
+.final-orbs::after{right:10%;top:20px;width:240px;height:240px;background:var(--green)}
+
+/* footer */
+footer{padding:80px 0 40px;position:relative;border-top:1px solid var(--border);background:var(--canvas)}
+footer::before{display:none}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:60px;margin-bottom:48px}
+.foot-col h5{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin-bottom:18px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col li a{font-size:14px;color:var(--text-secondary);font-weight:500}
+.foot-col li a:hover{color:var(--violet)}
+.foot-tag{color:var(--text-secondary);font-size:14px;max-width:320px;margin-top:12px;line-height:1.6}
+.foot-small{display:flex;justify-content:space-between;font-size:13px;color:var(--text-tertiary);border-top:1px solid var(--border);padding-top:24px;flex-wrap:wrap;gap:16px}
+.foot-small .mono{color:var(--text-tertiary);background:transparent;padding:0}
+
+/* WORK PAGE */
+.short-hero{min-height:60vh;padding:160px 0 60px;position:relative;overflow:hidden;background:#fff}
+.short-hero .hero-nebula .orb{width:60vw;transform:translate(-30%,-40%)}
+.short-hero-inner{position:relative;z-index:3}
+.short-hero .display{font-size:clamp(56px,7vw,96px);margin:20px 0 20px;max-width:900px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:48px 0 40px}
+.chip{padding:10px 18px;border-radius:100px;border:1px solid var(--border);background:#fff;font-size:13px;font-weight:500;color:var(--text-secondary);transition:all .2s}
+.chip:hover{border-color:var(--violet);color:var(--violet)}
+.chip.active{background:var(--violet);border-color:var(--violet);color:#fff;box-shadow:0 6px 18px -4px rgba(119,0,255,.4)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pc{border-radius:16px;background:#fff;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;gap:0;transition:transform .3s,border-color .3s,box-shadow .3s;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.pc:hover{transform:translateY(-4px);border-color:var(--violet);box-shadow:0 14px 32px -16px rgba(119,0,255,.2)}
+.pc-media{aspect-ratio:4/3;position:relative;overflow:hidden}
+.pc-media .ph{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(135deg,#F0E5FF 0%,#E6F9E0 100%);color:var(--violet-dark);font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:transform .6s}
+.pc:hover .pc-media .ph{transform:scale(1.05)}
+.pc-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.pc-tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet)}
+.pc-name{font-family:'DM Sans',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.pc-desc{color:var(--text-secondary);font-size:14px;line-height:1.55}
+
+/* STUDIO PAGE */
+.studio-hero{padding:180px 0 60px;position:relative;overflow:hidden;background:#fff}
+.studio-hero .display{font-size:clamp(56px,7vw,104px);margin:20px 0 32px}
+.studio-hero .display .line{display:block}
+.studio-two{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start;padding-top:0}
+.studio-two .studio-left{display:flex;flex-direction:column;gap:24px}
+.studio-two .studio-left .mini-pill{align-self:flex-start}
+.studio-two .studio-left .display{font-size:clamp(56px,7vw,104px);margin:0}
+.studio-two .studio-left .display .line{display:block}
+.story p{font-size:17px;line-height:1.7;color:var(--text-secondary);margin-bottom:20px}
+.story p:first-child::first-letter{font-family:'DM Sans',sans-serif;font-size:64px;font-weight:800;line-height:.9;float:left;padding:8px 12px 0 0;color:var(--violet)}
+.portrait{position:sticky;top:120px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#F0E5FF 0%,#E6F9E0 100%);display:grid;place-items:center;color:var(--violet-dark);font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.portrait .ph-tag{padding:8px 16px;border-radius:100px;border:1px solid rgba(119,0,255,.2);background:rgba(255,255,255,.85)}
+.principles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pr{padding:36px 28px;border-radius:16px;background:#fff;border:1px solid var(--border);display:flex;flex-direction:column;gap:18px;min-height:240px;transition:border-color .25s,transform .25s,box-shadow .25s;box-shadow:0 1px 2px rgba(9,9,2,.03)}
+.pr:nth-child(2n){background:linear-gradient(135deg,#F0E5FF 0%,#E6F9E0 100%);border-color:transparent}
+.pr:hover{border-color:var(--violet);transform:translateY(-3px);box-shadow:0 12px 28px -14px rgba(119,0,255,.2)}
+.pr .num{font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;color:var(--violet);letter-spacing:.12em}
+.pr .p-text{font-family:'DM Sans',sans-serif;font-weight:800;font-size:26px;line-height:1.15;letter-spacing:-.02em;margin-top:auto;color:var(--ink)}
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tool{padding:22px 24px;border:1px solid var(--border);border-radius:12px;background:#fff;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.tool:hover{border-color:var(--violet);transform:translateY(-2px);box-shadow:0 8px 20px -12px rgba(119,0,255,.2)}
+.tool .t-name{font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.02em;color:var(--ink)}
+.tool .t-role{font-size:13px;color:var(--text-tertiary)}
+.availability-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+.cal-mini{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cal{border:1px solid var(--border);border-radius:16px;padding:22px;background:#fff}
+.cal-head{display:flex;justify-content:space-between;margin-bottom:14px;align-items:baseline}
+.cal-month{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.cal-year{font-size:11px;font-weight:700;color:var(--text-tertiary);letter-spacing:.12em}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-size:12px}
+.cal-days .d-name{color:var(--text-tertiary);text-align:center;padding:6px 0;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.cal-days .d{text-align:center;padding:6px 0;border-radius:4px;color:var(--text-secondary)}
+.cal-days .d.booked{background:var(--muted);color:var(--text-tertiary);text-decoration:line-through}
+.cal-days .d.open{background:var(--green-light);color:var(--green-dark);font-weight:600}
+.cal-days .d.today{outline:2px solid var(--violet);color:var(--violet);font-weight:700}
+
+/* AUDIT PAGE */
+.audit-hero{min-height:100vh;padding:140px 0 80px;position:relative;overflow:hidden;background:#fff}
+.audit-hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center;padding-top:40px}
+.audit-hero .display{font-size:clamp(44px,5.6vw,80px);margin:20px 0 22px;text-wrap:balance}
+.audit-hero .sub{max-width:560px;color:var(--text-secondary);font-size:17px;line-height:1.6}
+.audit-form{background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;box-shadow:0 14px 40px -18px rgba(9,9,2,.1)}
+.audit-form::before{display:none}
+.audit-form h3{font-family:'DM Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-.01em;color:var(--ink)}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary)}
+.field input,.field select{background:#fff;border:1px solid var(--border-2);padding:13px 16px;border-radius:8px;color:var(--ink);font-family:inherit;font-size:14px;transition:all .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--violet);background:#F8F4FF;box-shadow:0 0 0 3px rgba(119,0,255,.12)}
+.field input::placeholder{color:var(--text-tertiary)}
+.small-note{color:var(--text-tertiary);font-size:13px;margin-top:4px}
+
+.deliverables{display:flex;flex-direction:column;gap:12px}
+.dv{padding:20px 24px;border-radius:12px;background:#fff;border:1px solid var(--border);display:flex;gap:18px;align-items:flex-start;transition:border-color .25s,box-shadow .25s}
+.dv:hover{border-color:var(--violet);box-shadow:0 8px 20px -12px rgba(119,0,255,.2)}
+.dv .check{flex:none;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center}
+.dv .d-title{font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.01em;color:var(--ink)}
+.dv .d-desc{color:var(--text-secondary);font-size:14px;margin-top:4px;line-height:1.55}
+
+.faq-list{max-width:880px;margin:0 auto}
+.faq{border:1px solid var(--border);border-radius:12px;padding:6px 24px;margin-bottom:10px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.faq:hover{border-color:var(--violet)}
+.faq.open{border-color:var(--violet);box-shadow:0 6px 20px -12px rgba(119,0,255,.2)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:24px;width:100%;text-align:left;font-family:'DM Sans',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;color:var(--ink);padding:18px 0}
+.faq-toggle{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--border);display:grid;place-items:center;font-size:16px;color:var(--violet);transition:transform .3s,background .3s}
+.faq.open .faq-toggle{transform:rotate(45deg);background:var(--violet);border-color:var(--violet);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease,padding .32s;color:var(--text-secondary);font-size:15px;line-height:1.65;max-width:720px}
+.faq.open .faq-a{max-height:360px;padding:0 0 22px}
+
+/* pages */
+.page{display:none}
+.page.active{display:block;animation:pi .4s cubic-bezier(.2,.7,.2,1)}
+@keyframes pi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* focus */
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+
+/* responsive */
+@media (max-width:1100px){
+  .wrap{padding:0 24px}
+  .nav{left:12px;right:12px;padding:8px 10px 8px 18px}
+  .nav-links{display:none}
+  .services-bento{grid-template-columns:1fr 1fr}
+  .sv.big{grid-column:span 2;grid-row:auto;min-height:320px}
+  .work-grid{grid-template-columns:1fr}
+  .wk.wide{grid-column:span 1}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-aside{display:none}
+  .audit-card{grid-template-columns:1fr;padding:40px}
+  .audit-hero-grid{grid-template-columns:1fr}
+  .studio-two{grid-template-columns:1fr}
+  .portrait{position:relative;top:0;max-width:480px}
+  .availability-wrap{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .process-rail::before{display:none}
+  .sc-grid{grid-template-columns:1fr}
+  .testimonials-grid{columns:2}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .principles-grid{grid-template-columns:repeat(2,1fr)}
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:40px}
+  section{padding:80px 0}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .services-bento{grid-template-columns:1fr}
+  .sv.big{grid-column:span 1}
+  .testimonials-grid{columns:1}
+  .projects-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .principles-grid{grid-template-columns:1fr}
+  .tools-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .final-card{padding:64px 28px}
+  .audit-card{padding:28px}
+  section{padding:64px 0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .hero-video-wrap video,.hero-nebula .orb::before{display:none}
+}
+
+/* ═════════════════════════════════════════════════════════
+   HIGH-TECH DARK HOME (scoped to body.home-dark)
+   Palette: --bg #070710 base, --panel #0E0E1A surface,
+   cyan #00ECFC signal color, violet #7700FF secondary,
+   glass cards with subtle inner borders and cyan halos
+   ═════════════════════════════════════════════════════════ */
+body.home-dark{
+  background:transparent;
+  --bg:#070710;
+  --surface:#0E0E1A;
+  --panel:#111122;
+  --canvas:#0A0A14;
+  --muted:#16162A;
+  --border:rgba(255,255,255,.08);
+  --border-2:rgba(255,255,255,.14);
+  --text-primary:#F5F5FA;
+  --text-secondary:#A8A8C0;
+  --text-tertiary:#6E6E8A;
+  --ink:#F5F5FA;
+  --t1:#F5F5FA;--t2:#A8A8C0;--t3:#6E6E8A;--t4:#4A4A60;
+  --bd:rgba(255,255,255,.08);--bd-2:rgba(255,255,255,.14);
+  --card-bg:rgba(255,255,255,.03);
+  --violet-light:rgba(119,0,255,.14);
+  --green-light:rgba(0,236,252,.12);
+  --green-dark:#00ECFC;
+  background:var(--bg);color:var(--text-primary);
+}
+body.home-dark::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-2;background:
+  radial-gradient(900px 600px at 12% 8%, rgba(119,0,255,.14), transparent 60%),
+  radial-gradient(1000px 700px at 88% 20%, rgba(0,236,252,.10), transparent 60%),
+  radial-gradient(700px 500px at 50% 100%, rgba(119,0,255,.08), transparent 70%),
+  #070710;
+}
+body.home-dark::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:-2;
+  background-image:
+    linear-gradient(rgba(120,180,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,180,255,.045) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(1200px 800px at 50% 0%, #000 10%, rgba(0,0,0,.5) 50%, transparent 95%);
+  -webkit-mask-image:radial-gradient(1200px 800px at 50% 0%, #000 10%, rgba(0,0,0,.5) 50%, transparent 95%);
+  display:block;
+  animation: gridDrift 40s linear infinite;
+}
+@keyframes gridDrift{
+  from{background-position: 0 0, 0 0}
+  to  {background-position: 64px 64px, 64px 64px}
+}
+
+/* ═════════════════════════════════════════════════════════
+   AMBIENT AI FX — fixed layer behind all sections in dark mode
+   Glowing drifting particles, horizontal scan sweep,
+   subtle vignette pulse. Zero pointer interference.
+   ═════════════════════════════════════════════════════════ */
+.ai-fx{display:none}
+body.home-dark .ai-fx{
+  display:block;
+  position:fixed;inset:0;pointer-events:none;z-index:-1;
+  overflow:hidden;
+}
+/* drifting glow particles */
+body.home-dark .ai-fx .p{
+  position:absolute;
+  width:3px;height:3px;border-radius:50%;
+  background:#7BE4FF;
+  box-shadow:0 0 8px #15D1FD, 0 0 24px rgba(50,139,253,.6);
+  opacity:.0;
+  animation: particleDrift linear infinite;
+  will-change: transform, opacity;
+}
+body.home-dark .ai-fx .p.purple{
+  background:#B98CFF;
+  box-shadow:0 0 8px #6820FE, 0 0 24px rgba(104,32,254,.55);
+}
+@keyframes particleDrift{
+  0%   {opacity:0; transform: translate(0, 20vh) scale(.6)}
+  15%  {opacity:.9}
+  85%  {opacity:.9}
+  100% {opacity:0; transform: translate(-10vw, -110vh) scale(1.2)}
+}
+/* horizontal scan sweep — a faint glow line crossing vertically */
+body.home-dark .ai-fx .scan{
+  position:absolute;left:-10%;right:-10%;height:1px;
+  top:-5%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(21,209,253,.0) 20%,
+    rgba(21,209,253,.7) 48%,
+    rgba(104,32,254,.8) 52%,
+    rgba(21,209,253,.0) 80%,
+    transparent 100%);
+  filter: drop-shadow(0 0 12px rgba(50,139,253,.8)) drop-shadow(0 0 30px rgba(104,32,254,.5));
+  animation: scanSweep 14s ease-in-out infinite;
+  opacity:.9;
+}
+body.home-dark .ai-fx .scan.s2{
+  animation-delay:-7s;
+  animation-duration:18s;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(104,32,254,.0) 20%,
+    rgba(104,32,254,.7) 48%,
+    rgba(21,209,253,.8) 52%,
+    rgba(104,32,254,.0) 80%,
+    transparent 100%);
+}
+@keyframes scanSweep{
+  0%   {transform: translateY(0)}
+  100% {transform: translateY(120vh)}
+}
+/* soft vignette pulse — breathes slowly to add life */
+body.home-dark .ai-fx .vignette{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(60% 45% at 50% 60%, transparent 0%, rgba(7,7,16,.0) 60%, rgba(7,7,16,.45) 100%);
+  animation: vignetteBreathe 12s ease-in-out infinite;
+}
+@keyframes vignetteBreathe{
+  0%,100%{opacity:.6}
+  50%    {opacity:.95}
+}
+/* glowing dividers between sections in dark mode */
+body.home-dark .section-glow{
+  position:relative;
+}
+body.home-dark .section-glow::before{
+  content:'';
+  position:absolute;top:0;left:10%;right:10%;height:1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(50,139,253,.45) 30%,
+    rgba(104,32,254,.55) 50%,
+    rgba(50,139,253,.45) 70%,
+    transparent 100%);
+  filter: drop-shadow(0 0 8px rgba(50,139,253,.5));
+  pointer-events:none;
+}
+@media (prefers-reduced-motion:reduce){
+  body.home-dark .ai-fx .p, body.home-dark .ai-fx .scan,
+  body.home-dark .ai-fx .vignette, body.home-dark::after{animation:none}
+}
+
+/* NAV — dark mode: LIGHT glass pill with subtle animated gradient sweep */
+body.home-dark .nav{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,.06) 50%, rgba(255,255,255,.12) 100%);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    inset 0 -1px 0 rgba(255,255,255,.06),
+    0 18px 50px -22px rgba(0,0,0,.45);
+  position:fixed;
+  overflow:hidden;
+  isolation:isolate;
+}
+/* moving aurora behind the nav glass */
+body.home-dark .nav::before{
+  content:'';
+  position:absolute;
+  inset:-50%;
+  background:
+    radial-gradient(40% 60% at 20% 50%, rgba(0,236,252,.35) 0%, transparent 60%),
+    radial-gradient(40% 60% at 80% 50%, rgba(104,32,254,.35) 0%, transparent 60%);
+  filter:blur(8px);
+  opacity:.55;
+  z-index:-1;
+  animation: navAurora 12s ease-in-out infinite alternate;
+}
+@keyframes navAurora{
+  0%   { transform:translateX(-8%) rotate(0deg);   }
+  100% { transform:translateX( 8%) rotate(2deg);   }
+}
+body.home-dark .nav.scrolled{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.18) 100%);
+  border-color:rgba(255,255,255,.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.35),
+    inset 0 -1px 0 rgba(255,255,255,.08),
+    0 22px 60px -22px rgba(0,0,0,.55);
+}
+body.home-dark .wordmark{color:#fff}
+body.home-dark .wordmark .vdot{background:var(--cyan);box-shadow:0 0 10px var(--cyan), 0 0 24px rgba(0,236,252,.4)}
+body.home-dark .nav-links a{color:rgba(255,255,255,.85);font-weight:600}
+body.home-dark .nav-links a:hover{color:#fff;background:rgba(255,255,255,.16)}
+body.home-dark .nav-links a.active{color:#fff;background:rgba(255,255,255,.20);box-shadow:inset 0 0 0 1px rgba(0,236,252,.35), 0 0 18px rgba(0,236,252,.25)}
+body.home-dark .nav-pill{background:rgba(0,236,252,.18);border:1px solid rgba(0,236,252,.42);color:#fff}
+body.home-dark .nav-pill .p-dot{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+@media (prefers-reduced-motion:reduce){
+  body.home-dark .nav::before{ animation:none; }
+}
+body.home-dark .nav .btn-primary{
+  background:linear-gradient(180deg,#fff 0%, #E6FBFD 100%);
+  color:#07070F;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 8px 24px -8px rgba(0,236,252,.25);
+  border:1px solid rgba(255,255,255,.4);
+}
+body.home-dark .nav .btn-primary:hover{background:var(--cyan);color:#07070F;box-shadow:0 0 0 1px var(--cyan), 0 12px 32px -8px rgba(0,236,252,.6)}
+
+/* cursor — cyan in dark */
+body.home-dark .cursor-dot{background:var(--cyan);box-shadow:0 0 14px rgba(0,236,252,.7)}
+body.home-dark .cursor-dot.hover{background:rgba(0,236,252,.3)}
+
+/* ── HERO (dark) ────────────────────────────── */
+body.home-dark .hero{
+  background:transparent;
+  min-height:100vh;
+  padding:150px 0 120px;
+  position:relative;
+  overflow:hidden;
+}
+/* video container fills hero, with a fade mask that blends to bg at bottom */
+/* video container — fixed-position parallax: stays in viewport while page scrolls over it */
+body.home-dark .hero .hero-video-wrap{
+  display:block;
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+body.home-dark .hero .hero-video-wrap video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(1.15) contrast(1.04) hue-rotate(-6deg) brightness(var(--video-dim, 1));
+  transition: filter .6s ease;
+}
+/* darkening overlay applied directly to the video, never to page content.
+   --video-scrim ramps with scroll (set by JS handler). */
+body.home-dark .hero .hero-video-wrap::after{
+  content:'';position:absolute;inset:0;
+  background: rgba(7,7,16, var(--video-scrim, .2));
+  transition: background .3s ease;
+}
+/* below-hero sections: fully transparent — global gradient handles dimming */
+body.home-dark main > section:not(.hero){
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  position:relative;
+  z-index:2;
+}
+body.home-dark .site-footer{
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  position:relative;
+  z-index:2;
+}
+/* (page-level veil removed — darkening is applied to the video element itself
+   via --video-scrim, so cards and promos stay clean and luminous.) */
+/* old nebula orbs -> disabled in dark so video reads cleanly */
+body.home-dark .hero .hero-nebula{display:none}
+
+/* hero typographic chrome — dark */
+body.home-dark .label{color:rgba(245,245,250,.64)}
+body.home-dark .label .dot{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+body.home-dark .hero-pill{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(0,236,252,.26);
+  color:#D5F7FB;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 0 1px rgba(255,255,255,.02) inset, 0 10px 28px -12px rgba(0,236,252,.2);
+}
+body.home-dark .hero-pill .p-dot{background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+body.home-dark .hero-title{
+  color:#fff;
+  text-shadow:0 2px 40px rgba(0,0,0,.3);
+}
+body.home-dark .hero-title .line-3{color:var(--cyan);text-shadow:0 0 40px rgba(0,236,252,.35), 0 2px 20px rgba(0,0,0,.4)}
+/* single-gradient wrapper used by the hero accent line; paints one continuous
+   gradient across the whole phrase instead of per-letter. */
+body.home-dark .hero-title .grad-fill{
+  background: linear-gradient(90deg, #15D1FD 0%, #328BFD 45%, #6820FE 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  filter: none;
+}
+body.home-dark .hero-title .line-3{text-shadow:none}
+body.home-dark .italic-violet{
+  background:linear-gradient(90deg, #15D1FD 0%, #6820FE 100%);
+  -webkit-background-clip:text;
+          background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 24px rgba(0,236,252,.55)) drop-shadow(0 2px 8px rgba(0,0,0,.5));
+}
+body.home-dark .italic-green{
+  background:linear-gradient(90deg, #15D1FD 0%, #6820FE 100%);
+  -webkit-background-clip:text;
+          background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 24px rgba(0,236,252,.55));
+}
+body.home-dark .hero-sub{color:rgba(245,245,250,.72);text-shadow:0 1px 16px rgba(0,0,0,.4)}
+
+/* hero CTAs */
+body.home-dark .btn-primary{
+  background:linear-gradient(180deg,#fff 0%, #D5F7FB 100%);
+  color:#07070F;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 0 0 1px rgba(0,236,252,.2), 0 14px 40px -12px rgba(0,236,252,.35);
+}
+body.home-dark .btn-primary:hover{
+  background:var(--cyan);
+  color:#07070F;
+  box-shadow:0 0 0 1px var(--cyan), 0 0 36px rgba(0,236,252,.5), 0 18px 50px -14px rgba(0,236,252,.6);
+}
+body.home-dark .btn-primary.glow{box-shadow:0 0 0 1px rgba(0,236,252,.35), 0 0 28px rgba(0,236,252,.25), 0 14px 40px -12px rgba(0,236,252,.4)}
+body.home-dark .btn-secondary{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.14);
+  color:#F5F5FA;
+  backdrop-filter:blur(14px);
+}
+body.home-dark .btn-secondary:hover{background:rgba(0,236,252,.08);border-color:rgba(0,236,252,.4);color:var(--cyan)}
+
+/* hero aside (glass) */
+body.home-dark .hero-aside{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  color:rgba(245,245,250,.76);
+  backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 1px 0 rgba(255,255,255,.05) inset, 0 20px 60px -24px rgba(0,0,0,.6);
+}
+body.home-dark .hero-aside .aside-label{color:var(--cyan)}
+
+/* hero stats — glassmorphism */
+body.home-dark .hstat{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.7);
+}
+body.home-dark .hstat:hover{
+  border-color:rgba(0,236,252,.3);
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 20px 50px -20px rgba(0,236,252,.2);
+}
+body.home-dark .hstat .hs-num{color:#fff}
+body.home-dark .hstat .hs-num em{color:var(--cyan)}
+body.home-dark .hstat .hs-lbl{color:#FFFFFF}
+
+/* ── marquee (dark) ── */
+body.home-dark .marquee{background:rgba(0,0,0,.4);border-color:rgba(255,255,255,.06);backdrop-filter:blur(8px)}
+body.home-dark .marquee-track{color:rgba(245,245,250,.85)}
+body.home-dark .marquee-track span::before{color:var(--cyan)}
+
+/* ── sections wrapper dark bg ── */
+body.home-dark .mini-pill{
+  background:rgba(0,236,252,.08);
+  border:1px solid rgba(0,236,252,.22);
+  color:#D5F7FB;
+  backdrop-filter:blur(10px);
+}
+body.home-dark .mini-pill .p-dot{background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+body.home-dark .section-title{color:#fff}
+body.home-dark .section-head .mini-title{color:rgba(245,245,250,.6)}
+body.home-dark .display{color:#fff}
+
+/* services bento → glass */
+body.home-dark .sv{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -30px rgba(0,0,0,.7);
+}
+body.home-dark .sv::before{background:radial-gradient(500px 260px at 0% 0%, rgba(0,236,252,.08), transparent 60%)}
+body.home-dark .sv:hover{border-color:rgba(0,236,252,.32);box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 24px 60px -24px rgba(0,236,252,.25)}
+body.home-dark .sv.big{
+  background:
+    linear-gradient(135deg, rgba(0,236,252,.20) 0%, rgba(119,0,255,.20) 60%, rgba(255,255,255,.10) 100%);
+  border:1px solid rgba(255,255,255,.22);
+}
+body.home-dark .sv h3{color:#fff}
+body.home-dark .sv p{color:rgba(245,245,250,.66)}
+body.home-dark .sv .sv-kicker{color:var(--cyan)}
+body.home-dark .sv .sv-kicker::before{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+body.home-dark .sv .t{background:rgba(255,255,255,.06);color:rgba(245,245,250,.72);border:1px solid rgba(255,255,255,.06)}
+body.home-dark .sv.big .t{background:rgba(0,0,0,.35);color:#D5F7FB;border-color:rgba(0,236,252,.2)}
+body.home-dark .sv .learn{color:var(--cyan)}
+body.home-dark .sv .wave-lines path{stroke:rgba(0,236,252,.5)!important}
+body.home-dark .sv .grid-lines{background-image:linear-gradient(rgba(0,236,252,.14) .5px,transparent .5px),linear-gradient(90deg,rgba(0,236,252,.14) .5px,transparent .5px)}
+body.home-dark .sv .orbit{background:radial-gradient(circle,rgba(0,236,252,.3),transparent 60%)}
+
+/* work cards → glass */
+body.home-dark .wk{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -30px rgba(0,0,0,.7);
+}
+body.home-dark .wk:hover{border-color:rgba(0,236,252,.32);box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 24px 60px -24px rgba(0,236,252,.22)}
+body.home-dark .wk-media{background:#0A0A14}
+body.home-dark .wk-media .ph{
+  background:linear-gradient(135deg, rgba(119,0,255,.25) 0%, rgba(0,236,252,.15) 100%);
+  color:#D5F7FB;
+}
+body.home-dark .wk-media .ph-tag{background:rgba(10,10,20,.75);border:1px solid rgba(0,236,252,.3);color:#D5F7FB}
+body.home-dark .wk-media .wk-play{background:var(--cyan);color:#07070F}
+body.home-dark .wk-title{color:#fff}
+body.home-dark .wk-pills .p{background:rgba(255,255,255,.06);color:rgba(245,245,250,.72)}
+body.home-dark .wk-link{background:rgba(0,236,252,.1);color:var(--cyan);border:1px solid rgba(0,236,252,.22)}
+body.home-dark .wk-link:hover{background:var(--cyan);color:#07070F;border-color:var(--cyan)}
+
+/* audit card — light glass treatment defined in main card block below */
+body.home-dark .audit-card p{color:rgba(245,245,250,.75)}
+body.home-dark .audit-card .a-list li{color:rgba(245,245,250,.75)}
+body.home-dark .audit-card .a-list li::before{background:var(--cyan);box-shadow:0 0 10px rgba(0,236,252,.6)}
+body.home-dark .audit-card .a-list li::after{border-color:#07070F}
+body.home-dark .audit-mock{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.04) 50%, rgba(255,255,255,.08) 100%);
+  border:1px solid rgba(255,255,255,.20);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -1px 0 rgba(255,255,255,.06),
+    0 30px 90px -24px rgba(0,0,0,.55),
+    0 0 0 1px rgba(0,236,252,.12);
+}
+body.home-dark .audit-mock .m-head{border-color:rgba(255,255,255,.18)}
+body.home-dark .audit-mock .m-row{border-color:rgba(255,255,255,.18);color:#FFFFFF;font-weight:600}
+body.home-dark .audit-mock .m-logo{color:#fff}
+body.home-dark .audit-mock .m-logo .d{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+body.home-dark .audit-mock .m-date{color:#FFFFFF;opacity:.85}
+body.home-dark .audit-mock .m-title{color:#fff}
+body.home-dark .audit-mock .m-title em{color:var(--cyan)}
+/* m-row styling moved into the light-glass block above */
+body.home-dark .audit-mock .m-row .mono{color:var(--cyan);background:rgba(0,236,252,.12)}
+body.home-dark .audit-mock .m-score{
+  background:linear-gradient(135deg, var(--cyan) 0%, var(--violet) 100%);
+  color:#07070F;
+}
+body.home-dark .audit-mock .m-score .big{color:#07070F}
+body.home-dark .audit-mock .m-score .lbl{color:rgba(7,7,15,.7)}
+
+/* process cards */
+body.home-dark .ps{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 16px 44px -24px rgba(0,0,0,.6);
+}
+body.home-dark .ps:hover{border-color:rgba(0,236,252,.32)}
+body.home-dark .ps h4{color:#fff}
+body.home-dark .ps p{color:rgba(245,245,250,.66)}
+body.home-dark .ps .node{background:var(--cyan);color:#07070F;box-shadow:0 0 0 1px rgba(255,255,255,.3) inset, 0 6px 18px -4px rgba(0,236,252,.5)}
+body.home-dark .ps .week{color:var(--cyan)}
+body.home-dark .process-rail::before{display:none}
+
+/* stat cards */
+body.home-dark .sc{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -28px rgba(0,0,0,.7);
+}
+body.home-dark .sc:nth-child(2){
+  background:linear-gradient(135deg, rgba(0,236,252,.16) 0%, rgba(119,0,255,.14) 100%);
+  border:1px solid rgba(255,255,255,.12);
+}
+body.home-dark .sc::before{background:radial-gradient(circle, rgba(0,236,252,.14), transparent 70%)}
+body.home-dark .sc .big{color:#fff}
+body.home-dark .sc .big .u{color:var(--cyan)}
+body.home-dark .sc .desc{color:#FFFFFF;font-weight:600}
+/* PILLAR BAR CHART
+   Flat columns with vertical cyan→violet gradient and a continuous
+   bottom→top luminous wave traveling through each pillar.
+*/
+body.home-dark .sc .mini-chart{
+  margin-top:20px;
+  height:96px;
+  display:flex;
+  align-items:flex-end;
+  gap:14px;
+  padding:0 6px;
+}
+body.home-dark .sc .mini-chart .bar{
+  flex:1;
+  position:relative;
+  border-radius:4px 4px 2px 2px;
+  /* flat 2-color gradient, top→bottom */
+  background:linear-gradient(180deg, var(--cyan) 0%, var(--violet) 100%);
+  box-shadow: 0 0 18px rgba(0,236,252,.22);
+  opacity:1;
+  overflow:hidden;
+  isolation:isolate;
+  /* rising grow-in: scale from bottom */
+  animation:barGrow 1.1s cubic-bezier(.2,.7,.2,1) backwards;
+  transform-origin:bottom;
+}
+/* stagger the grow-in across bars */
+body.home-dark .sc .mini-chart .bar:nth-child(1){animation-delay:.05s}
+body.home-dark .sc .mini-chart .bar:nth-child(2){animation-delay:.15s}
+body.home-dark .sc .mini-chart .bar:nth-child(3){animation-delay:.25s}
+body.home-dark .sc .mini-chart .bar:nth-child(4){animation-delay:.35s}
+body.home-dark .sc .mini-chart .bar:nth-child(5){animation-delay:.45s}
+body.home-dark .sc .mini-chart .bar:nth-child(6){animation-delay:.55s}
+@keyframes barGrow{
+  from{ transform:scaleY(0); opacity:0; }
+  to  { transform:scaleY(1); opacity:1; }
+}
+/* rising wave: traveling luminous band */
+body.home-dark .sc .mini-chart .bar::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,.55) 50%,
+    rgba(255,255,255,0) 70%,
+    transparent 100%);
+  background-size:100% 200%;
+  animation:wave 2.4s ease-in-out infinite;
+  mix-blend-mode:overlay;
+  pointer-events:none;
+  z-index:1;
+}
+body.home-dark .sc .mini-chart .bar:nth-child(1)::after{animation-delay:0s}
+body.home-dark .sc .mini-chart .bar:nth-child(2)::after{animation-delay:.18s}
+body.home-dark .sc .mini-chart .bar:nth-child(3)::after{animation-delay:.36s}
+body.home-dark .sc .mini-chart .bar:nth-child(4)::after{animation-delay:.54s}
+body.home-dark .sc .mini-chart .bar:nth-child(5)::after{animation-delay:.72s}
+body.home-dark .sc .mini-chart .bar:nth-child(6)::after{animation-delay:.90s}
+@keyframes wave{
+  0%   { background-position: 0 100%; opacity:0; }
+  20%  { opacity:.9; }
+  80%  { opacity:.9; }
+  100% { background-position: 0 -100%; opacity:0; }
+}
+/* hover the chart → speed up the wave */
+body.home-dark .stat:hover .mini-chart .bar::after{ animation-duration:1.4s; }
+@media (prefers-reduced-motion: reduce){
+  body.home-dark .sc .mini-chart .bar,
+  body.home-dark .sc .mini-chart .bar::after{ animation:none; }
+}
+
+/* testimonials */
+body.home-dark .tm{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 14px 40px -22px rgba(0,0,0,.6);
+}
+body.home-dark .tm:hover{border-color:rgba(0,236,252,.3)}
+body.home-dark .tm .quote{color:rgba(245,245,250,.9)}
+body.home-dark .tm .who .name{color:#fff}
+body.home-dark .tm .who .role{color:rgba(245,245,250,.5)}
+body.home-dark .tm.accent{background:linear-gradient(135deg, rgba(0,236,252,.22) 0%, rgba(119,0,255,.22) 100%);border:1px solid rgba(0,236,252,.3)}
+body.home-dark .tm.accent .quote{color:#fff}
+
+/* final CTA — light glass treatment defined in main card block below */
+body.home-dark .final-card .display{color:#fff}
+body.home-dark .final-card .display .italic-violet{color:var(--cyan);text-shadow:0 0 40px rgba(0,236,252,.5)}
+body.home-dark .final-card .btn-primary{background:var(--cyan);color:#07070F}
+body.home-dark .final-card .btn-primary:hover{background:#fff;color:#07070F;box-shadow:0 0 0 1px var(--cyan), 0 0 48px rgba(0,236,252,.5)}
+body.home-dark .final-orbs::before{background:var(--violet)}
+body.home-dark .final-orbs::after{background:var(--cyan)}
+
+/* footer — gradient blend so it doesn't slam against the section above */
+body.home-dark footer{
+  background:linear-gradient(180deg,
+    rgba(5,5,12,0)   0%,
+    rgba(5,5,12,.4)  18%,
+    rgba(5,5,12,.85) 55%,
+    rgba(5,5,12,.95) 100%);
+  border-top:none;
+  padding-top:160px;
+  margin-top:-80px;
+  position:relative;
+  z-index:2;
+}
+body.home-dark .foot-col h5{color:var(--cyan)}
+body.home-dark .foot-col li a{color:rgba(245,245,250,.66)}
+body.home-dark .foot-col li a:hover{color:var(--cyan)}
+body.home-dark .foot-tag{color:rgba(245,245,250,.58)}
+body.home-dark .foot-small{border-color:rgba(255,255,255,.06);color:rgba(245,245,250,.4)}
+
+/* mono pills */
+body.home-dark .mono{color:var(--cyan);background:rgba(0,236,252,.12)}
+
+/* focus rings */
+body.home-dark :focus-visible{outline-color:var(--cyan)}
+
+/* reveal underline / micro accents on section */
+body.home-dark section{position:relative}
+
+/* small extra: subtle scan-line over hero video for more "tech" feel */
+body.home-dark .hero::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:linear-gradient(to bottom, rgba(255,255,255,.015) 1px, transparent 2px);
+  background-size:100% 3px;
+  mix-blend-mode:overlay;
+  opacity:.35;
+}
+
+/* new: top corner brackets around hero — subtle high-tech trim */
+body.home-dark .hero .corner{
+  position:absolute;width:38px;height:38px;border-color:rgba(0,236,252,.35);
+  pointer-events:none;z-index:3;
+}
+body.home-dark .hero .corner.tl{top:110px;left:40px;border-top:1px solid;border-left:1px solid;border-top-left-radius:6px}
+body.home-dark .hero .corner.tr{top:110px;right:40px;border-top:1px solid;border-right:1px solid;border-top-right-radius:6px}
+body.home-dark .hero .corner.bl{bottom:80px;left:40px;border-bottom:1px solid;border-left:1px solid;border-bottom-left-radius:6px}
+body.home-dark .hero .corner.br{bottom:80px;right:40px;border-bottom:1px solid;border-right:1px solid;border-bottom-right-radius:6px}
+@media(max-width:1100px){body.home-dark .hero .corner{display:none}}
+
+/* tighten hero spacing so video is generous behind content */
+body.home-dark .hero-inner{min-height:calc(100vh - 230px)}
+
+/* partner logos row (new) */
+.partners{margin-top:24px;padding:22px 0 6px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;opacity:.85}
+.partners .p-logo{font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.01em;color:rgba(245,245,250,.56);display:inline-flex;align-items:center;gap:8px;transition:color .2s, opacity .2s;opacity:.72}
+.partners .p-logo:hover{color:#fff;opacity:1}
+body:not(.home-dark) .partners .p-logo{color:var(--text-tertiary)}
+.partners .dot-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.2)}
+@media(max-width:900px){.partners{gap:24px}.partners .dot-sep{display:none}}
+
+/* hero layout tweaks to match reference feel */
+body.home-dark .hero-title{font-size:clamp(52px,9vw,130px);line-height:.98}
+body.home-dark .hero-center{gap:22px}
+
+/* ═════════════════════════════════════════════════════════
+   BRAND GRADIENT (cyan → blue → violet)
+   Used on accent words, button hovers, CTAs
+   ═════════════════════════════════════════════════════════ */
+:root{
+  --grad: linear-gradient(90deg, #15D1FD 0%, #328BFD 45%, #6820FE 100%);
+  --grad-135: linear-gradient(135deg, #15D1FD 0%, #328BFD 50%, #6820FE 100%);
+}
+/* Applied to hero last-line (accent). Body.home-dark scope so light pages keep brand purple. */
+body.home-dark .hero-title .line-3,
+body.home-dark .grad-text,
+body.home-dark .final-card .display .italic-violet{
+  background: var(--grad);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  animation: gradShift 8s ease-in-out infinite;
+  display:inline-block;
+}
+@keyframes gradShift{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+/* small decorative glow behind the gradient word — optional */
+body.home-dark .final-card .display .italic-violet{position:relative}
+
+/* ═════════════════════════════════════════════════════════
+   BUTTON HOVER — pill wipe (right → left)
+   A gradient pill grows in from the right edge and fills
+   the button. Sits above the native bg, below the content.
+   ═════════════════════════════════════════════════════════ */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: var(--grad);
+  border-radius:inherit;
+  z-index:0;
+  pointer-events:none;
+  /* start: a tiny pill clipped to the right edge (invisible) */
+  clip-path: inset(8% 0% 8% 100% round 999px);
+  transition: clip-path .55s cubic-bezier(.2,.7,.2,1);
+}
+.btn:hover::after{
+  /* end: full coverage, pill softens to button corners */
+  clip-path: inset(0% 0% 0% 0% round 999px);
+}
+/* content sits above the wipe */
+.btn > *{position:relative;z-index:1}
+.btn{color:inherit}
+/* specific hover overrides so text+border react cleanly */
+body.home-dark .btn-primary{color:#07070F}
+body.home-dark .btn-primary:hover{color:#fff;border-color:rgba(255,255,255,.4);box-shadow:0 0 0 1px rgba(255,255,255,.2), 0 0 40px rgba(0,236,252,.35), 0 20px 60px -14px rgba(104,32,254,.45)}
+body.home-dark .btn-secondary:hover{color:#fff;border-color:rgba(255,255,255,.35)}
+body:not(.home-dark) .btn-primary:hover{color:#fff}
+body:not(.home-dark) .btn-secondary:hover{color:#fff;border-color:transparent}
+/* ensure text nodes inside btn repaint with the hover color — text nodes follow parent color naturally, good.
+   But we also need any inner span (like .arrow) to pick up the white color on hover. */
+body.home-dark .btn-primary:hover .arrow,
+body.home-dark .btn-primary:hover *{color:#fff}
+body:not(.home-dark) .btn-primary:hover .arrow,
+body:not(.home-dark) .btn-primary:hover *{color:#fff}
+
+/* ═════════════════════════════════════════════════════════
+   TESTIMONIALS — modernized, single-color gradient avatar
+   ═════════════════════════════════════════════════════════ */
+body.home-dark .avatar,
+body.home-dark .avatar.a2,
+body.home-dark .avatar.a3,
+body.home-dark .avatar.a4,
+body.home-dark .avatar.a5,
+body.home-dark .avatar.a6,
+body.home-dark .avatar.a7,
+body.home-dark .avatar.a8{
+  background: var(--grad-135);
+  color:#fff;
+  font-weight:800;
+  box-shadow:0 0 0 1px rgba(255,255,255,.14) inset, 0 8px 22px -6px rgba(50,139,253,.45);
+  width:42px;height:42px;
+  font-size:15px;
+}
+/* modernize testimonial cards with a gradient-border hover */
+body.home-dark .tm{
+  position:relative;
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.07);
+  transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s;
+}
+body.home-dark .tm::before{
+  content:'';
+  position:absolute;inset:-1px;
+  border-radius:inherit;
+  padding:1px;
+  background: var(--grad-135);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity:0;
+  transition: opacity .45s;
+  pointer-events:none;
+}
+body.home-dark .tm:hover{
+  transform:translateY(-4px);
+  border-color:transparent;
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 24px 50px -22px rgba(104,32,254,.28);
+}
+body.home-dark .tm:hover::before{opacity:1}
+body.home-dark .tm.accent{
+  background:
+    radial-gradient(400px 240px at 0% 0%, rgba(21,209,253,.22), transparent 60%),
+    linear-gradient(135deg, rgba(21,209,253,.14) 0%, rgba(104,32,254,.24) 100%);
+  border:1px solid rgba(255,255,255,.1);
+}
+body.home-dark .tm.accent .quote{color:#fff}
+
+/* ═════════════════════════════════════════════════════════
+   HERO — floating industry labels (glow text only)
+   No chrome — just slowly fading, glowing DM Sans labels
+   scattered around the hero, appearing at random times.
+   ═════════════════════════════════════════════════════════ */
+.hero-industries{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:4;
+  display:block;
+}
+.hero-industries .ind{
+  position:absolute;
+  font-family:'DM Sans',sans-serif;
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  pointer-events:none;
+  opacity:0;
+  color: #EAF7FF;
+  /* each chip gets its own cycle — duration+delay set inline in JS */
+  animation-name: indPulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.45,.05,.55,.95);
+  will-change: opacity, filter, transform;
+}
+body.home-dark .hero-industries .ind{
+  color: #C8E7FF;
+  text-shadow:
+    0 0 12px rgba(21,209,253,.55),
+    0 0 28px rgba(50,139,253,.35),
+    0 0 48px rgba(104,32,254,.25);
+}
+/* light-mode fallback — subtle brand-purple glow */
+body:not(.home-dark) .hero-industries .ind{
+  color: #5A3AFF;
+  text-shadow: 0 0 10px rgba(119,0,255,.3);
+}
+@keyframes indPulse{
+  0%   {opacity:0; transform:translateY(6px) scale(.98); filter:blur(4px)}
+  18%  {opacity:0.95; transform:translateY(0) scale(1); filter:blur(0)}
+  55%  {opacity:0.95; transform:translateY(0) scale(1); filter:blur(0)}
+  85%  {opacity:0; transform:translateY(-4px) scale(1.02); filter:blur(3px)}
+  100% {opacity:0; transform:translateY(-4px) scale(1.02); filter:blur(3px)}
+}
+@media(max-width:1100px){
+  .hero-industries{display:none}
+}
+
+/* hide original marquee in dark (home) — still rendered but removed visually */
+body.home-dark .marquee{display:none}
+
+/* ═════════════════════════════════════════════════════════
+   FEATURED WORK — extend media to full card, overlay title
+   ═════════════════════════════════════════════════════════ */
+body.home-dark .wk{padding:0;border-radius:20px;overflow:hidden;background:#0A0A14}
+body.home-dark .wk-media{aspect-ratio:16/10;position:relative;height:auto}
+body.home-dark .wk.wide .wk-media{aspect-ratio:21/10}
+/* hide the decorative [ PROJECT NAME ] placeholder tag when overlay titles are used */
+body.home-dark .wk-media .ph-tag{display:none}
+body.home-dark .wk-media::after{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to top, rgba(7,7,16,.92) 0%, rgba(7,7,16,.7) 22%, rgba(7,7,16,.2) 50%, transparent 75%);
+  pointer-events:none;
+  transition:opacity .4s;
+  z-index:1;
+}
+body.home-dark .wk-media .ph{
+  background:
+    radial-gradient(500px 350px at 30% 30%, rgba(21,209,253,.22), transparent 60%),
+    radial-gradient(400px 300px at 80% 70%, rgba(104,32,254,.30), transparent 60%),
+    linear-gradient(135deg, #0F0F22 0%, #1A0A35 100%);
+}
+body.home-dark .wk-body{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  padding:28px 32px 30px;
+  background:transparent;
+  z-index:3;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+  flex-wrap:wrap;
+}
+body.home-dark .wk-title{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.6);font-weight:800}
+body.home-dark .wk .wk-pills{margin-top:12px}
+body.home-dark .wk-pills{display:flex;gap:6px;flex-wrap:wrap}
+body.home-dark .wk-pills .p{
+  background:rgba(14,14,26,.6);
+  border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(10px);
+  color:rgba(245,245,250,.92);
+  white-space:nowrap;
+}
+body.home-dark .wk-link{
+  background:rgba(14,14,26,.7);
+  border:1px solid rgba(255,255,255,.2);
+  color:#fff;
+  backdrop-filter:blur(10px);
+  flex:none;
+}
+body.home-dark .wk-link:hover{
+  background: var(--grad-135);
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 0 0 1px rgba(255,255,255,.2), 0 12px 30px -10px rgba(50,139,253,.5);
+}
+/* play button on featured wide card */
+body.home-dark .wk-media .wk-play{
+  background: var(--grad-135);
+  color:#fff;
+  box-shadow:0 6px 20px -4px rgba(50,139,253,.45), 0 0 0 1px rgba(255,255,255,.14);
+  z-index:2;
+}
+
+/* section head: "Recent work" — keep green accent but show gradient */
+body.home-dark .italic-green{
+  background: var(--grad);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+/* hero "love." — pure white with soft cyan halo, NOT italic, sits inline with "people" */
+body.home-dark .hero-title .italic-violet{
+  background:none;
+  -webkit-background-clip:initial; background-clip:initial;
+  -webkit-text-fill-color:#FFFFFF; color:#FFFFFF;
+  font-style:normal;
+  text-shadow:
+    0 0 24px rgba(0,236,252,.55),
+    0 0 60px rgba(104,32,254,.45),
+    0 2px 24px rgba(0,0,0,.45);
+}
+/* also override italic-violet on dark hero/final */
+body.home-dark .italic-violet{
+  background: var(--grad);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+
+/* ═════════════════════════════════════════════════════════
+   CTA primary — arrow span hover tweak
+   ═════════════════════════════════════════════════════════ */
+body.home-dark .btn-primary .arrow,
+body.home-dark .btn-secondary .arrow{transition:transform .2s}
+body.home-dark .btn:hover .arrow{transform:translateX(4px)}
+
+/* ═════════════════════════════════════════════════════════
+   ANIMATED BOUNDARY BORDER for cards over the video
+   conic gradient sweeps a soft cyan/violet light around the
+   card edge, creating a living perimeter without a heavy
+   background. layered as a sibling pseudo on the card.
+   ═════════════════════════════════════════════════════════ */
+@property --bd-angle{
+  syntax:'<angle>';
+  initial-value:0deg;
+  inherits:false;
+}
+@keyframes bdSpin{ to{ --bd-angle: 360deg; } }
+
+body.home-dark .sv,
+body.home-dark .work-card,
+body.home-dark .audit-card,
+body.home-dark .stat,
+body.home-dark .proc,
+body.home-dark .testi-card,
+body.home-dark .pc{
+  position:relative;
+  isolation:isolate;
+}
+body.home-dark .sv::after,
+body.home-dark .work-card::after,
+body.home-dark .audit-card::after,
+body.home-dark .stat::after,
+body.home-dark .proc::after,
+body.home-dark .testi-card::after,
+body.home-dark .pc::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  padding:1.5px;
+  background:conic-gradient(from var(--bd-angle),
+    rgba(0,236,252,0)   0deg,
+    rgba(0,236,252,.05) 60deg,
+    rgba(0,236,252,.85) 120deg,
+    rgba(119,0,255,.85) 200deg,
+    rgba(119,0,255,.05) 260deg,
+    rgba(119,0,255,0)   360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite:exclude;
+  pointer-events:none;
+  opacity:.55;
+  animation: bdSpin 8s linear infinite;
+  z-index:0;
+}
+body.home-dark .sv:hover::after,
+body.home-dark .work-card:hover::after,
+body.home-dark .audit-card:hover::after,
+body.home-dark .stat:hover::after,
+body.home-dark .proc:hover::after,
+body.home-dark .testi-card:hover::after,
+body.home-dark .pc:hover::after{
+  opacity:1;
+  animation-duration:4s;
+}
+/* keep card content above the perimeter pseudo */
+body.home-dark .sv > *,
+body.home-dark .work-card > *,
+body.home-dark .audit-card > *,
+body.home-dark .stat > *,
+body.home-dark .proc > *,
+body.home-dark .testi-card > *,
+body.home-dark .pc > *{
+  position:relative;
+  z-index:1;
+}
+/* fallback for browsers without @property — static glow */
+@supports not (background: conic-gradient(from 0deg, red, red)){
+  body.home-dark .sv::after,
+  body.home-dark .work-card::after,
+  body.home-dark .audit-card::after,
+  body.home-dark .stat::after,
+  body.home-dark .proc::after,
+  body.home-dark .testi-card::after,
+  body.home-dark .pc::after{
+    background:linear-gradient(135deg, rgba(0,236,252,.4), rgba(119,0,255,.4));
+    animation:none;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  body.home-dark .sv::after,
+  body.home-dark .work-card::after,
+  body.home-dark .audit-card::after,
+  body.home-dark .stat::after,
+  body.home-dark .proc::after,
+  body.home-dark .testi-card::after,
+  body.home-dark .pc::after{ animation:none; }
+}
+
+/* lift glass cards: LIGHT luminous glass — image-4 style.
+   subtle white-tinted fill + soft inner highlight + glowing border.
+   the video underneath shines through at moderate strength. */
+body.home-dark .sv,
+body.home-dark .work-card,
+body.home-dark .stat,
+body.home-dark .proc,
+body.home-dark .testi-card,
+body.home-dark .pc,
+body.home-dark .audit-card,
+body.home-dark .final-card,
+body.home-dark .tc-card{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.04) 50%, rgba(255,255,255,.08) 100%);
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.20),
+    inset 0 -1px 0 rgba(255,255,255,.06),
+    0 24px 60px -28px rgba(0,0,0,.55);
+}
+/* keep existing animated boundary border, but bump opacity for the brighter look */
+body.home-dark .sv::after,
+body.home-dark .work-card::after,
+body.home-dark .audit-card::after,
+body.home-dark .stat::after,
+body.home-dark .proc::after,
+body.home-dark .testi-card::after,
+body.home-dark .pc::after,
+body.home-dark .tc-card::after{
+  opacity:.7;
+}
+body.home-dark .sv:hover::after,
+body.home-dark .work-card:hover::after,
+body.home-dark .audit-card:hover::after,
+body.home-dark .stat:hover::after,
+body.home-dark .proc:hover::after,
+body.home-dark .testi-card:hover::after,
+body.home-dark .pc:hover::after,
+body.home-dark .tc-card:hover::after{
+  opacity:1;
+  animation-duration:4s;
+}
+
+/* ═════════════════════════════════════════════════════════
+   GLOBAL BODY TEXT — 18 / 600 / pure white in home-dark
+   per-card overrides above are neutralized for paragraphs
+   ═════════════════════════════════════════════════════════ */
+body.home-dark p,
+body.home-dark .sv p,
+body.home-dark .audit-card p,
+body.home-dark .audit-card .a-list li,
+body.home-dark .work-card p,
+body.home-dark .proc p,
+body.home-dark .stat .label,
+body.home-dark .testi-card p,
+body.home-dark .tm .quote,
+body.home-dark .tm .who .name,
+body.home-dark .tm .who .role,
+body.home-dark .final-card .sub,
+body.home-dark .hero .sub,
+body.home-dark .hero p{
+  color:#FFFFFF !important;
+  font-size:18px;
+  font-weight:600;
+  line-height:1.55;
+}
+/* tighten quote line-height — testimonials are bigger */
+body.home-dark .tm .quote{ font-size:18px; }
+body.home-dark .tm.lg .quote{ font-size:22px; }
+
+/* ═════════════════════════════════════════════════════════
+   WALL OF LOVE — 3:4 PROMO CARD CAROUSEL
+   horizontal scroll-snap track with prev/next arrows
+   each card aspect-ratio:3/4, glass background to match site
+   ═════════════════════════════════════════════════════════ */
+.testimonials-carousel{
+  position:relative;
+  margin-top:48px;
+}
+.tc-viewport{
+  position:relative;
+  /* feather edges so partial cards fade out softly */
+  -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+          mask-image:linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+}
+.tc-track{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-padding-left:0;
+  padding:8px 4px 28px;
+  scrollbar-width:none;
+  scroll-behavior:smooth;
+}
+.tc-track::-webkit-scrollbar{display:none}
+.tc-card{
+  flex:0 0 calc(33.333% - 14px);
+  aspect-ratio:1/1;
+  scroll-snap-align:start;
+  border-radius:20px;
+  padding:36px 32px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:24px;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+@media (max-width: 1024px){
+  .tc-card{flex-basis:calc(50% - 10px)}
+}
+@media (max-width: 640px){
+  .tc-card{flex-basis:calc(100% - 8px)}
+}
+.tc-quote-mark{
+  font-family:'DM Sans',sans-serif;
+  font-weight:800;
+  font-size:96px;
+  line-height:.6;
+  color:var(--cyan);
+  opacity:.55;
+  text-shadow:0 0 24px rgba(0,236,252,.35);
+}
+.tc-card .quote{
+  font-family:'DM Sans',sans-serif;
+  font-weight:600;
+  font-size:20px;
+  line-height:1.45;
+  color:#fff;
+  flex:1;
+}
+.tc-card .who{display:flex;align-items:center;gap:12px}
+.tc-card .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--violet));display:grid;place-items:center;font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;color:#07070F;flex-shrink:0}
+.tc-card .name{color:#fff;font-weight:700;font-size:15px}
+.tc-card .role{color:rgba(255,255,255,.6);font-size:13px}
+
+/* animated boundary on carousel cards (matches other cards) */
+body.home-dark .tc-card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  padding:1.5px;
+  background:conic-gradient(from var(--bd-angle),
+    rgba(0,236,252,0)   0deg,
+    rgba(0,236,252,.05) 60deg,
+    rgba(0,236,252,.85) 120deg,
+    rgba(119,0,255,.85) 200deg,
+    rgba(119,0,255,.05) 260deg,
+    rgba(119,0,255,0)   360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite:exclude;
+  pointer-events:none;
+  opacity:.55;
+  animation: bdSpin 8s linear infinite;
+  z-index:-1;
+}
+body.home-dark .tc-card:hover::after{ opacity:1; animation-duration:4s; }
+
+/* arrows */
+.tc-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(14,14,26,.65);
+  border:1px solid rgba(0,236,252,.3);
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+  z-index:5;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  transition:transform .25s, background .25s, border-color .25s, box-shadow .25s;
+}
+.tc-arrow:hover{
+  background:var(--cyan);
+  border-color:var(--cyan);
+  color:#07070F;
+  box-shadow:0 0 32px rgba(0,236,252,.5);
+  transform:translateY(-50%) scale(1.06);
+}
+.tc-prev{left:-12px}
+.tc-next{right:-12px}
+/* ═════════════════════════════════════════════════════════
+   INTERIOR PAGES — light theme upgrade
+   Applies on every page EXCEPT body.home-dark (homepage).
+   White bg stays. Headings get gradient accent words, buttons go
+   white-with-cyan-glow, final CTAs get a white card with gradient
+   ring, select promo blocks get light-glass treatment.
+   ═════════════════════════════════════════════════════════ */
+
+/* ── 1. Gradient accent word ─────────────────────────────────
+   Site-wide on light pages. Same cyan→violet ramp as home, with a
+   soft halo so the word still pops on white. */
+body:not(.home-dark) .italic-violet,
+body:not(.home-dark) .italic-green,
+body:not(.home-dark) .display .italic-violet,
+body:not(.home-dark) .display .italic-green{
+  background: var(--grad);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; color:transparent;
+  font-style:normal;
+  font-weight:800;
+  /* subtle drop-glow behind the gradient text */
+  filter: drop-shadow(0 6px 24px rgba(0,236,252,.18))
+          drop-shadow(0 2px 14px rgba(104,32,254,.18));
+}
+
+/* ── 2. Primary button — white with cyan glow ──────────────── */
+body:not(.home-dark) .btn-primary{
+  background:#fff;
+  color:#0B0B14;
+  border:1px solid rgba(0,236,252,.35);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.6) inset,
+    0 0 0 1px rgba(0,236,252,.06),
+    0 12px 28px -10px rgba(0,236,252,.35),
+    0 6px 18px -6px rgba(104,32,254,.20);
+  transition:transform .18s, box-shadow .25s, border-color .25s, background .25s;
+}
+body:not(.home-dark) .btn-primary:hover{
+  background:#fff;
+  color:#0B0B14;
+  border-color: rgba(0,236,252,.7);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 0 0 2px rgba(0,236,252,.18),
+    0 18px 40px -12px rgba(0,236,252,.55),
+    0 10px 28px -10px rgba(104,32,254,.35);
+}
+body:not(.home-dark) .btn-primary.glow{
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.6) inset,
+    0 0 0 1px rgba(0,236,252,.10),
+    0 16px 36px -10px rgba(0,236,252,.45),
+    0 8px 22px -6px rgba(104,32,254,.25);
+}
+body:not(.home-dark) .btn-primary .arrow{
+  display:inline-block; transition:transform .25s;
+}
+body:not(.home-dark) .btn-primary:hover .arrow{ transform:translateX(4px); }
+
+/* the light "secondary" version that lives inside dark final-card on home is
+   left untouched — only target buttons OUTSIDE that container. */
+
+/* ── 3. Final CTA card — white card with gradient ring ──────── */
+body:not(.home-dark) .final-card{
+  background:#FFFFFF;
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:28px;
+  padding:96px 64px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 30px 80px -28px rgba(0,236,252,.35),
+    0 18px 40px -16px rgba(104,32,254,.25),
+    0 0 0 1px rgba(0,236,252,.08);
+}
+/* the gradient ring — a 2px conic/linear gradient border using a pseudo */
+body:not(.home-dark) .final-card::before{
+  content:''; display:block;
+  position:absolute; inset:0;
+  border-radius:inherit;
+  padding:2px;                                /* ring thickness */
+  background: var(--grad-135);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  opacity:.85;
+}
+/* soft aurora glow inside the card, behind the type */
+body:not(.home-dark) .final-card::after{
+  content:''; position:absolute; inset:-20%;
+  background:
+    radial-gradient(35% 50% at 18% 30%, rgba(0,236,252,.18) 0%, transparent 65%),
+    radial-gradient(35% 50% at 82% 70%, rgba(104,32,254,.18) 0%, transparent 65%);
+  filter: blur(10px);
+  z-index:0;
+  pointer-events:none;
+}
+body:not(.home-dark) .final-card > *{ position:relative; z-index:1; }
+body:not(.home-dark) .final-card .display{
+  color:#0B0B14;
+  font-size:clamp(48px,6.6vw,92px);
+  margin-bottom:22px;
+}
+body:not(.home-dark) .final-card .display .italic-violet{
+  /* gradient already inherited; ensure no flat color override wins */
+  background: var(--grad);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; color:transparent;
+  filter: drop-shadow(0 6px 24px rgba(0,236,252,.25))
+          drop-shadow(0 2px 14px rgba(104,32,254,.22));
+}
+body:not(.home-dark) .final-card .sub{
+  color:#475569;
+  font-size:18px;
+  margin-bottom:36px;
+}
+body:not(.home-dark) .final-card .btn-primary{
+  background:#fff;
+  color:#0B0B14;
+  /* same cyan-glow recipe as page-level primary, just slightly stronger */
+  border:1px solid rgba(0,236,252,.4);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 16px 38px -10px rgba(0,236,252,.5),
+    0 8px 24px -8px rgba(104,32,254,.3);
+}
+body:not(.home-dark) .final-card .btn-primary:hover{
+  background:#fff;
+  color:#0B0B14;
+  border-color: rgba(0,236,252,.7);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.8) inset,
+    0 22px 48px -10px rgba(0,236,252,.65),
+    0 12px 30px -10px rgba(104,32,254,.4);
+}
+body:not(.home-dark) .final-card .email-link{
+  color:#0B0B14;
+  border-color:rgba(11,11,20,.25);
+}
+body:not(.home-dark) .final-card .email-link:hover{
+  color:#0B0B14;
+  border-color:rgba(0,236,252,.7);
+}
+/* hide the old purple/orbs decorative layer on light-card variant */
+body:not(.home-dark) .final-card .final-orbs{ display:none; }
+
+/* ── 4. Promo blocks — light glass with gradient ring ────────
+   Promotes select feature cards to a luminous glass surface so the
+   heading + cyan glow feel cohesive. */
+
+/* a. Audit "what's inside" card */
+body:not(.home-dark) .audit-card{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.85) 0%,
+      rgba(245,250,255,.95) 50%,
+      rgba(240,245,255,.85) 100%);
+  border:1px solid rgba(0,236,252,.18);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.8) inset,
+    0 22px 60px -28px rgba(0,236,252,.30),
+    0 12px 32px -14px rgba(104,32,254,.20);
+  position:relative;
+  overflow:hidden;
+}
+body:not(.home-dark) .audit-card::before{
+  content:''; display:block;
+  position:absolute; inset:0; border-radius:inherit;
+  padding:1.5px;
+  background: var(--grad-135);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  opacity:.5;
+}
+body:not(.home-dark) .audit-card .a-list li::before{
+  background: var(--grad);
+}
+
+/* b. Principles cards (About) — every other card already has a soft purple bg.
+   Replace ALL with light-glass + gradient ring on the every-other pattern. */
+body:not(.home-dark) .pr{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.06);
+}
+body:not(.home-dark) .pr:nth-child(2n){
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.85) 0%,
+      rgba(245,250,255,.95) 50%,
+      rgba(240,245,255,.85) 100%);
+  border-color: rgba(0,236,252,.18);
+  position:relative;
+  overflow:hidden;
+}
+body:not(.home-dark) .pr:nth-child(2n)::after{
+  content:''; position:absolute; inset:0; border-radius:inherit;
+  padding:1.5px;
+  background: var(--grad-135);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  opacity:.45;
+}
+body:not(.home-dark) .pr:hover{
+  border-color: rgba(0,236,252,.35);
+  box-shadow:
+    0 18px 40px -16px rgba(0,236,252,.30),
+    0 10px 24px -10px rgba(104,32,254,.18);
+}
+
+/* c. Audit form — keep white card but lift with cyan-tinted glow on focus */
+body:not(.home-dark) .audit-form{
+  border-color: rgba(0,236,252,.18);
+  box-shadow:
+    0 18px 50px -22px rgba(0,236,252,.25),
+    0 10px 26px -12px rgba(104,32,254,.18);
+}
+body:not(.home-dark) .audit-form input:focus,
+body:not(.home-dark) .audit-form textarea:focus,
+body:not(.home-dark) .audit-form select:focus{
+  outline:none;
+  border-color: rgba(0,236,252,.6);
+  box-shadow: 0 0 0 4px rgba(0,236,252,.12);
+}
+
+/* ── 8. Final cleanup — kill ALL remaining light purple/lavender washes ── */
+/* hero-nebula orbs (soft purple blobs behind page heros) */
+body:not(.home-dark) .hero-nebula{ display:none; }
+
+/* stat-card middle (sc:nth-child(2)) — was purple/cream, now plain white */
+body:not(.home-dark) .sc:nth-child(2){
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,.06);
+}
+/* sc corner radial (was rgba(119,0,255,.08) purple) */
+body:not(.home-dark) .sc::before{
+  background: radial-gradient(circle, rgba(0,236,252,.10), transparent 70%);
+}
+/* hover border on stat-cards: cyan, not violet */
+body:not(.home-dark) .sc:hover{
+  border-color: rgba(0,236,252,.35);
+  box-shadow: 0 14px 32px -16px rgba(0,236,252,.30);
+}
+
+/* audit-mock report card — was lavender; now plain white with cyan ring */
+body:not(.home-dark) .audit-mock{
+  background: #FFFFFF;
+  border: 1px solid rgba(0,236,252,.18);
+  box-shadow:
+    0 30px 80px -28px rgba(0,236,252,.30),
+    0 16px 36px -16px rgba(104,32,254,.20),
+    0 0 0 1px rgba(0,236,252,.08);
+  position:relative;
+}
+/* mono chips inside the audit-mock (yourbrand.com, 2/10, etc.) — dark instead of lavender */
+body:not(.home-dark) .audit-mock .m-row .mono{
+  background: #111827;
+  color: #FFFFFF;
+}
+
+/* generic .mono inline tags (used in copy) — keep on light pages but neutral */
+body:not(.home-dark) .mono{
+  background: #F3F4F6;
+  color: #1F2937;
+}
+
+/* ── 8b. UI primitive cleanup — flat-purple → cyan/gradient on light pages ── */
+/* Nav active pill — cyan tint instead of lavender */
+body:not(.home-dark) .nav-links a.active{
+  color: var(--violet);
+  background: rgba(0,236,252,.12);
+  box-shadow: inset 0 0 0 1px rgba(0,236,252,.28);
+}
+/* mini-pill (section header chips) — cyan tint, gradient dot */
+body:not(.home-dark) .section-head .mini-pill{
+  background: rgba(0,236,252,.10);
+  border-color: rgba(0,236,252,.30);
+  color: #1E293B;
+}
+body:not(.home-dark) .section-head .mini-pill .p-dot{
+  background: var(--grad);
+  box-shadow: 0 0 10px rgba(0,236,252,.6);
+}
+/* Work page filter chip "All" active — cyan→violet gradient */
+body:not(.home-dark) .chip.active{
+  background: var(--grad);
+  border-color: transparent;
+  color: #FFFFFF;
+  box-shadow:
+    0 6px 18px -4px rgba(0,236,252,.45),
+    0 6px 18px -4px rgba(104,32,254,.30);
+}
+body:not(.home-dark) .chip:hover{
+  border-color: rgba(0,236,252,.45);
+  color: var(--violet);
+}
+/* Work card placeholder tile — neutral slate w/ subtle cyan, no lavender→mint */
+body:not(.home-dark) .pc-media .ph{
+  background:
+    linear-gradient(135deg, #F8FAFC 0%, #EEF6FA 100%);
+  color: #475569;
+}
+.pc-media .ph::after{
+  content:'';
+  position:absolute; inset:0;
+  background: radial-gradient(60% 80% at 50% 0%, rgba(0,236,252,.10), transparent 70%);
+  pointer-events:none;
+}
+/* audit-mock title <em> — gradient text, not flat violet */
+body:not(.home-dark) .audit-mock .m-title em{
+  background: var(--grad);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; color:transparent;
+  font-style:normal;
+}
+/* Cursor dot — gradient on light pages too */
+body:not(.home-dark) .cursor-dot{
+  background: var(--grad);
+  box-shadow: 0 0 14px rgba(0,236,252,.5);
+}
+body:not(.home-dark) .cursor-dot.hover{
+  background: rgba(0,236,252,.25);
+}
+
+/* ── 9. Audit page redesign — "What's inside" + stats sections ──
+   Match the polished aesthetic of the closer card. */
+
+/* "What's inside your audit" — fully restyle the audit-card */
+body:not(.home-dark) .audit-card{
+  background: #FFFFFF;
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 28px;
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 30px 80px -28px rgba(0,236,252,.28),
+    0 18px 40px -16px rgba(104,32,254,.18),
+    0 0 0 1px rgba(0,236,252,.08);
+}
+/* gradient ring on outer audit-card */
+body:not(.home-dark) .audit-card::before{
+  content:'';
+  position:absolute; inset:0; border-radius:inherit;
+  padding:2px;
+  background: var(--grad-135);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  opacity:.55;
+}
+/* aurora wash inside the audit-card */
+body:not(.home-dark) .audit-card::after{
+  content:''; position:absolute; inset:-20%;
+  background:
+    radial-gradient(35% 50% at 18% 30%, rgba(0,236,252,.14) 0%, transparent 65%),
+    radial-gradient(35% 50% at 82% 70%, rgba(104,32,254,.14) 0%, transparent 65%);
+  filter: blur(10px);
+  z-index:0;
+  pointer-events:none;
+}
+body:not(.home-dark) .audit-card > *{ position:relative; z-index:1; }
+
+/* "What's inside" bullet list — modern card-style, not flat circles */
+body:not(.home-dark) .audit-card .a-list{
+  display:flex; flex-direction:column; gap:10px;
+}
+body:not(.home-dark) .audit-card .a-list li{
+  padding: 16px 16px 16px 56px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,.06);
+  color: #0B0B14;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+body:not(.home-dark) .audit-card .a-list li:hover{
+  border-color: rgba(0,236,252,.35);
+  box-shadow: 0 8px 24px -10px rgba(0,236,252,.25);
+  transform: translateY(-1px);
+}
+/* check icon — cyan/violet gradient circle with white check */
+body:not(.home-dark) .audit-card .a-list li::before{
+  content:'';
+  position:absolute;
+  left: 16px; top: 50%; transform: translateY(-50%);
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--grad-135);
+  box-shadow: 0 4px 12px -2px rgba(0,236,252,.4);
+}
+body:not(.home-dark) .audit-card .a-list li::after{
+  left: 22px; top: 50%;
+  margin-top: -4px;
+  width: 10px; height: 5px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(-45deg);
+}
+
+/* Stats grid (sc-grid) — promote each card to luminous glass with gradient ring */
+body:not(.home-dark) .sc{
+  background: #FFFFFF;
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 20px;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 22px 50px -24px rgba(0,236,252,.22),
+    0 12px 28px -14px rgba(104,32,254,.16),
+    0 0 0 1px rgba(0,236,252,.06);
+}
+/* gradient ring on each stat card */
+body:not(.home-dark) .sc::after{
+  content:'';
+  position:absolute; inset:0; border-radius:inherit;
+  padding:1.5px;
+  background: var(--grad-135);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  opacity:.4;
+  transition: opacity .3s;
+}
+body:not(.home-dark) .sc:hover::after{ opacity:.75; }
+body:not(.home-dark) .sc:hover{
+  transform: translateY(-3px);
+  border-color: transparent;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 28px 60px -22px rgba(0,236,252,.36),
+    0 16px 36px -14px rgba(104,32,254,.24);
+}
+body:not(.home-dark) .sc > *{ position:relative; z-index:1; }
+/* big number — gradient text */
+body:not(.home-dark) .sc .big{
+  background: var(--grad);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; color:transparent;
+  filter: drop-shadow(0 6px 24px rgba(0,236,252,.18));
+}
+body:not(.home-dark) .sc .desc{
+  color: #475569;
+  font-weight: 500;
+}
+/* mini-chart bars stay slate (already set in section 7) — they read clearly on white */
+body:not(.home-dark) .portrait .ph-tag{
+  border:1px solid rgba(0,236,252,.3);
+  background:#fff;
+  color:#0B0B14;
+}
+
+/* ── 6. Plain white backgrounds — kill the soft purple/green wash ──
+   User feedback: light purple bg looks dated on interior pages. */
+body:not(.home-dark) .audit-card{
+  background: #FFFFFF;
+}
+body:not(.home-dark) .pr:nth-child(2n){
+  background: #FFFFFF;
+}
+body:not(.home-dark) .portrait{
+  background: #FFFFFF;
+}
+body:not(.home-dark) .sv.big{
+  background: #FFFFFF;
+  border-color: rgba(0,0,0,.08);
+}
+
+/* ── 7. Audit page: kill purple bars, replace with dark/gray neutral ── */
+/* stat-card bars (mini-chart) */
+body:not(.home-dark) .sc .mini-chart .bar{
+  background: #1F2937;             /* slate-800, modern dark */
+  opacity: 1;
+  border-radius: 4px 4px 1px 1px;
+}
+/* audit-mock CITATION READINESS bar */
+body:not(.home-dark) .audit-mock .m-score{
+  background: linear-gradient(135deg, #111827 0%, #374151 100%);
+  color: #FFFFFF;
+}
+body:not(.home-dark) .audit-mock .m-score .big{ color:#FFFFFF; }
+body:not(.home-dark) .audit-mock .m-score .lbl{ color:rgba(255,255,255,.7); }
+/* process-rail connector */
+body:not(.home-dark) .process-rail::before{
+  background: linear-gradient(90deg, #6B7280 0%, #1F2937 100%);
+  opacity: .35;
+}
+/* process-step nodes */
+body:not(.home-dark) .ps .node{
+  background: #111827;
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px -4px rgba(17,24,39,.45);
+}
+/* audit-card check bullets — neutral gray */
+body:not(.home-dark) .audit-card .a-list li::before{
+  background: #1F2937;
+}
+/* final-orbs (purple+green) — remove on light pages */
+body:not(.home-dark) .final-orbs{ display:none; }
+  /* inherits from rule 1; this just bumps specificity over old purple rules */
+  background: var(--grad);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; color:transparent;
+}
+</style>
+</head>
+
+<body class="home-dark">
+
+<!-- ambient AI FX — drifting particles, scan sweeps, vignette breathe.
+     Populated at runtime; hidden in light mode via CSS. -->
+<div class="ai-fx" id="aiFx" aria-hidden="true">
+  <div class="vignette"></div>
+  <div class="scan"></div>
+  <div class="scan s2"></div>
+</div>
+
+<div class="cursor-dot" id="cursor"></div>
+
+<nav class="nav" id="nav">
+  <a href="#" class="wordmark" data-page="home">CHIRAN<span class="vdot"></span></a>
+  <div class="nav-links">
+    <a href="#" data-page="home" class="active">Home</a>
+    <a href="#" data-page="work">Work</a>
+    <a href="#" data-page="studio">Studio</a>
+    <a href="#" data-page="audit">Audit</a>
+    <a href="#" data-page="journal">Journal</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-pill"><span class="p-dot"></span>Q3 2026 · 2 slots</div>
+    <a href="#" data-page="audit" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
+  </div>
+</nav>
+
+<!-- ═════════ HOME ═════════ -->
+<main class="page active" id="page-home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline preload="auto" poster="">
+      <source src="assets/hero-bg.mp4" type="video/mp4"/>
+    </video>
+  </div>
+  <div class="corner tl" aria-hidden="true"></div>
+  <div class="corner tr" aria-hidden="true"></div>
+  <div class="corner bl" aria-hidden="true"></div>
+  <div class="corner br" aria-hidden="true"></div>
+
+  <!-- floating industry chips — draws the eye, replaces the marquee -->
+  <div class="hero-industries" id="heroIndustries" aria-hidden="true"></div>
+
+  <div class="hero-nebula" aria-hidden="true">
+    <div class="orb">
+      <div class="rings">
+        <div class="ring"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="ring r4"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <div class="label">DESIGN STUDIO</div>
+      <div class="hero-pill"><span class="p-dot"></span>Now booking Q3 2026 · 2 slots open</div>
+    </div>
+
+    <div class="hero-center">
+      <div class="label" style="text-align:center;letter-spacing:.22em">WHERE DESIGN MEETS INTELLIGENCE</div>
+      <h1 class="display hero-title" id="heroTitle">
+        <span class="line" data-text="Brands"></span>
+        <span class="line" data-text="people " data-italic="love."></span>
+        <span class="line line-3" data-text="Engineered for AI."></span>
+      </h1>
+      <p class="hero-sub">I design and build websites for hotels, wellness, beauty and lifestyle brands — cinematic, editorial, and engineered to be cited by ChatGPT, Claude and Perplexity.</p>
+      <div class="hero-ctas">
+        <a href="#" data-page="audit" class="btn btn-primary glow">Get a free AI audit <span class="arrow">→</span></a>
+        <a href="#featured" class="btn btn-secondary">See the work</a>
+      </div>
+
+      <div class="partners" aria-label="Trusted by">
+        <span class="p-logo">Sarisara Lanka</span>
+        <span class="dot-sep"></span>
+        <span class="p-logo">Villa Kaloya</span>
+        <span class="dot-sep"></span>
+        <span class="p-logo">Lumen Skincare</span>
+        <span class="dot-sep"></span>
+        <span class="p-logo">Hiruka Wellness</span>
+        <span class="dot-sep"></span>
+        <span class="p-logo">North Point Estates</span>
+      </div>
+    </div>
+
+    <aside class="hero-aside">
+      <span class="aside-label">What I build</span>
+      A one-designer studio shipping editorial, AI-citable websites for 50+ lifestyle brands — from boutique hotels to beauty founders — on Next.js and WordPress.
+    </aside>
+
+    <div class="hero-stats">
+      <div class="hstat"><div class="hs-num">50<em>+</em></div><div class="hs-lbl">Brands<br/>Designed</div></div>
+      <div class="hstat"><div class="hs-num">6<em> yrs</em></div><div class="hs-lbl">Studio<br/>Experience</div></div>
+      <div class="hstat"><div class="hs-num">99<em>%</em></div><div class="hs-lbl">Repeat<br/>Client Rate</div></div>
+      <div class="hstat"><div class="hs-num">3<em> wks</em></div><div class="hs-lbl">Site to<br/>Launch</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <!-- filled by JS for seamless loop -->
+  </div>
+</div>
+
+<!-- WHAT I DO — bento -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>The studio · what I do</div>
+      <h2 class="display section-title">A studio for lifestyle brands<br/>that want to be <span class="italic-violet">found</span>.</h2>
+    </div>
+
+    <div class="services-bento reveal">
+      <div class="sv big">
+        <span class="sv-kicker">01 · Flagship</span>
+        <h3>Website Design<br/>+ Build, in 3 weeks.</h3>
+        <p>Custom websites on Next.js or WordPress — strategy, brand application, front-end, CMS and launch — wired for AI citation on day one.</p>
+        <div class="schematic">
+          <div class="orbit"></div>
+          <div class="grid-lines"></div>
+          <svg class="wave-lines" viewBox="0 0 300 200" fill="none" stroke="rgba(169,75,255,.55)" stroke-width=".6">
+            <path d="M0 160 Q 80 120, 150 140 T 300 100" />
+            <path d="M0 140 Q 80 100, 150 120 T 300 80" opacity=".6"/>
+            <path d="M0 120 Q 80 80, 150 100 T 300 60" opacity=".35"/>
+            <path d="M0 180 Q 80 150, 150 170 T 300 130" opacity=".25"/>
+          </svg>
+        </div>
+        <div class="sv-foot">
+          <div class="sv-tags">
+            <span class="t">Next.js</span><span class="t">WordPress</span><span class="t">Shopify</span>
+          </div>
+          <a href="#" class="learn">Learn more <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">02 · Identity</span>
+        <h3>Brand +<br/>Visual Identity</h3>
+        <p>Logos, visual systems, guidelines — the kind that don't need a refresh in 18 months.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">Logo</span><span class="t">Guidelines</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">03 · AI Search</span>
+        <h3>AI Search<br/>Optimization</h3>
+        <p>Structured so ChatGPT, Claude and Perplexity cite your brand in their answers.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">Schema</span><span class="t">Entity</span><span class="t">llms.txt</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">04 · Lifecycle</span>
+        <h3>Care + Growth,<br/>after launch.</h3>
+        <p>Monthly retainers for the brands that want their site to keep improving, not just exist.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">Retainer</span><span class="t">Analytics</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+
+      <div class="sv">
+        <span class="sv-kicker">05 · Tooling</span>
+        <h3>AI-Native<br/>CMS setup.</h3>
+        <p>Clean content models, MCP hooks, and editor workflows your team will actually use.</p>
+        <div class="sv-foot">
+          <div class="sv-tags"><span class="t">CMS</span><span class="t">MCP</span></div>
+          <a href="#" class="learn">→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section id="featured">
+  <div class="wrap">
+    <div class="section-head reveal" style="flex-direction:row;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="mini-pill"><span class="p-dot"></span>Featured work · 2026</div>
+        <h2 class="display section-title">Recent <span class="italic-green">work</span>.</h2>
+      </div>
+      <a href="#" data-page="work" class="btn btn-secondary">All projects <span class="arrow">→</span></a>
+    </div>
+
+    <div class="work-grid reveal">
+      <article class="wk wide">
+        <div class="wk-media">
+          <div class="ph"><span class="ph-tag">[ Sarisara Lanka — hero still ]</span></div>
+          <div class="wk-ov"></div>
+          <div class="wk-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="wk-body">
+          <div>
+            <h3 class="wk-title">Sarisara Lanka</h3>
+            <div class="wk-pills"><span class="p">Travel Marketplace</span><span class="p">WordPress</span><span class="p">AI Itinerary</span><span class="p">MCP Ready</span></div>
+          </div>
+          <a href="#" class="wk-link">Case study <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="wk">
+        <div class="wk-media">
+          <div class="ph"><span class="ph-tag">[ Villa Kaloya — lobby still ]</span></div>
+          <div class="wk-ov"></div>
+        </div>
+        <div class="wk-body">
+          <div>
+            <h3 class="wk-title">Villa Kaloya</h3>
+            <div class="wk-pills"><span class="p">Hospitality</span><span class="p">Next.js</span><span class="p">Bookings</span></div>
+          </div>
+          <a href="#" class="wk-link">→</a>
+        </div>
+      </article>
+
+      <article class="wk">
+        <div class="wk-media">
+          <div class="ph"><span class="ph-tag">[ Lumen Skincare — product flat-lay ]</span></div>
+          <div class="wk-ov"></div>
+        </div>
+        <div class="wk-body">
+          <div>
+            <h3 class="wk-title">Lumen Skincare</h3>
+            <div class="wk-pills"><span class="p">Beauty</span><span class="p">Shopify</span><span class="p">Brand System</span></div>
+          </div>
+          <a href="#" class="wk-link">→</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT LEAD MAGNET -->
+<section>
+  <div class="wrap">
+    <div class="audit-card reveal">
+      <div>
+        <div class="mini-pill" style="margin-bottom:20px"><span class="p-dot"></span>Free tool · limited capacity</div>
+        <h2 class="display" style="font-size:clamp(40px,5.4vw,72px);margin-bottom:18px">Is your website <span class="italic-violet">invisible</span> to AI?</h2>
+        <p style="color:var(--t2);font-size:17px;max-width:520px">Travelers, buyers, and clients ask ChatGPT, Claude and Perplexity for recommendations right now. I'll check if your brand shows up — and tell you how to fix it if it doesn't.</p>
+        <ul class="a-list">
+          <li>I run your domain through ChatGPT, Claude, and Perplexity</li>
+          <li>Check schema, entity clarity, and citation-readiness</li>
+          <li>Deliver a branded PDF within 48 hours</li>
+          <li>Free. No credit card, no sales call.</li>
+        </ul>
+        <a href="#" data-page="audit" class="btn btn-primary glow">Get your free audit <span class="arrow">→</span></a>
+      </div>
+      <div class="audit-mock">
+        <div class="m-head">
+          <div class="m-logo">Chiran<span class="d"></span></div>
+          <div class="m-date">AUDIT · 04·24·26</div>
+        </div>
+        <div class="m-body">
+          <div class="m-title">AI Search<br/>Visibility <em>Report</em></div>
+          <div class="m-row"><span>Domain</span><span class="mono">sarisaralanka.com</span></div>
+          <div class="m-row"><span>ChatGPT cites</span><span class="mono">2 / 10</span></div>
+          <div class="m-row"><span>Claude cites</span><span class="mono">1 / 10</span></div>
+          <div class="m-row"><span>Perplexity cites</span><span class="mono">3 / 10</span></div>
+          <div class="m-row"><span>Schema found</span><span class="mono">Partial</span></div>
+          <div class="m-score">
+            <div class="lbl">Citation<br/>Readiness</div>
+            <div class="big">34<span style="font-size:18px">%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>How it works</div>
+      <h2 class="display section-title">Simple process.<br/>Serious <span class="italic-green">results</span>.</h2>
+    </div>
+    <div class="process-rail reveal">
+      <div class="process-grid">
+        <div class="ps">
+          <div class="node">01</div>
+          <div class="week">30 minutes</div>
+          <h4>Discovery Call</h4>
+          <p>We talk about your brand, your audience, and what success looks like after launch.</p>
+        </div>
+        <div class="ps">
+          <div class="node">02</div>
+          <div class="week">Week One</div>
+          <h4>Strategy + Wireframes</h4>
+          <p>Content, positioning, and site architecture — with AI-search structure baked in.</p>
+        </div>
+        <div class="ps">
+          <div class="node">03</div>
+          <div class="week">Week Two</div>
+          <h4>Design + Build</h4>
+          <p>Visual design, front-end and CMS — built the way I'd build my own studio site.</p>
+        </div>
+        <div class="ps">
+          <div class="node">04</div>
+          <div class="week">Week Three</div>
+          <h4>Launch + Handover</h4>
+          <p>We ship it live, you get a Loom walkthrough and 30 days of support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI SHIFT STATS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>The shift · Why this matters</div>
+      <h2 class="display section-title">Search is <span class="italic-violet">changing</span>.<br/>Are you ready?</h2>
+    </div>
+    <div class="sc-grid reveal">
+      <div class="sc">
+        <div class="big" data-count="47">0<span class="u">%</span></div>
+        <div class="desc">of travelers plan trips using an AI chatbot as part of their research — rising every quarter.</div>
+        <div class="mini-chart">
+          <div class="bar" style="height:18%"></div><div class="bar" style="height:32%"></div>
+          <div class="bar" style="height:46%"></div><div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:72%"></div><div class="bar" style="height:90%"></div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="big"><span class="grad-text" style="font-style:italic">1</span> <span style="color:var(--t3);font-style:italic;font-weight:400;font-size:40px">in</span> <span data-count="4">0</span></div>
+        <div class="desc">Google searches now return an AI Overview above the first organic result.</div>
+        <div class="mini-chart">
+          <div class="bar" style="height:82%"></div><div class="bar" style="height:28%"></div>
+          <div class="bar" style="height:22%"></div><div class="bar" style="height:26%"></div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="big" data-count="12">0<span class="u">%</span></div>
+        <div class="desc">of small-and-midsized lifestyle sites are structurally ready to be cited by an LLM. The rest are invisible.</div>
+        <div class="mini-chart">
+          <div class="bar" style="height:88%"></div><div class="bar" style="height:86%"></div>
+          <div class="bar" style="height:84%"></div><div class="bar" style="height:22%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="mini-pill"><span class="p-dot"></span>What clients say</div>
+      <h2 class="display section-title">Wall of <span class="italic-green">love</span>.</h2>
+    </div>
+    <div class="testimonials-carousel reveal">
+      <button class="tc-arrow tc-prev" aria-label="Previous">←</button>
+      <div class="tc-viewport">
+      <div class="tc-track" id="tcTrack">
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 1 — Hero quote. Specific outcome, specific tone.]</p><div class="who"><div class="avatar">A</div><div><div class="name">[Client Name]</div><div class="role">Founder, [Brand]</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 2 — speed of delivery and how the site felt from day one.]</p><div class="who"><div class="avatar a2">K</div><div><div class="name">[Client Name]</div><div class="role">Owner, Boutique Hotel</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 3 — short, punchy. Pull-quote material.]</p><div class="who"><div class="avatar a3">M</div><div><div class="name">[Client Name]</div><div class="role">Director, Wellness Retreat</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 4 — about the AI audit process.]</p><div class="who"><div class="avatar a4">P</div><div><div class="name">[Client Name]</div><div class="role">CMO, Beauty Brand</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 5 — about handover and docs.]</p><div class="who"><div class="avatar a5">D</div><div><div class="name">[Client Name]</div><div class="role">Developer, Real Estate</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 6 — the long emotional one. Trust, craft, being understood.]</p><div class="who"><div class="avatar a6">R</div><div><div class="name">[Client Name]</div><div class="role">Founder, Lifestyle Product</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 7 — bookings and revenue impact after launch.]</p><div class="who"><div class="avatar a7">S</div><div><div class="name">[Client Name]</div><div class="role">GM, Eco Resort</div></div></div></article>
+        <article class="tc-card"><div class="tc-quote-mark">"</div><p class="quote">[TESTIMONIAL 8 — referrals and why they came back.]</p><div class="who"><div class="avatar a8">T</div><div><div class="name">[Client Name]</div><div class="role">Head of Brand, Eldercare</div></div></div></article>
+      </div>
+      </div>
+      <button class="tc-arrow tc-next" aria-label="Next">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <div class="wrap">
+    <div class="final-card reveal">
+      <div class="final-orbs"></div>
+      <h2 class="display">Let's build<br/>something <span class="italic-violet">unforgettable</span>.</h2>
+      <p class="sub">Currently booking Q3 2026. 2 slots remaining.</p>
+      <div class="ctas">
+        <a href="#" data-page="audit" class="btn btn-primary glow">Start a project <span class="arrow">→</span></a>
+        <a href="mailto:hello@chiranperera.com" class="email-link">hello@chiranperera.com <span>↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="wordmark" style="margin-bottom:8px">CHIRAN<span class="vdot"></span></div>
+        <p class="foot-tag">A lifestyle brand design studio. Beautiful websites, engineered for the AI search era.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Studio</h5>
+        <ul><li><a href="#" data-page="work">Work</a></li><li><a href="#" data-page="studio">Studio</a></li><li><a href="#">Journal</a></li><li><a href="#" data-page="audit">Audit</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul><li><a href="mailto:hello@chiranperera.com">hello@chiranperera.com</a></li><li><a href="#">Schedule a call</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-small">
+      <div>© 2026 Chiran Perera. Made with care in Colombo, Sri Lanka.</div>
+      <div class="mono">v2026.04</div>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- ═════════ WORK ═════════ -->
+<main class="page" id="page-work">
+  <section class="short-hero">
+    <div class="hero-nebula" aria-hidden="true"><div class="orb"><div class="rings"><div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div></div></div></div>
+    <div class="wrap short-hero-inner">
+      <div class="mini-pill"><span class="p-dot"></span>Selected work · 2020–2026</div>
+      <h1 class="display" style="margin-top:20px">Every project,<br/>every <span class="italic-violet">lesson</span>.</h1>
+      <p style="max-width:560px;color:var(--t2);font-size:17px">A tight portfolio of lifestyle brands I've built with — from boutique hotels in the hills to wellness brands ready for global launch.</p>
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="hospitality">Hospitality</button>
+        <button class="chip" data-filter="wellness">Wellness</button>
+        <button class="chip" data-filter="beauty">Beauty</button>
+        <button class="chip" data-filter="real-estate">Real Estate</button>
+        <button class="chip" data-filter="products">Products</button>
+        <button class="chip" data-filter="education">Education</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final-card reveal">
+        <div class="final-orbs"></div>
+        <h2 class="display" style="font-size:clamp(44px,6vw,80px)">Your brand, <span class="italic-violet">next</span>.</h2>
+        <p class="sub">Q3 2026 calendar opens May 1. Two slots.</p>
+        <div class="ctas"><a href="#" data-page="audit" class="btn btn-primary glow">Start a project <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═════════ STUDIO ═════════ -->
+<main class="page" id="page-studio">
+  <section class="studio-hero">
+    <div class="hero-nebula" aria-hidden="true" style="opacity:.7"><div class="orb" style="width:min(50vw,560px);transform:translate(-28vw,-5vh)"><div class="rings"><div class="ring"></div><div class="ring r2"></div></div></div></div>
+    <div class="wrap" style="position:relative;z-index:3">
+      <div class="studio-two">
+        <div class="studio-left">
+          <div class="mini-pill"><span class="p-dot"></span>The studio · Colombo, Sri Lanka</div>
+          <h1 class="display">
+            <span class="line">One designer.</span>
+            <span class="line">Six years.</span>
+            <span class="line">Fifty <span class="italic-violet">brands</span>.</span>
+          </h1>
+          <div class="story">
+          <p>I'm Chiran. I run a small lifestyle brand design studio out of Colombo. For six years I've been quietly building websites for the kinds of brands I love — boutique hotels in the hill country, wellness retreats on the coast, beauty founders shipping out of their kitchens, real estate developers with something actually worth selling.</p>
+          <p>The studio started the way most do: a few 99designs wins, a referral, a second referral, and then suddenly 50+ brands later you realize you've accidentally built a practice. I picked a lane — lifestyle — because it's where design matters most. If the site doesn't feel like the brand, the booking doesn't happen.</p>
+          <p>Now there's a second shift. People ask ChatGPT, Claude and Perplexity for hotel picks, product recommendations and therapists instead of opening Google. Lifestyle brands that don't structure their sites for that conversation are, quietly, going missing. That's the problem I'm building around in 2026.</p>
+        </div>
+        </div>
+        <div class="portrait"><span class="ph-tag">[ Portrait of Chiran · Colombo · 4×5 ]</span></div>
+      </div>
+
+      <div class="section-head" style="margin:120px 0 40px">
+        <div class="mini-pill"><span class="p-dot"></span>How I work</div>
+        <h2 class="display section-title">Four <span class="italic-violet">principles</span>.</h2>
+      </div>
+      <div class="principles-grid reveal">
+        <div class="pr"><div class="num">01 / PRINCIPLE</div><div class="p-text">Design is a commercial act.</div></div>
+        <div class="pr"><div class="num">02 / PRINCIPLE</div><div class="p-text">Speed is a feature.</div></div>
+        <div class="pr"><div class="num">03 / PRINCIPLE</div><div class="p-text">Every brand has a soul.</div></div>
+        <div class="pr"><div class="num">04 / PRINCIPLE</div><div class="p-text">Ship, then improve.</div></div>
+      </div>
+
+      <div class="section-head" style="margin:120px 0 40px">
+        <div class="mini-pill"><span class="p-dot"></span>Tools of the trade</div>
+        <h2 class="display section-title">The <span class="italic-green">stack</span>.</h2>
+      </div>
+      <div class="tools-grid reveal">
+        <div class="tool"><div class="t-name">Claude Design</div><div class="t-role">Ideation, spec, mockup</div></div>
+        <div class="tool"><div class="t-name">Claude Code</div><div class="t-role">Production front-end</div></div>
+        <div class="tool"><div class="t-name">Figma</div><div class="t-role">Systems, handoff</div></div>
+        <div class="tool"><div class="t-name">Next.js</div><div class="t-role">Custom builds</div></div>
+        <div class="tool"><div class="t-name">WordPress</div><div class="t-role">Editorial sites</div></div>
+        <div class="tool"><div class="t-name">Adobe CS</div><div class="t-role">Identity, print</div></div>
+        <div class="tool"><div class="t-name">Vercel</div><div class="t-role">Hosting, preview</div></div>
+        <div class="tool"><div class="t-name">Notion</div><div class="t-role">Brief, spec, delivery</div></div>
+      </div>
+
+      <div class="section-head" style="margin:120px 0 40px">
+        <div class="mini-pill"><span class="p-dot"></span>Availability</div>
+        <h2 class="display section-title">Currently booking <span class="italic-green">Q3 2026</span>.</h2>
+      </div>
+      <div class="availability-wrap">
+        <p style="color:var(--t2);font-size:17px">Two engagement slots open each quarter. Green days are available to start that week. Grey days are booked — we can still shape the brief for the next cycle.</p>
+        <div class="cal-mini">
+          <div class="cal"><div class="cal-head"><div class="cal-month">July</div><div class="cal-year">2026</div></div><div class="cal-days" id="cal1"></div></div>
+          <div class="cal"><div class="cal-head"><div class="cal-month">August</div><div class="cal-year">2026</div></div><div class="cal-days" id="cal2"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final-card reveal">
+        <div class="final-orbs"></div>
+        <h2 class="display" style="font-size:clamp(44px,6vw,82px)">Want to work <span class="italic-violet">together</span>?</h2>
+        <p class="sub">Start with a free AI audit, or tell me about the project.</p>
+        <div class="ctas"><a href="#" data-page="audit" class="btn btn-primary glow">Start here <span class="arrow">→</span></a><a href="mailto:hello@chiranperera.com" class="email-link">hello@chiranperera.com <span>↗</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═════════ AUDIT ═════════ -->
+<main class="page" id="page-audit">
+  <section class="audit-hero">
+    <div class="hero-nebula" aria-hidden="true" style="opacity:.7"><div class="orb" style="width:min(46vw,520px);transform:translate(28vw,-8vh)"><div class="rings"><div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div></div></div></div>
+
+    <div class="wrap audit-hero-grid">
+      <div>
+        <div class="mini-pill"><span class="p-dot"></span>Free AI search audit</div>
+        <h1 class="display">See where your brand<br/>goes <span class="italic-violet">missing</span> in AI.</h1>
+        <p class="sub">Travelers, buyers and clients are asking ChatGPT, Claude and Perplexity for recommendations right now. Is your brand in the answer?</p>
+      </div>
+      <form class="audit-form" id="auditForm" novalidate>
+        <h3>Request your audit</h3>
+        <div class="field"><label for="url">Your website URL</label><input type="url" id="url" name="url" placeholder="https://yourbrand.com" required/></div>
+        <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Chiran Perera" required/></div>
+        <div class="field"><label for="email">Your email</label><input type="email" id="email" name="email" placeholder="you@brand.com" required/></div>
+        <div class="field"><label for="industry">Your industry</label><select id="industry" name="industry" required><option value="">Select one…</option><option>Hospitality · Hotels</option><option>Wellness · Retreat</option><option>Beauty · Skincare</option><option>Real Estate</option><option>Lifestyle Products</option><option>Education</option><option>Eldercare</option><option>Other</option></select></div>
+        <button type="submit" class="btn btn-primary glow" style="justify-content:center">Run my audit <span class="arrow">→</span></button>
+        <p class="small-note">Your audit lands in your inbox within 48 hours. No credit card, no sales call.</p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mini-pill"><span class="p-dot"></span>What's inside your audit</div>
+        <h2 class="display section-title">10 queries.<br/>3 engines.<br/>1 clear <span class="italic-violet">verdict</span>.</h2>
+      </div>
+      <div class="audit-card reveal" style="padding:40px">
+        <div class="deliverables">
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Visibility score across ChatGPT, Claude, Perplexity</div><div class="d-desc">Ten category queries per engine — counted, screenshotted, scored.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Schema + structured data audit</div><div class="d-desc">What's present, what's missing, what to add for citation-readiness.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Competitor comparison</div><div class="d-desc">Who's being cited for the queries you should own.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Entity clarity check</div><div class="d-desc">Does your brand read as a clear entity, or a vague content soup?</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Top 5 fixes, prioritized</div><div class="d-desc">Ordered by impact, not effort. Copy-paste ready where possible.</div></div></div>
+          <div class="dv"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div><div class="d-title">Branded PDF, in 48 hours</div><div class="d-desc">Readable by humans, actionable by developers, shareable with stakeholders.</div></div></div>
+        </div>
+        <div class="audit-mock">
+          <div class="m-head"><div class="m-logo">Chiran<span class="d"></span></div><div class="m-date">REPORT · 04·24·26</div></div>
+          <div class="m-body">
+            <div class="m-title">AI Search<br/>Visibility <em>Report</em></div>
+            <div class="m-row"><span>Domain</span><span class="mono">yourbrand.com</span></div>
+            <div class="m-row"><span>ChatGPT cites</span><span class="mono">2 / 10</span></div>
+            <div class="m-row"><span>Claude cites</span><span class="mono">1 / 10</span></div>
+            <div class="m-row"><span>Perplexity cites</span><span class="mono">3 / 10</span></div>
+            <div class="m-row"><span>Schema found</span><span class="mono">Partial</span></div>
+            <div class="m-score"><div class="lbl">Citation<br/>Readiness</div><div class="big">34<span style="font-size:18px">%</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="mini-pill"><span class="p-dot"></span>The shift</div>
+        <h2 class="display section-title">Search is <span class="italic-violet">changing</span>.<br/>Are you ready?</h2>
+      </div>
+      <div class="sc-grid reveal">
+        <div class="sc"><div class="big" data-count="47">0<span class="u">%</span></div><div class="desc">of travelers plan trips using an AI chatbot as part of their research.</div><div class="mini-chart"><div class="bar" style="height:20%"></div><div class="bar" style="height:34%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:64%"></div><div class="bar" style="height:78%"></div><div class="bar" style="height:90%"></div></div></div>
+        <div class="sc"><div class="big"><span class="grad-text" style="font-style:italic">1</span> <span style="color:var(--t3);font-style:italic;font-weight:400;font-size:40px">in</span> <span data-count="4">0</span></div><div class="desc">Google searches now return an AI Overview above the first organic result.</div><div class="mini-chart"><div class="bar" style="height:82%"></div><div class="bar" style="height:26%"></div><div class="bar" style="height:22%"></div><div class="bar" style="height:28%"></div></div></div>
+        <div class="sc"><div class="big" data-count="12">0<span class="u">%</span></div><div class="desc">of lifestyle sites are structurally ready to be cited by an LLM. The rest are invisible.</div><div class="mini-chart"><div class="bar" style="height:88%"></div><div class="bar" style="height:86%"></div><div class="bar" style="height:84%"></div><div class="bar" style="height:22%"></div></div></div>
+      </div>
+      <p style="margin-top:40px;max-width:640px;color:var(--t2);font-size:16px">Sites that get cited in AI answers in 2026 will own the category. The rest will lose traffic quietly, for years, before they notice. The audit tells you which one you're on track for.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;align-items:center;margin:0 auto 48px">
+        <div class="mini-pill"><span class="p-dot"></span>FAQ</div>
+        <h2 class="display section-title">Questions, <span class="italic-green">answered</span>.</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq"><button class="faq-q">What exactly will I get? <span class="faq-toggle">+</span></button><div class="faq-a">A branded PDF delivered to your inbox within 48 hours. It includes the visibility score across three AI engines, a schema audit, competitor comparison, entity clarity check, and a prioritized list of the top five fixes.</div></div>
+        <div class="faq"><button class="faq-q">How is this different from SEO? <span class="faq-toggle">+</span></button><div class="faq-a">SEO optimizes for Google's blue-link results. This audit tests for something newer: whether LLMs cite your brand in their answers when a human asks them for a recommendation. Some overlap, but different rules.</div></div>
+        <div class="faq"><button class="faq-q">How do you run the audit? <span class="faq-toggle">+</span></button><div class="faq-a">Ten representative category queries per engine, executed against ChatGPT, Claude, and Perplexity. Screenshots captured. Schema and structured-data scanned via tooling, then reviewed by hand.</div></div>
+        <div class="faq"><button class="faq-q">Is my data shared anywhere? <span class="faq-toggle">+</span></button><div class="faq-a">Never. Your domain and business context stay between us and the audit file. I don't sell leads, don't add you to a newsletter, don't pass details to third parties.</div></div>
+        <div class="faq"><button class="faq-q">What if I don't have a website yet? <span class="faq-toggle">+</span></button><div class="faq-a">Then the audit isn't right for you yet — the build service is. Reach out directly and we'll talk about what to launch with, wired for AI citation on day one.</div></div>
+        <div class="faq"><button class="faq-q">Do I have to buy anything after? <span class="faq-toggle">+</span></button><div class="faq-a">No. The audit is genuinely free, with no follow-up sales call. If you want help fixing what it surfaces, the studio is here. If you'd rather fix it yourself, the PDF is written so you can.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final-card reveal">
+        <div class="final-orbs"></div>
+        <h2 class="display" style="font-size:clamp(44px,6vw,82px)">Stop being invisible.<br/>Get the <span class="italic-violet">audit</span>.</h2>
+        <p class="sub">Two minutes to fill out. 48 hours to answer. Free.</p>
+        <div class="ctas"><a href="#" onclick="document.getElementById('url')?.focus()" class="btn btn-primary glow">Request my audit <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═════════ JOURNAL placeholder ═════════ -->
+<main class="page" id="page-journal">
+  <section class="short-hero">
+    <div class="hero-nebula" aria-hidden="true"><div class="orb"><div class="rings"><div class="ring"></div><div class="ring r2"></div></div></div></div>
+    <div class="wrap short-hero-inner" style="text-align:center">
+      <div class="mini-pill" style="margin:0 auto"><span class="p-dot"></span>Journal · Coming soon</div>
+      <h1 class="display" style="margin-top:24px">Notes from the <span class="italic-violet">studio</span>.</h1>
+      <p style="color:var(--t2);font-size:17px;max-width:520px;margin:24px auto 28px">Essays on lifestyle brand building, AI search, and running a one-person studio. First issue May 2026.</p>
+      <div class="ctas" style="display:flex;justify-content:center"><a href="#" data-page="home" class="btn btn-primary glow">Back home <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What exactly will I get?","acceptedAnswer":{"@type":"Answer","text":"A branded PDF within 48 hours with a visibility score, schema audit, competitor comparison, and top five fixes."}},{"@type":"Question","name":"How is this different from SEO?","acceptedAnswer":{"@type":"Answer","text":"SEO optimizes for Google blue links. This tests whether LLMs cite your brand in their answers."}}]}
+</script>
+
+<script>
+(function(){
+  // cursor
+  const cursor = document.getElementById('cursor');
+  let cx=0,cy=0,tx=0,ty=0;
+  addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+  (function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cursor.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
+  document.addEventListener('mouseover',e=>{if(e.target.closest('a,button,input,select,textarea,.tm,.wk,.pc,.tool,.sv,.sc,.ps,.pr,.dv,.faq,.audit-mock')) cursor.classList.add('hover')});
+  document.addEventListener('mouseout',e=>{if(e.target.closest('a,button,input,select,textarea,.tm,.wk,.pc,.tool,.sv,.sc,.ps,.pr,.dv,.faq,.audit-mock')) cursor.classList.remove('hover')});
+
+  // testimonials carousel
+  const tcTrack=document.getElementById('tcTrack');
+  if(tcTrack){
+    const cardW=()=>{
+      const c=tcTrack.querySelector('.tc-card');
+      const gap=parseFloat(getComputedStyle(tcTrack).gap)||20;
+      return (c?.offsetWidth||320)+gap;
+    };
+    document.querySelector('.tc-prev')?.addEventListener('click',()=>tcTrack.scrollBy({left:-cardW(),behavior:'smooth'}));
+    document.querySelector('.tc-next')?.addEventListener('click',()=>tcTrack.scrollBy({left: cardW(),behavior:'smooth'}));
+  }
+
+  // nav scroll + scroll-driven veil
+  const nav=document.getElementById('nav');
+  const root=document.documentElement;
+  addEventListener('scroll',()=>{
+    const y=scrollY;
+    nav.classList.toggle('scrolled',y>40);
+    if(document.body.classList.contains('home-dark')){
+      // darken the VIDEO ITSELF (not page content) — keeps cards luminous.
+      // hero stays at .2; ramps to .65 once user is past hero.
+      const start = innerHeight * 0.5;       // begin darkening once user is half-past hero
+      const span  = innerHeight * 0.7;       // peak by ~1.2 viewports scrolled
+      const t = Math.max(0, Math.min(1, (y - start) / span));
+      const scrim = 0.2 + (0.60 - 0.2) * t;  // .20 → .60 (5% lighter than before)
+      root.style.setProperty('--video-scrim', scrim.toFixed(3));
+      root.style.setProperty('--veil-strength', t.toFixed(3));
+    }
+  },{passive:true});
+
+  // page routing
+  const pages=document.querySelectorAll('main.page');
+  const navLinks=document.querySelectorAll('.nav-links a');
+  function setPage(name){
+    pages.forEach(p=>p.classList.toggle('active',p.id==='page-'+name));
+    navLinks.forEach(a=>a.classList.toggle('active',a.dataset.page===name));
+    document.body.classList.toggle('home-dark', name==='home');
+    scrollTo({top:0,behavior:'instant'});
+    observeReveals();
+    animateCounters();
+  }
+  document.addEventListener('click',e=>{
+    const l=e.target.closest('[data-page]');
+    if(l){e.preventDefault();setPage(l.dataset.page)}
+  });
+
+  // reveal
+  let io;
+  function observeReveals(){
+    if(io) io.disconnect();
+    io=new IntersectionObserver(ents=>{
+      ents.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.1,rootMargin:'0px 0px -80px 0px'});
+    document.querySelectorAll('.page.active .reveal').forEach(el=>io.observe(el));
+  }
+  observeReveals();
+
+  // hero char stagger
+  (function stagger(){
+    const title=document.getElementById('heroTitle');
+    if(!title) return;
+    title.querySelectorAll('.line').forEach((line,li)=>{
+      const txt=line.dataset.text||'', ital=line.dataset.italic||'';
+      const base=li*160;
+      // gradient accent line: render as a single element so the gradient
+      // spans the whole phrase instead of repeating per-letter.
+      if(line.classList.contains('line-3')){
+        line.innerHTML='';
+        const whole=document.createElement('span');
+        whole.className='grad-fill';
+        whole.textContent=txt;
+        whole.style.display='inline-block';
+        whole.style.opacity='0';
+        whole.style.transform='translateY(14px)';
+        whole.style.animation='charIn .9s forwards';
+        whole.style.animationDelay=base+'ms';
+        line.appendChild(whole);
+        return;
+      }
+      let idx=0; line.innerHTML='';
+      const put=(ch,wrap)=>{
+        const s=document.createElement('span');
+        s.style.display='inline-block';
+        s.style.opacity='0';
+        s.style.transform='translateY(12px)';
+        s.style.animation='charIn .6s forwards';
+        s.style.animationDelay=(base+idx*28)+'ms';
+        s.textContent=ch===' '?'\u00A0':ch;
+        (wrap||line).appendChild(s); idx++;
+      };
+      for(const ch of txt) put(ch);
+      if(ital){
+        const w=document.createElement('span');w.className='italic-violet';
+        // render the italic accent as one piece so its gradient (in dark mode)
+        // paints continuously across the whole word — and so it actually shows up
+        const i=document.createElement('span');
+        i.style.display='inline-block';
+        i.style.opacity='0';
+        i.style.transform='translateY(12px)';
+        i.style.animation='charIn .7s forwards';
+        i.style.animationDelay=(base+txt.length*28+40)+'ms';
+        i.textContent=ital;
+        w.appendChild(i);
+        line.appendChild(w);
+      }
+    });
+  })();
+  const sty=document.createElement('style');sty.textContent='@keyframes charIn{to{opacity:1;transform:none}}';document.head.appendChild(sty);
+
+  // ambient AI FX — spawn drifting glow particles
+  (function aiFx(){
+    const host=document.getElementById('aiFx');
+    if(!host) return;
+    const N=36;
+    for(let i=0;i<N;i++){
+      const p=document.createElement('span');
+      p.className='p'+(Math.random()<0.4?' purple':'');
+      p.style.left=(Math.random()*100).toFixed(1)+'%';
+      p.style.top=(60+Math.random()*60)+'%'; // start below/near bottom
+      const dur=(14+Math.random()*22).toFixed(1);
+      const delay=(-Math.random()*dur).toFixed(1);
+      p.style.animationDuration=dur+'s';
+      p.style.animationDelay=delay+'s';
+      // slight size variation
+      const sz=(2+Math.random()*3).toFixed(1);
+      p.style.width=sz+'px'; p.style.height=sz+'px';
+      host.appendChild(p);
+    }
+  })();
+  // each cycling at a different duration/delay so they never sync.
+  (function industries(){
+    const host=document.getElementById('heroIndustries');
+    if(!host) return;
+    const labels=[
+      'Hospitality','Wellness','Beauty','Real Estate','Lifestyle Products',
+      'Education','Eldercare','AI Search','Brand Identity','Ayurveda',
+      'Boutique Hotels','Fragrance','Retreats','Skincare','Music Schools'
+    ];
+    // pick 9 distinct labels at random
+    const pick=[...labels].sort(()=>Math.random()-0.5).slice(0,9);
+    // place them in rough bands on left/right so they don't collide with the title column.
+    // each band is (xRange, yRange).
+    const bands=[
+      {x:[2,18],  y:[12,28]},  {x:[2,18],  y:[32,48]},  {x:[2,18],  y:[52,68]}, {x:[2,18],  y:[72,88]},
+      {x:[82,97], y:[12,28]}, {x:[82,97], y:[32,48]}, {x:[82,97], y:[52,68]}, {x:[82,97], y:[72,88]},
+      {x:[35,65], y:[92,96]}
+    ];
+    const rand=(lo,hi)=>lo+Math.random()*(hi-lo);
+    pick.forEach((txt,i)=>{
+      const b=bands[i%bands.length];
+      const el=document.createElement('span');
+      el.className='ind';
+      el.textContent=txt;
+      el.style.left   = rand(b.x[0],b.x[1]).toFixed(1)+'%';
+      el.style.top    = rand(b.y[0],b.y[1]).toFixed(1)+'%';
+      // each cycle: 8–14s duration, 0–8s initial delay; random phase offset so they never align.
+      const dur=(8+Math.random()*6).toFixed(2);
+      const delay=(Math.random()*8).toFixed(2);
+      el.style.animationDuration=dur+'s';
+      el.style.animationDelay=delay+'s';
+      host.appendChild(el);
+    });
+  })();
+
+  // marquee build
+  (function mq(){
+    const el=document.getElementById('marquee');
+    if(!el) return;
+    const items=['Hospitality','Wellness','Beauty','Real Estate','Lifestyle Products','Education','Eldercare','AI Search','Brand Identity','Hospitality','Wellness','Beauty','Real Estate','Lifestyle Products','Education','Eldercare','AI Search','Brand Identity'];
+    const s=items.map(i=>`<span>${i}</span>`).join('');
+    el.innerHTML=s+s;
+  })();
+
+  // FAQ
+  document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+
+  // audit form
+  const form=document.getElementById('auditForm');
+  if(form){
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      if(!form.url.value||!form.name.value||!form.email.value||!form.industry.value){alert('Please fill every field.');return;}
+      form.innerHTML=`<h3 class="display" style="font-size:26px;letter-spacing:-.01em">Audit on the way.</h3><p style="color:var(--t2)">Thanks, ${form.name.value.split(' ')[0]}. Your audit for <span class="mono" style="color:#fff">${form.url.value}</span> is queued. Expect a branded PDF within 48 hours.</p><div style="padding:14px 16px;border-radius:10px;background:rgba(119,0,255,.12);border:.5px solid rgba(119,0,255,.3);color:#fff;font-size:14px">No follow-up. No newsletter. Just the audit.</div>`;
+    });
+  }
+
+  // projects
+  const projects=[
+    {n:'Sarisara Lanka',c:'hospitality',t:'Travel Marketplace',d:'WordPress + AI itinerary builder, MCP-ready.'},
+    {n:'Villa Kaloya',c:'hospitality',t:'Boutique Hotel',d:'Hill-country lodge on Next.js, bookings integrated.'},
+    {n:'Lumen Skincare',c:'beauty',t:'Beauty · DTC',d:'Shopify brand system for a clean-beauty founder.'},
+    {n:'Anuhas Wellness',c:'wellness',t:'Retreat',d:'Ayurvedic retreat, seasonal packages, multilingual.'},
+    {n:'Serendib Estates',c:'real-estate',t:'Developer',d:'Plantation-era property portfolio, Colombo.'},
+    {n:'Kōyō Hinoki',c:'products',t:'Home Fragrance',d:'Editorial shop for a Japanese-Lankan incense atelier.'},
+    {n:'Paduru Academy',c:'education',t:'Platform',d:'Online music academy — courses, bookings, streams.'},
+    {n:'Muse Bay',c:'hospitality',t:'Surf Hotel',d:'South-coast surf hotel. Editorial. Seasonal. Fast.'},
+    {n:'Herba Clinic',c:'wellness',t:'Clinical',d:'Naturopathy clinic with protocol-based content.'},
+    {n:'Ondulee Studio',c:'beauty',t:'Salon',d:'A Colombo hair atelier, booked three months ahead.'},
+    {n:'Kalpitiya Homes',c:'real-estate',t:'Lagoon Villas',d:'Villas for rent and sale, lagoon-side.'},
+    {n:'Chaga Goods',c:'products',t:'Wellness CPG',d:'Functional mushroom brand, shipped in 16 days.'}
+  ];
+  const grid=document.getElementById('projectsGrid');
+  if(grid){
+    const render=(f)=>{const list=f==='all'?projects:projects.filter(p=>p.c===f);grid.innerHTML=list.map(p=>`<a href="#" class="pc"><div class="pc-media"><div class="ph"><span class="ph-tag">[ ${p.n} ]</span></div></div><div class="pc-body"><div class="pc-tag">${p.t}</div><div class="pc-name">${p.n}</div><div class="pc-desc">${p.d}</div></div></a>`).join('')};
+    render('all');
+    document.querySelectorAll('#filters .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('#filters .chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');render(c.dataset.filter)}));
+  }
+
+  // calendar
+  function renderCal(id,y,m,today,booked){
+    const el=document.getElementById(id); if(!el) return;
+    const firstDay=new Date(y,m,1).getDay();
+    const last=new Date(y,m+1,0).getDate();
+    const names=['S','M','T','W','T','F','S'];
+    let h=names.map(n=>`<div class="d-name">${n}</div>`).join('');
+    for(let i=0;i<firstDay;i++) h+='<div class="d" style="color:transparent">·</div>';
+    for(let d=1;d<=last;d++){const cls=['d'];if(booked.includes(d)) cls.push('booked');else if(d>=today) cls.push('open');if(id==='cal1'&&d===today) cls.push('today');h+=`<div class="${cls.join(' ')}">${d}</div>`}
+    el.innerHTML=h;
+  }
+  renderCal('cal1',2026,6,6,[1,2,3,13,14,15,16,17,22,23,29,30]);
+  renderCal('cal2',2026,7,0,[3,4,5,10,11,12,19,20,26,27,28]);
+
+  // counters
+  function animateCounters(){
+    document.querySelectorAll('.page.active [data-count]').forEach(el=>{
+      const target=+el.dataset.count; if(el.dataset.done) return;
+      el.dataset.done='1';
+      const dur=1400, start=performance.now();
+      const suffix=el.innerHTML.replace(/^\d+/, '');
+      (function tick(now){
+        const p=Math.min(1,(now-start)/dur);
+        const eased=1-Math.pow(1-p,3);
+        const v=Math.round(target*eased);
+        el.innerHTML=v+suffix;
+        if(p<1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }
+  // kick counters when they enter viewport
+  const ci=new IntersectionObserver(ents=>ents.forEach(en=>{if(en.isIntersecting){animateCounters();ci.unobserve(en.target)}}),{threshold:.3});
+  document.querySelectorAll('[data-count]').forEach(el=>ci.observe(el));
+
+  // wrap bare text nodes inside .btn so .btn > * { z-index:1 } lifts them
+  // above the gradient-wipe ::after pseudo-element on hover.
+  document.querySelectorAll('.btn').forEach(btn=>{
+    btn.childNodes.forEach(node=>{
+      if(node.nodeType===3 && node.textContent.trim()){
+        const span=document.createElement('span');
+        span.className='btn-label';
+        span.textContent=node.textContent;
+        node.parentNode.replaceChild(span,node);
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
