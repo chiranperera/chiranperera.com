@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookingCalendar } from "@/components/BookingCalendar";
 import { CalendarMini } from "@/components/CalendarMini";
 import { site } from "@/lib/site";
 
@@ -121,8 +122,9 @@ export default function StudioPage() {
           </div>
           <div className="availability-wrap">
             <p style={{ color: "var(--t2)", fontSize: 17 }}>
-              Two engagement slots open each quarter. Green days are available to start that
-              week. Grey days are booked — we can still shape the brief for the next cycle.
+              Two engagement slots open each quarter. Discovery calls are 30 minutes,
+              weekday mornings + afternoons in Asia/Colombo. Pick a time that works —
+              I&apos;ll confirm by email within one business day.
             </p>
             <div className="cal-mini">
               <CalendarMini
@@ -141,6 +143,17 @@ export default function StudioPage() {
               />
             </div>
           </div>
+
+          <div id="book-call" className="section-head" style={{ margin: "80px 0 24px" }}>
+            <div className="mini-pill"><span className="p-dot" />Book a discovery call</div>
+            <h3 className="display section-title" style={{ fontSize: "clamp(28px,3.5vw,44px)" }}>
+              Pick a <span className="italic-violet">slot</span>.
+            </h3>
+          </div>
+          <BookingCalendar
+            initialYear={new Date().getFullYear()}
+            initialMonth={new Date().getMonth()}
+          />
         </div>
       </section>
 
