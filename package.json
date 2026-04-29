@@ -15,7 +15,10 @@
     "scrape:99designs": "node scripts/scrape-99designs.mjs"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@neondatabase/serverless": "^1.1.0",
+    "@react-pdf/renderer": "^4.5.1",
+    "cheerio": "^1.2.0",
     "drizzle-orm": "^0.45.2",
     "ics": "^3.12.0",
     "next": "16.2.4",

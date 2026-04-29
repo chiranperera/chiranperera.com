@@ -7,7 +7,7 @@ import { NextResponse, type NextRequest } from "next/server";
  * (Auth.js or a custom iron-session-based one) but for a one-person studio
  * Basic Auth over HTTPS is sufficient and adds zero dependencies.
  */
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   if (!req.nextUrl.pathname.startsWith("/admin")) return NextResponse.next();
 
   const expectedUser = process.env.ADMIN_USER ?? "chiran";

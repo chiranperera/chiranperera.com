@@ -1,4 +1,5 @@
 import { desc } from "drizzle-orm";
+import Link from "next/link";
 import { getDb, isDbConfigured } from "@/db";
 import { audits } from "@/db/schema";
 
@@ -30,6 +31,7 @@ export default async function AuditsPage() {
         <table className="admin-table">
           <thead>
             <tr>
+              <th>ID</th>
               <th>When</th>
               <th>Target URL</th>
               <th>Status</th>
@@ -40,6 +42,9 @@ export default async function AuditsPage() {
           <tbody>
             {rows.map((r) => (
               <tr key={r.id}>
+                <td>
+                  <Link href={`/admin/audits/${r.id}`}>#{r.id} →</Link>
+                </td>
                 <td>{new Date(r.createdAt).toLocaleString()}</td>
                 <td>
                   <a href={r.targetUrl} target="_blank" rel="noreferrer">
