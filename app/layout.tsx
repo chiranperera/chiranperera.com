@@ -71,12 +71,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${dmSans.variable} ${jetbrains.variable}`}>
       <body>
-        {/* Set body.home-dark before first paint so the home nav doesn't
-            flash light theme on hard refresh. BodyClass keeps it in sync
-            during client-side navigation. */}
+        {/* Apply the dark palette before first paint so neither the home
+            page nor the inner pages flash a light theme on hard refresh.
+            BodyClass keeps the data-route attribute in sync during
+            client-side navigation. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{if(location.pathname==='/')document.body.classList.add('home-dark');}catch(e){}`,
+            __html: `try{document.body.classList.add('home-dark');document.body.dataset.route=location.pathname==='/'?'home':'inner';}catch(e){}`,
           }}
         />
         <a href="#main" className="skip-link">

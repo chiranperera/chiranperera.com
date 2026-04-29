@@ -1,13 +1,22 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 const PARTICLES = 18;
 
 export function AmbientFX() {
+  const pathname = usePathname();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Cinematic ambient layer is reserved for the home page. Inner pages
+    // stay calm so content reads better.
+    if (pathname !== "/") {
+      const host = ref.current;
+      if (host) host.querySelectorAll(".p").forEach((n) => n.remove());
+      return;
+    }
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const host = ref.current;
     if (!host || host.childElementCount > 3) return; // already populated
@@ -29,7 +38,7 @@ export function AmbientFX() {
     return () => {
       host.querySelectorAll(".p").forEach((n) => n.remove());
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <div ref={ref} className="ai-fx" aria-hidden="true">
