@@ -2331,3 +2331,51 @@ body.home-dark .tc-cta{
 }
 body.home-dark .tc-cta:hover{background:rgba(0,236,252,.12);border-color:var(--cyan);color:#fff;box-shadow:0 0 0 1px rgba(0,236,252,.4),0 12px 32px -10px rgba(0,236,252,.3)}
 body.home-dark .tc-cta .tc-cta-stars{color:var(--cyan)}
+
+/* ════════════════════════════════════════════════════════
+   TESTIMONIAL CARDS — clearer client info + star row
+   ════════════════════════════════════════════════════════ */
+.tc-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.tc-stars{display:inline-flex;gap:2px;font-size:14px;line-height:1}
+.tc-star{color:rgba(255,255,255,.16)}
+body:not(.home-dark) .tc-star{color:rgba(9,9,2,.12)}
+.tc-star--on{color:#FFB700}
+body.home-dark .tc-star--on{color:var(--cyan);text-shadow:0 0 8px rgba(0,236,252,.4)}
+
+/* read-full link inline at end of truncated quote */
+.tc-readmore{
+  font-size:.86em;font-weight:600;
+  color:var(--violet);
+  white-space:nowrap;
+  border-bottom:1px dashed rgba(119,0,255,.4);
+}
+.tc-readmore:hover{border-bottom-style:solid;border-bottom-color:var(--violet)}
+body.home-dark .tc-readmore{color:var(--cyan);border-bottom-color:rgba(0,236,252,.4)}
+body.home-dark .tc-readmore:hover{border-bottom-color:var(--cyan)}
+
+/* who block — bolder name, clearer role line */
+.who{display:flex;align-items:center;gap:14px}
+.who-meta{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tc-card .who .name{
+  font-family:'DM Sans',sans-serif;
+  font-weight:700;
+  font-size:16px;
+  letter-spacing:-.01em;
+  line-height:1.2;
+  color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.home-dark .tc-card .who .name{color:#fff}
+.tc-card .who .role{
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.02em;
+  color:var(--text-tertiary);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.home-dark .tc-card .who .role{color:rgba(245,245,250,.62)}
+.tc-card .avatar{flex:none;width:44px;height:44px;font-size:15px}
+
+/* let the card breathe with shorter quotes — no forced 1:1 anymore */
+.tc-card{aspect-ratio:auto;min-height:300px}
+@media(max-width:760px){.tc-card{flex-basis:calc(100% - 4px);min-height:260px}}

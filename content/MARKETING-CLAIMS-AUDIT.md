@@ -35,12 +35,13 @@ node scripts/scrape-99designs.mjs
 
 The other 16 reviews are private (only visible to logged-in 99designs users). If Chiran wants those used on the site, he can copy-paste them into `lib/content/testimonials.ts` and add `source: "99designs"` + the original review URL.
 
-## Testimonial carousel: mixed sources right now
+## Testimonial carousel: 100% verified 99designs reviews
 
-Per design feedback, the carousel was switched back to longer pull-quotes for visual weight. The mix is:
+Per Chiran's request the carousel now ships only the five publicly-visible 99designs reviews — no placeholders, no fabricated quotes. Each card shows:
 
-- **6 placeholder testimonials** marked `source: "placeholder"` in `lib/content/testimonials.ts`. They are well-written but unverified — Chiran must replace them with real client feedback (paraphrased real reviews, or off-platform testimonials with permission) before public launch.
-- **2 verified 99designs testimonials** marked `source: "99designs"` with back-links.
-- The "View 21 verified reviews on 99designs ↗" CTA at the bottom-center of the carousel always points at the public profile so visitors can verify the underlying rating.
+- ★ rating row (all five reviews are 5-star)
+- The verbatim quote, truncated at 200 chars on a word boundary with a `read full ↗` link to the original review when truncation kicks in
+- A bolded client name + date · category line
+- The "View 21 verified reviews on 99designs ↗" CTA below the carousel
 
-**Action required before public launch:** edit `lib/content/testimonials.ts` and either (a) replace placeholders with real client quotes, or (b) drop them and ship with only the verified entries.
+To add more testimonials later, either copy verified reviews from the gated `/full_reviews` page (manually) into `lib/content/testimonials.ts`, or capture off-platform client quotes (with written permission) and add them with `source: "in-house"`.
