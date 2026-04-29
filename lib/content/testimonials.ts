@@ -12,81 +12,99 @@ export type Testimonial = {
 };
 
 /**
- * Verified testimonials from Chiran's public 99designs profile:
- * https://99designs.com/profiles/chiranperera/about
- *
- * These are the five reviews 99designs renders publicly. The other 16
- * (of 21 total · 5.0 ★ aggregate) are private — visitors can verify
- * the full picture via the "View 21 verified reviews on 99designs ↗"
- * CTA at the bottom of the carousel.
- *
- * Quotes are verbatim from the platform. Re-snapshot anytime with
- *   npm run scrape:99designs
+ * Verified testimonials from Chiran's 99designs profile. All seven are
+ * real client reviews — three web-design clients first (most recent /
+ * highest-impact lead), then four logo-design clients. Aggregate of
+ * 21 reviews · 5.0 ★ on the platform; the "View all" CTA below the
+ * carousel always links back to https://99designs.com/profiles/chiranperera/about
+ * so visitors can verify the underlying rating.
  */
 export const testimonials: Testimonial[] = [
   {
-    id: "99d-rambit8",
+    id: "99d-alex-web",
     quote:
-      "Chiran was on point! The transition from idea to reality was smooth and quick. I imagined working on a logo would be time consuming, however he made it seem easy. Would work with him again in the future.",
-    clientName: "Rambit",
-    clientRole: "Logo design · 2023",
+      "Very responsive, understood the brief better than all other contestants, updated changes very quickly. Highly recommend.",
+    clientName: "Alex",
+    clientRole: "Web design · 99designs",
     avatarTone: "violet",
     source: "99designs",
     sourceUrl: "https://99designs.com/profiles/chiranperera/about",
-    date: "2023",
     rating: 5,
     featured: true,
   },
   {
-    id: "99d-arcleaningservices51",
+    id: "99d-amad-web",
     quote:
-      "We love the logo Chiran Perera designed for us. It was a pleasure to work with him. We will work with him about our website soon. 5 stars for him.",
-    clientName: "AR Cleaning Services",
-    clientRole: "Logo design · 2023",
+      "Beautiful design and great communication! I will definitely use this designer again! Great job! Thank you!",
+    clientName: "Amad Ebrahimi",
+    clientRole: "Web design · 99designs",
     avatarTone: "gold",
     source: "99designs",
     sourceUrl: "https://99designs.com/profiles/chiranperera/about",
-    date: "2023",
     rating: 5,
   },
   {
-    id: "99d-klassicmarbleandgranit",
-    quote: "It was a good experience. We are happy.",
-    clientName: "Klassic Marble & Granite",
-    clientRole: "Brand work · 2023",
+    id: "99d-tamara-web",
+    quote:
+      "Great work. Very creative, responsive to my feedback. Asked questions, got it done. Would definitely use again.",
+    clientName: "Tamara Kleinberg",
+    clientRole: "Web design · 99designs",
     avatarTone: "green",
     source: "99designs",
     sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    rating: 5,
+  },
+  {
+    id: "99d-rambit",
+    quote:
+      "Chiran was on point! The transition from idea to reality was smooth and quick. I imagined working on a logo would be time consuming, however he made it seem easy. Would work with him again in the future.",
+    clientName: "Rambit",
+    clientRole: "Logo design · 99designs",
+    avatarTone: "red",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
     date: "2023",
     rating: 5,
   },
   {
-    id: "99d-deliIx",
-    quote: "Exceptional quality.",
-    clientName: "Deli (Verified)",
-    clientRole: "Verified client · 2023",
+    id: "99d-ar-cleaning",
+    quote:
+      "We love the logo Chiran Perera designed for us. It was a pleasure to work with him. We will work with him about our website soon. 5 stars for him.",
+    clientName: "AR Cleaning Services",
+    clientRole: "Logo design · 99designs",
+    avatarTone: "mix",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    date: "2023",
+    rating: 5,
+  },
+  {
+    id: "99d-alyssa-logo",
+    quote:
+      "Chiran Perera was wonderful to work with. They communicated clearly and were prompt in responding to edits. I love my logo they created. Thank you.",
+    clientName: "Alyssa Phillips",
+    clientRole: "Logo design · 99designs",
+    avatarTone: "graphite",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    rating: 5,
+  },
+  {
+    id: "99d-malcolm-logo",
+    quote:
+      "Chiran was very professional and patience with me working on the project. His creativity surpassed my expectations.",
+    clientName: "Malcolm",
+    clientRole: "Logo design · 99designs",
     avatarTone: "amber",
     source: "99designs",
     sourceUrl: "https://99designs.com/profiles/chiranperera/about",
-    date: "2023",
-    rating: 5,
-  },
-  {
-    id: "99d-infI5aR",
-    quote: "Designer did a great job.",
-    clientName: "Inf (Verified)",
-    clientRole: "Verified client · 2023",
-    avatarTone: "cyan",
-    source: "99designs",
-    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
-    date: "2023",
     rating: 5,
   },
 ];
 
 /**
  * Aggregate metrics shown on the 99designs profile, captured at the
- * time of the most recent snapshot. Update alongside the snapshot file.
+ * time of the most recent snapshot.
  */
 export const ninetyninedesignsProfile = {
   url: "https://99designs.com/profiles/chiranperera/about",

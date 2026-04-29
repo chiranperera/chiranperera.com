@@ -2479,3 +2479,36 @@ body.home-dark::after{
     background:rgba(7,7,16,.55);
   }
 }
+
+/* ════════════════════════════════════════════════════════
+   NAV GLASS — opaque enough that scrolled content doesn't
+   bleed through; nav links stay clearly readable.
+   ════════════════════════════════════════════════════════ */
+
+/* Light theme: bump to 92% so the page-content doesn't show through
+   on the lighter sections either. */
+.nav{
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+.nav.scrolled{background:rgba(255,255,255,.97)}
+
+/* Dark theme (home): layer the iridescent glass tint on top of a
+   solid-ish dark base so underlying sections fully disappear. */
+body.home-dark .nav{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.16) 100%),
+    rgba(7,7,16,.78);
+  backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);
+}
+body.home-dark .nav.scrolled{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.24) 0%, rgba(255,255,255,.12) 50%, rgba(255,255,255,.20) 100%),
+    rgba(7,7,16,.88);
+}
+
+/* Mobile drawer: it covers the nav, so make sure it's fully opaque too. */
+.nav-mobile{background:rgba(255,255,255,.99)}
+body.home-dark .nav-mobile{background:rgba(7,7,16,.97)}
