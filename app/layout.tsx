@@ -7,6 +7,13 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/site";
+import {
+  jsonLdScript,
+  localBusinessJsonLd,
+  organizationJsonLd,
+  personJsonLd,
+  servicesJsonLd,
+} from "@/lib/jsonld";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -60,25 +67,6 @@ export const viewport: Viewport = {
   ],
 };
 
-const orgJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: site.name,
-  url: site.url,
-  founder: {
-    "@type": "Person",
-    name: site.name,
-    jobTitle: "Designer",
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: site.locality,
-    addressCountry: site.country,
-  },
-  sameAs: [site.ninetyninedesigns],
-  description: site.description,
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${jetbrains.variable}`}>
@@ -90,10 +78,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <Reveal />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-        />
+        <script {...jsonLdScript(organizationJsonLd)} />
+        <script {...jsonLdScript(personJsonLd)} />
+        <script {...jsonLdScript(localBusinessJsonLd)} />
+        <script {...jsonLdScript(servicesJsonLd)} />
       </body>
     </html>
   );
