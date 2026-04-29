@@ -2182,3 +2182,23 @@ body.home-dark .nav-mobile-inner a.active{color:var(--cyan)}
    leftover use renders normally. */
 .page{display:block;animation:none}
 .page.active{display:block;animation:none}
+
+/* verified-on-99designs badge — sits inside section-head */
+.verify-badge{
+  align-self:flex-start;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;border-radius:100px;
+  background:rgba(0,236,252,.08);
+  border:1px solid rgba(0,236,252,.32);
+  color:#0E5763;font-size:13px;font-weight:600;letter-spacing:.01em;
+  transition:background .2s,color .2s,transform .15s;
+}
+.verify-badge:hover{background:rgba(0,236,252,.18);transform:translateY(-1px)}
+.verify-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+body.home-dark .verify-badge{
+  background:rgba(0,236,252,.10);
+  border-color:rgba(0,236,252,.34);
+  color:#D5F7FB;
+  backdrop-filter:blur(8px);
+}
+body.home-dark .verify-badge:hover{background:rgba(0,236,252,.20);color:#fff}

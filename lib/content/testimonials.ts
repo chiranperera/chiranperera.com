@@ -6,73 +6,90 @@ export type Testimonial = {
   avatarTone?: "violet" | "gold" | "green" | "red" | "mix" | "graphite" | "amber" | "cyan";
   source?: "99designs" | "in-house";
   sourceUrl?: string;
+  date?: string;
   featured?: boolean;
 };
 
-// Phase 2 ingestion replaces these from
-// https://99designs.com/profiles/chiranperera/about (21 reviews).
-// Until then we keep a small set of bracketed placeholders so the
-// component renders. They are clearly labeled as placeholders.
+/**
+ * Verified testimonials sourced from Chiran's public 99designs profile
+ * (https://99designs.com/profiles/chiranperera/about).
+ *
+ * The full count of 21 reviews shown on that profile includes private
+ * reviews not exposed to non-authenticated visitors. The five entries
+ * below are everything 99designs renders publicly. The raw scrape lives
+ * in `content/99designs-snapshot.json` for traceability — re-run the
+ * scraper to refresh.
+ */
 export const testimonials: Testimonial[] = [
   {
-    id: "p1",
+    id: "99d-rambit8",
     quote:
-      "[Awaiting 99designs ingestion — placeholder hero quote about specific outcome and tone.]",
-    clientName: "[Client Name]",
-    clientRole: "Founder, [Brand]",
+      "Chiran was on point! The transition from idea to reality was smooth and quick. I imagined working on a logo would be time consuming, however he made it seem easy. Would work with him again in the future.",
+    clientName: "rambit8",
+    clientRole: "Logo design · 99designs",
     avatarTone: "violet",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    date: "about 3 years ago",
     featured: true,
   },
   {
-    id: "p2",
+    id: "99d-arcleaningservices51",
     quote:
-      "[Placeholder — about speed of delivery and how the site felt from day one.]",
-    clientName: "[Client Name]",
-    clientRole: "Owner, Boutique Hotel",
+      "We love the logo what Chiran Perera design for Us. It was pleasure to work with him. We will work with him about our Website soon. 5 stars for him.",
+    clientName: "arcleaningservices51",
+    clientRole: "Logo design · 99designs",
     avatarTone: "gold",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    date: "about 3 years ago",
   },
   {
-    id: "p3",
-    quote: "[Placeholder — short, punchy. Pull-quote material.]",
-    clientName: "[Client Name]",
-    clientRole: "Director, Wellness Retreat",
+    id: "99d-klassicmarbleandgranitK",
+    quote: "It was a good experience. We are happy.",
+    clientName: "klassicmarbleandgranitK",
+    clientRole: "Brand work · 99designs",
     avatarTone: "green",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    date: "about 3 years ago",
   },
   {
-    id: "p4",
-    quote: "[Placeholder — about the AI audit process.]",
-    clientName: "[Client Name]",
-    clientRole: "CMO, Beauty Brand",
-    avatarTone: "red",
-  },
-  {
-    id: "p5",
-    quote: "[Placeholder — about handover and docs.]",
-    clientName: "[Client Name]",
-    clientRole: "Developer, Real Estate",
-    avatarTone: "mix",
-  },
-  {
-    id: "p6",
-    quote:
-      "[Placeholder — the long emotional one. Trust, craft, being understood.]",
-    clientName: "[Client Name]",
-    clientRole: "Founder, Lifestyle Product",
-    avatarTone: "graphite",
-  },
-  {
-    id: "p7",
-    quote:
-      "[Placeholder — bookings and revenue impact after launch.]",
-    clientName: "[Client Name]",
-    clientRole: "GM, Eco Resort",
+    id: "99d-deliIx",
+    quote: "Exceptional quality.",
+    clientName: "deliIx",
+    clientRole: "Verified client · 99designs",
     avatarTone: "amber",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    date: "about 3 years ago",
   },
   {
-    id: "p8",
-    quote: "[Placeholder — referrals and why they came back.]",
-    clientName: "[Client Name]",
-    clientRole: "Head of Brand, Eldercare",
+    id: "99d-infI5aR",
+    quote: "Designer did a great job.",
+    clientName: "infI5aR",
+    clientRole: "Verified client · 99designs",
     avatarTone: "cyan",
+    source: "99designs",
+    sourceUrl: "https://99designs.com/profiles/chiranperera/about",
+    date: "about 3 years ago",
   },
 ];
+
+/**
+ * Aggregate metrics shown on the 99designs profile, captured at the
+ * time of the most recent snapshot. Update alongside the snapshot file.
+ */
+export const ninetyninedesignsProfile = {
+  url: "https://99designs.com/profiles/chiranperera/about",
+  badge: "Mid Level",
+  starRating: 5.0,
+  totalReviews: 21,
+  publicReviews: 5,
+  contestsWon: 3,
+  runnerUp: 13,
+  projects: 35,
+  repeatClients: 2,
+  memberSince: "June 8, 2016",
+  capturedAt: "2026-04-29",
+} as const;
