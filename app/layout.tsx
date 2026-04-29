@@ -79,6 +79,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `try{if(location.pathname==='/')document.body.classList.add('home-dark');}catch(e){}`,
           }}
         />
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
         <BodyClass />
         <AmbientFX />
         <Nav />

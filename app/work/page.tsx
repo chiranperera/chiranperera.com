@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <main>
+    <main id="main">
       <section className="short-hero">
         <div className="hero-nebula" aria-hidden="true">
           <div className="orb">

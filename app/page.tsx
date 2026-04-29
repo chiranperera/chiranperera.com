@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Counters } from "@/components/Counters";
 import { HeroIndustries } from "@/components/HeroIndustries";
 import { HeroTitle } from "@/components/HeroTitle";
+import { HeroVideo } from "@/components/HeroVideo";
 import { Marquee } from "@/components/Marquee";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { testimonials } from "@/lib/content/testimonials";
@@ -9,14 +10,10 @@ import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main">
       {/* HERO */}
       <section className="hero">
-        <div className="hero-video-wrap">
-          <video autoPlay muted loop playsInline preload="auto">
-            <source src="/hero-bg.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <HeroVideo />
         <div className="corner tl" aria-hidden="true" />
         <div className="corner tr" aria-hidden="true" />
         <div className="corner bl" aria-hidden="true" />

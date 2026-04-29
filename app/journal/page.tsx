@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function JournalPage() {
   return (
-    <main>
+    <main id="main">
       <section className="short-hero">
         <div className="hero-nebula" aria-hidden="true">
           <div className="orb">

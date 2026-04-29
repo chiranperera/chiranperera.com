@@ -16,10 +16,12 @@ export function Nav() {
       setScrolled(y > 40);
 
       if (document.body.classList.contains("home-dark")) {
-        const start = innerHeight * 0.5;
-        const span = innerHeight * 0.7;
+        const start = innerHeight * 0.3;
+        const span = innerHeight * 0.6;
         const t = Math.max(0, Math.min(1, (y - start) / span));
-        const scrim = 0.2 + (0.6 - 0.2) * t;
+        // Hero starts at .40 (text readable from first paint over bright frames)
+        // and ramps to .70 once user is past the hero.
+        const scrim = 0.4 + (0.7 - 0.4) * t;
         document.documentElement.style.setProperty("--video-scrim", scrim.toFixed(3));
         document.documentElement.style.setProperty("--veil-strength", t.toFixed(3));
       }

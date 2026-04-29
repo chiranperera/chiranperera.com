@@ -31,7 +31,7 @@ const tools = [
 
 export default function StudioPage() {
   return (
-    <main>
+    <main id="main">
       <section className="studio-hero">
         <div className="hero-nebula" aria-hidden="true" style={{ opacity: 0.7 }}>
           <div

@@ -76,7 +76,7 @@ const faqJsonLd = {
 
 export default function AuditPage() {
   return (
-    <main>
+    <main id="main">
       <section className="audit-hero">
         <div className="hero-nebula" aria-hidden="true" style={{ opacity: 0.7 }}>
           <div

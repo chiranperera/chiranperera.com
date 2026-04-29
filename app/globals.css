@@ -5,7 +5,7 @@
   --cyan:#00ECFC; --cyan-2:#00BCCC; --cyan-soft:rgba(0,236,252,.14);
   --gold:#FFB700; --gold-light:#FFF5D6;
   --error:#E5243B; --error-light:#FDEAEC;
-  --ink:#090902; --text-primary:#090902; --text-secondary:#5A5A6E; --text-tertiary:#8E8EA0;
+  --ink:#090902; --text-primary:#090902; --text-secondary:#5A5A6E; --text-tertiary:#6E6E8A;
   --bg:#FFFFFF; --surface:#FFFFFF; --muted:#F0F0F5; --canvas:#F8F8F8;
   --border:#E8E8EE; --border-2:#D8D8E0;
   --violet-glow:rgba(119,0,255,.18);
@@ -13,7 +13,7 @@
   /* legacy token aliases used throughout the file — now point at the light palette */
   --black:#FFFFFF; --black-2:#FFFFFF; --black-3:#F8F8F8; --black-4:#F0F0F5;
   --mist:#F0E5FF; --white:#FFFFFF;
-  --t1:#090902; --t2:#5A5A6E; --t3:#8E8EA0; --t4:#B8B8C4;
+  --t1:#090902; --t2:#5A5A6E; --t3:#6E6E8A; --t4:#B8B8C4;
   --bd:#E8E8EE; --bd-2:#D8D8E0;
   --card-bg:#FFFFFF;
   --card-edge:linear-gradient(180deg,#E8E8EE,#F0F0F5);
@@ -2379,3 +2379,103 @@ body.home-dark .tc-card .who .role{color:rgba(245,245,250,.62)}
 /* let the card breathe with shorter quotes — no forced 1:1 anymore */
 .tc-card{aspect-ratio:auto;min-height:300px}
 @media(max-width:760px){.tc-card{flex-basis:calc(100% - 4px);min-height:260px}}
+
+/* ════════════════════════════════════════════════════════
+   ACCESSIBILITY + READABILITY PASS (Phase 6.5)
+   Targeted overrides to fix dark-bg readability, ambient
+   noise, focus rings, and tap-target compliance.
+   ════════════════════════════════════════════════════════ */
+
+/* C10 · Skip-to-content link — visually hidden until focused */
+.skip-link{
+  position:fixed;top:-100px;left:16px;z-index:9999;
+  padding:12px 18px;border-radius:8px;
+  background:var(--violet);color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;
+  text-decoration:none;
+  transition:top .2s ease;
+  box-shadow:0 6px 24px -8px rgba(0,0,0,.4);
+}
+.skip-link:focus{top:16px;outline:2px solid #fff;outline-offset:2px}
+body.home-dark .skip-link{background:var(--cyan);color:#07070F}
+
+/* C13 · Focus rings — cyan glow that works on both themes
+   (the previous violet outline disappeared against the dark cyan ambient) */
+:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 3px rgba(0,236,252,.55), 0 0 0 1px rgba(7,7,16,.85) inset;
+  border-radius:6px;
+}
+body:not(.home-dark) :focus-visible{box-shadow:0 0 0 3px rgba(119,0,255,.45)}
+
+/* C12 · Tap targets ≥ 44×44 (WCAG AAA — and just easier to hit) */
+.nav-pill{min-height:44px;padding:10px 16px}
+.hero-pill{min-height:44px;padding:11px 20px}
+.nav-burger{width:44px;height:44px}
+
+/* A3 · Hero subtitle — was .72 white, hard to read over bright video frames */
+body.home-dark .hero-sub{
+  color:rgba(245,245,250,.92);
+  text-shadow:0 1px 24px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.35);
+}
+
+/* A3 · Hero title shadow stronger so the gradient line stays legible */
+body.home-dark .hero-title{text-shadow:0 2px 60px rgba(0,0,0,.5)}
+
+/* A1 + A5 · Glass cards on home — give body text a real ground.
+   Bumped bg from .03 to .07 white, body copy from .66 to .82 white. */
+body.home-dark .hstat,
+body.home-dark .sv,
+body.home-dark .wk,
+body.home-dark .ps,
+body.home-dark .sc,
+body.home-dark .tm,
+body.home-dark .tc-card{
+  background:rgba(255,255,255,.07);
+  border-color:rgba(255,255,255,.12);
+}
+body.home-dark .sv p,
+body.home-dark .ps p,
+body.home-dark .sc .desc,
+body.home-dark .hero-aside,
+body.home-dark .foot-tag,
+body.home-dark .foot-col li a{
+  color:rgba(245,245,250,.82);
+}
+body.home-dark .sc .desc{font-weight:500} /* was 600 — mass on body text was crushing the number */
+
+/* A4 · Audit promo card — lift body text + add inner highlight for boundary */
+body.home-dark .audit-card{
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 24px 60px -28px rgba(0,0,0,.6);
+}
+body.home-dark .audit-card p,
+body.home-dark .audit-card .a-list li{color:rgba(245,245,250,.92)}
+
+/* B7 · Scan sweeps — calmer, slower, less attention-grabbing */
+body.home-dark .ai-fx .scan{opacity:.55;animation-duration:22s}
+body.home-dark .ai-fx .scan.s2{animation-duration:26s}
+
+/* B9 · Grid overlay — was .045 lines, halved so it doesn't compete with text */
+body.home-dark::after{
+  background-image:
+    linear-gradient(rgba(120,180,255,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,180,255,.022) 1px, transparent 1px);
+}
+
+/* D17 · Mobile hero — render the poster only, never the 4MB MP4
+   (HeroVideo component already conditionally omits the source on
+   small viewports, but this belt-and-braces hides any fallback). */
+@media (max-width:640px){
+  .hero-video-wrap video{display:none}
+  .hero-video-wrap{
+    background:#070710 url(/hero-poster.jpg) center/cover no-repeat;
+  }
+  body.home-dark .hero-video-wrap{
+    background:#070710 url(/hero-poster.jpg) center/cover no-repeat;
+  }
+  body.home-dark .hero-video-wrap::after{
+    content:'';position:absolute;inset:0;
+    background:rgba(7,7,16,.55);
+  }
+}

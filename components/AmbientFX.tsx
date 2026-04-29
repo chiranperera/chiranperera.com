@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const PARTICLES = 36;
+const PARTICLES = 18;
 
 export function AmbientFX() {
   const ref = useRef<HTMLDivElement>(null);

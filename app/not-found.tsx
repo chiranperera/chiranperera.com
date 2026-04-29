@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main>
+    <main id="main">
       <section className="short-hero" style={{ minHeight: "70vh" }}>
         <div className="hero-nebula" aria-hidden="true">
           <div className="orb">
