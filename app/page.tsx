@@ -33,14 +33,6 @@ export default function HomePage() {
         </div>
 
         <div className="wrap hero-inner">
-          <div className="hero-top">
-            <div className="label">DESIGN STUDIO</div>
-            <div className="hero-pill">
-              <span className="p-dot" />
-              Now booking {site.bookingWindow} open
-            </div>
-          </div>
-
           <div className="hero-center">
             <div className="label" style={{ textAlign: "center", letterSpacing: ".22em" }}>
               WHERE DESIGN MEETS INTELLIGENCE

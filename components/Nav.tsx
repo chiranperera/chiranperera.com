@@ -13,21 +13,29 @@ export function Nav() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 40);
+      const isHomeDark = document.body.classList.contains("home-dark");
+      // On home, hold the nav at its at-rest state through the hero so the
+      // glassmorphism transition reads as "you've left the hero". Inner pages
+      // flip almost immediately because their hero is shorter.
+      const threshold = isHomeDark ? Math.max(innerHeight * 0.7, 200) : 40;
+      setScrolled(y > threshold);
 
-      if (document.body.classList.contains("home-dark")) {
+      if (isHomeDark) {
         const start = innerHeight * 0.3;
         const span = innerHeight * 0.6;
         const t = Math.max(0, Math.min(1, (y - start) / span));
-        // Hero starts at .40 (text readable from first paint over bright frames)
-        // and ramps to .70 once user is past the hero.
         const scrim = 0.4 + (0.7 - 0.4) * t;
         document.documentElement.style.setProperty("--video-scrim", scrim.toFixed(3));
         document.documentElement.style.setProperty("--veil-strength", t.toFixed(3));
       }
     };
+    // Defer the initial sync past the effect so we don't tripsetState-in-effect.
+    const raf = requestAnimationFrame(onScroll);
     addEventListener("scroll", onScroll, { passive: true });
-    return () => removeEventListener("scroll", onScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (

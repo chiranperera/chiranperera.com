@@ -2512,3 +2512,97 @@ body.home-dark .nav.scrolled{
 /* Mobile drawer: it covers the nav, so make sure it's fully opaque too. */
 .nav-mobile{background:rgba(255,255,255,.99)}
 body.home-dark .nav-mobile{background:rgba(7,7,16,.97)}
+
+/* ════════════════════════════════════════════════════════
+   HERO + NAV REFINEMENTS
+   - Hero title smaller (~100px) with 120px line-height
+   - Title text-shadow removed (no backdrop behind text)
+   - Nav: white + cyan + violet light gradient
+     · 10% opacity at rest (in hero)
+     · glassmorphism gradient when scrolled past hero
+   ════════════════════════════════════════════════════════ */
+
+/* Hero title — smaller and crisper */
+.hero-title{font-size:clamp(56px,8vw,100px);line-height:120px}
+body.home-dark .hero-title{font-size:clamp(56px,8vw,100px);line-height:120px;text-shadow:none}
+
+/* Grad-fill applied per user spec — line-height 120px keeps the
+   gradient line visually aligned with the rest of the title. */
+body.home-dark .hero-title .grad-fill{
+  background:linear-gradient(90deg, #15D1FD 0%, #328BFD 45%, #6820FE 100%);
+  -webkit-text-fill-color:transparent;
+  color:#0000;
+  text-shadow:none;
+  filter:none;
+  -webkit-background-clip:text;
+  background-clip:text;
+  line-height:120px;
+}
+
+/* ── NAV: white + blue + violet gradient ── */
+
+/* AT REST (hero) — 10% opacity light gradient. The mostly-transparent
+   pill lets the hero artwork breathe through. */
+.nav{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.12) 0%,
+      rgba(50,139,253,.08) 50%,
+      rgba(119,0,255,.10) 100%);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border:1px solid rgba(255,255,255,.18);
+}
+body.home-dark .nav{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.10) 0%,
+      rgba(50,139,253,.08) 50%,
+      rgba(119,0,255,.12) 100%);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 14px 40px -22px rgba(0,0,0,.4);
+}
+
+/* SCROLLED (past hero) — glassmorphism with the home-page color story. */
+.nav.scrolled{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.55) 0%,
+      rgba(213,247,251,.45) 50%,
+      rgba(232,217,255,.55) 100%);
+  backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);
+  border-color:rgba(255,255,255,.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    0 18px 50px -22px rgba(9,9,2,.18);
+}
+body.home-dark .nav.scrolled{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.16) 0%,
+      rgba(0,236,252,.20) 50%,
+      rgba(119,0,255,.24) 100%);
+  border-color:rgba(255,255,255,.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.30),
+    0 22px 60px -22px rgba(0,0,0,.55);
+}
+
+/* Make sure nav links stay sharply legible against the new gradient
+   in both states (including the AT-REST low-opacity hero variant). */
+body.home-dark .wordmark{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+body.home-dark .nav-links a{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+body.home-dark .nav-links a:hover{background:rgba(255,255,255,.18);text-shadow:none}
+body.home-dark .nav-links a.active{background:rgba(0,236,252,.22);text-shadow:none;box-shadow:inset 0 0 0 1px rgba(0,236,252,.45), 0 0 18px rgba(0,236,252,.30)}
+/* In scrolled state the gradient is opaque enough that text-shadow
+   becomes unnecessary and slightly muddy — remove it. */
+body.home-dark .nav.scrolled .wordmark,
+body.home-dark .nav.scrolled .nav-links a{text-shadow:none}
+
+/* Same idea for light-theme inner pages */
+body:not(.home-dark) .wordmark{color:var(--ink)}
+body:not(.home-dark) .nav-links a{color:var(--text-secondary)}
+body:not(.home-dark) .nav.scrolled{box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 14px 40px -18px rgba(9,9,2,.14)}
