@@ -2202,3 +2202,48 @@ body.home-dark .verify-badge{
   backdrop-filter:blur(8px);
 }
 body.home-dark .verify-badge:hover{background:rgba(0,236,252,.20);color:#fff}
+
+/* ════════════════════════════════════════════════════════
+   ADMIN — basic shell
+   Phase 3 only adds the dashboard + read tables. Edit forms
+   land in subsequent phases.
+   ════════════════════════════════════════════════════════ */
+.admin-shell{display:grid;grid-template-columns:240px 1fr;min-height:100vh;background:#F8F8F8;color:#0F172A;font-family:'DM Sans',sans-serif}
+body.home-dark .admin-shell{background:#070710;color:#F5F5FA}
+.admin-side{padding:32px 24px;background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:24px;position:sticky;top:0;height:100vh}
+body.home-dark .admin-side{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08)}
+.admin-brand{font-weight:800;letter-spacing:-.01em;font-size:18px}
+.admin-side nav{display:flex;flex-direction:column;gap:4px}
+.admin-side nav a{padding:9px 12px;border-radius:8px;font-size:14px;font-weight:500;color:var(--t2);transition:background .15s,color .15s}
+.admin-side nav a:hover{background:var(--violet-light);color:var(--violet)}
+.admin-side-foot{margin-top:auto;font-size:13px;color:var(--t3)}
+.admin-side-foot a{color:var(--violet);font-weight:500}
+.admin-main{padding:48px 56px;max-width:1280px}
+@media(max-width:900px){
+  .admin-shell{grid-template-columns:1fr}
+  .admin-side{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}
+  .admin-side nav{flex-direction:row;flex-wrap:wrap}
+  .admin-main{padding:24px 18px}
+}
+.admin-h1{font-family:'DM Sans',sans-serif;font-weight:800;font-size:32px;letter-spacing:-.02em;margin-bottom:24px}
+.admin-banner{padding:14px 18px;border-radius:10px;background:#fff;border:1px solid var(--border);margin-bottom:20px;font-size:14px}
+.admin-banner code{font-family:'JetBrains Mono',monospace;background:var(--violet-light);color:var(--violet);padding:1px 6px;border-radius:4px;font-size:.92em}
+.admin-banner--warn{background:#FFFBEA;border-color:#F0E0A0;color:#8A6700}
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:32px}
+.admin-stat{padding:24px;background:#fff;border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;gap:6px}
+.admin-stat-label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3)}
+.admin-stat-num{font-family:'DM Sans',sans-serif;font-weight:800;font-size:42px;letter-spacing:-.02em;color:var(--ink)}
+.admin-stat a{font-size:13px;font-weight:600;color:var(--violet);margin-top:6px}
+.admin-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:14px}
+.admin-table th,.admin-table td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);vertical-align:middle}
+.admin-table th{background:#FAFAFA;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3)}
+.admin-table tbody tr:hover{background:#FAFAFA}
+.admin-table a{color:var(--violet);font-weight:500}
+.badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.badge--new{background:rgba(0,168,184,.12);color:#0E5763}
+.badge--in_review{background:rgba(255,183,0,.18);color:#8A6700}
+.badge--responded{background:rgba(48,179,0,.14);color:#1F8000}
+.badge--archived,.badge--cancelled,.badge--declined{background:#F0F0F5;color:#5A5A6E}
+.badge--spam,.badge--failed{background:rgba(229,36,59,.14);color:#A61828}
+.badge--pending,.badge--scanning,.badge--drafting,.badge--held{background:rgba(119,0,255,.14);color:var(--violet)}
+.badge--ready,.badge--confirmed,.badge--sent{background:rgba(48,179,0,.14);color:#1F8000}
